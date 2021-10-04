@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+.navIcon{
+    border-radius:30px;
+    
+}
+.navBar{
+    background: white;
+    ;
+   
+    font-family: 'Pacifico', cursive;
+     /* box-shadow: 10px 10px 5px grey; */
+}
+
+.navText{
+    color: #015249!important;
+    font-family: 'Pacifico', cursive;
+    
+    
+}
+.resumeNav{
+    
+}
