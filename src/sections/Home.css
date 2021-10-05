@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+.introductionText{
+    font-family:'Pacifico', cursive;
+    color:white;
+    font-size:25px;
+    
+}
+.nameText{
+    font-family: 'Merriweather', serif;
+    color:white;
+    font-size:70px;
+    
+}
+
+.whoText{
+    font-family: 'Merriweather', serif;
+    color:white;
+    font-size:25px;
+    
+}

@@ -41,20 +41,41 @@
   background: linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%);
   margin-top:60px;
   color:black;
-  justify-content: center;
-  text-align: center;
-  background-repeat: no-repeat, repeat;
-  background-image: profPic;
-  background-blend-mode: lighten;
+  
+  
+  
   
 }
 .profPic{
  
   border-color:linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%);
-  border-radius: 30px;
+  border-radius:10px;
+  background-image: linear-gradient(to right,blue 0%,red 100%), url('./images/profPic.jpg');
+  background-color:green;
+  background-blend-mode: multiply;
+  background-size: 200px 200px;
+  background-repeat: no-repeat;
+   
+
+/* Two values, one per background */
+
+
+/* Global values */
+
+
+
+
+    
   
   
 }
 .make{
   margin-bottom:1000px
+}
+
+.home{
+  
+  
+  margin-top:200px;
+ 
 }

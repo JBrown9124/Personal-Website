@@ -49,17 +49,20 @@ export default function Navigation(props) {
     
       <Navbar className="navBar" expand="sm" fixed="top" collapseOnSelect >
       <Container fluid>
-          <Navbar.Brand className="navBrand">
+        <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
+          <Navbar.Brand   className="navBrand">
          
             <img
+            type="button"
               src={navIcon}
-              width="40"
+              width="60"
               height="40"
               className="navIcon"
               alt="React Bootstrap logo"
             />
             
           </Navbar.Brand>
+          </Col>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
