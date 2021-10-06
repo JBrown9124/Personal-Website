@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+.aboutTitleText{
+    font-family:'Merriweather', serif;
+    color:white;
+    font-size:35px;
+    text-align: left;
+}
+.aboutText{
+    font-family: 'Merriweather',;
+    color:#015249!important;
+    font-size:20px;
+    text-align:"." center;;
+    
+}
+
+
+.aboutDivider{
+    height:1%
+}

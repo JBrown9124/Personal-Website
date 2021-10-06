@@ -6,23 +6,29 @@ import React, { useEffect, useState } from "react";
 
 
 
-const Boop = ({  x = 0,
+const CertificateBoop = ({  x = 0,
     y = 0,
     rotation = 0,
-    scale = 1, 
+    scale = 1.1, 
     timing = 150, children }) => {
     const [isBooped, setIsBooped] = React.useState(false);
     const style = useSpring({
         display: 'inline-block',
         backfaceVisibility: 'hidden',
+        
+        boxShadow: isBooped? '0 4px 8px 0 rgba(0, 0, 0, 0.0), 0 0px 0px 0 rgba(0, 0, 0, 0.0u)':'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
         transform: isBooped
+        
       ? `translate(${x}px, ${y}px)
          rotate(${rotation}deg)
          scale(${scale})`
       : `translate(0px, 0px)
          rotate(0deg)
+         
          scale(1)`,
-         color: isBooped?'rgba(87,188,144,1)': 'white' ,
+         
+         
+         
           config: {
             mass: 1, tension: 280, friction: 60
             
@@ -53,4 +59,4 @@ const Boop = ({  x = 0,
     );
   };
 
-export default Boop
+export default CertificateBoop

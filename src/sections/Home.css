@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
 .introductionText{
     font-family:'Pacifico', cursive;
-    color:white;
+    color:#015249!important;
     font-size:25px;
     
 }
@@ -20,3 +20,22 @@
     font-size:25px;
     
 }
+/* .introductionText{
+    font-family:'Pacifico', cursive;
+    color:#015249!important;
+    font-size:1.6vw;
+    
+}
+.nameText{
+    font-family: 'Merriweather', serif;
+    color:white;
+    font-size:4.4vw;
+    
+}
+
+.whoText{
+    font-family: 'Merriweather', serif;
+    color:white;
+    font-size:1.6vw;
+    
+} */

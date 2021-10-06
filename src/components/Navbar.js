@@ -1,6 +1,6 @@
 import * as React from "react";
 import PropTypes from "prop-types";
-
+import Jonathan_Brown_Resume from "../images/Jonathan_Brown_Resume.pdf";
 import {
   Navbar,
   Nav,
@@ -11,7 +11,7 @@ import {
   Badge,
   Container,
   Row,
-  Col
+  Col,
 } from "react-bootstrap";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
@@ -45,49 +45,43 @@ HideOnScroll.propTypes = {
 export default function Navigation(props) {
   return (
     <>
-    <HideOnScroll {...props}>
-    
-      <Navbar className="navBar" expand="sm" fixed="top" collapseOnSelect >
-      <Container fluid>
-        <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
-          <Navbar.Brand   className="navBrand">
-         
-            <img
-            type="button"
-              src={navIcon}
-              width="60"
-              height="40"
-              className="navIcon"
-              alt="React Bootstrap logo"
-            />
-            
-          </Navbar.Brand>
-          </Col>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-             
-            </Nav>
+      <HideOnScroll {...props}>
+        <Navbar className="navBar" expand="sm" fixed="top" collapseOnSelect>
+          <Container fluid>
+            <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
+              <Navbar.Brand href="#home" className="navBrand">
+                <img
+                
+                  type="button"
+                  src={navIcon}
+                  width="60"
+                  height="40"
+                  className="navIcon"
+                  alt="React Bootstrap logo"
+                />
+              </Navbar.Brand>
+            </Col>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="me-auto"></Nav>
 
-            
-              
-              <Col  xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
-              <Nav.Link  className="navText">About</Nav.Link></Col>
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
-              <Nav.Link className="navText">Work</Nav.Link></Col>
-              <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}><Nav.Link className="navText">Contact</Nav.Link></Col>
-              <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}><Nav.Link className="navText">Resume</Nav.Link></Col>
-              
-              
-              
-             
+                <Nav.Link href="#about" className="navText">About</Nav.Link>
+              </Col>
+              <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
+                <Nav.Link href="#work"className="navText">Work</Nav.Link>
+              </Col>
+              <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
+                <Nav.Link className="navText">Contact</Nav.Link>
+              </Col>
+              <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
             
-          </Navbar.Collapse>
-          
+                <Nav.Link href={Jonathan_Brown_Resume} without rel="noopener noreferrer" target="_blank"trailingIcon="picture_as_pdf"label="Resume"className="navText">Resume</Nav.Link>
+                
+              </Col>
+            </Navbar.Collapse>
           </Container>
-        
-      </Navbar>
-      
+        </Navbar>
       </HideOnScroll>
     </>
   );

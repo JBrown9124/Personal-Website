@@ -46,29 +46,17 @@
   
   
 }
-.profPic{
+.profPicContainer{
+ border-radius:5px;
+ margin-top:90px
  
-  border-color:linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%);
-  border-radius:10px;
-  background-image: linear-gradient(to right,blue 0%,red 100%), url('./images/profPic.jpg');
-  background-color:green;
-  background-blend-mode: multiply;
-  background-size: 200px 200px;
-  background-repeat: no-repeat;
-   
-
-/* Two values, one per background */
-
-
-/* Global values */
-
-
-
-
-    
+}
+.profPic{
+  border-radius:5px;
   
   
 }
+
 .make{
   margin-bottom:1000px
 }
@@ -78,4 +66,8 @@
   
   margin-top:200px;
  
+}
+.about{
+  
+  margin-bottom:200px
 }

@@ -3,13 +3,18 @@ import "./App.css";
 import "./components/Navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./sections/Home.css";
-import "./components/SocialButtons.css"
+import "./sections/About.css";
+import "./components/SocialButtons.css";
+import "./components/Accordion.css";
 import Navigation from "./components/Navbar.js";
 import profPic from "./images/profPic.jpg";
+import ProfPicBoop from "./animators/ProfPicBoop.js";
 
-import 'mdb-ui-kit/css/mdb.min.css';
+import ReactDOM from "react-dom";
+import VisibilitySensor from "react-visibility-sensor";
+// import 'mdb-ui-kit/css/mdb.min.css';
 import React, { useEffect, useState } from "react";
-
+import About from "./sections/About.js";
 import Home from "./sections/Home.js";
 
 import {
@@ -23,38 +28,72 @@ import {
   Container,
   Row,
   Col,
-  Image
+  Image,
 } from "react-bootstrap";
-import Boop from "./animators/Boop.js"
+import Boop from "./animators/SocialIconsBoop.js";
+import FadeIn from "./animators/FadeIn.js";
 function App() {
+  const h2Styles = {
+    fontSize: "82px",
+  };
+
+  const centeredStyles = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column",
+    height: "100%",
+    overflowX: "hidden",
+  };
   return (
     <>
-     
-        <Navigation />
-        <Container className="appContainer" fluid>
-<Container>
-           
-            <Row>
-            <Col >
-          <div className="home">
-            
-            <Home   />
-            </div>
-            
+      <Navigation />
+      <Container id="home" className="appContainer" fluid>
+        <Container >
+          <Row xl={4}>
+            <Col xl={8}>
+              <VisibilitySensor>
+                {({ isVisible, }) => (
+                  <FadeIn isVisible={isVisible} y={-10}>
+                    <div className="home">
+                      <Home />
+                    </div>
+                  </FadeIn>
+                )}
+              </VisibilitySensor>
             </Col>
-        <Col xs={"auto"}>
-        <div className='bg-image hover-overlay' style={{  backgroundColor: 'rgba(57, 192, 237, 0.2)' , }}>
-      <img src={`${profPic}`} className='img-fluid' />
-      <a href='#!'>
-        <div className='mask overlay' style={{ backgroundColor: 'rgba(57, 192, 237, 0.2)' }}></div>
-      </a>
-    </div>
-        
-           
-        </Col>
-        </Row>
-       
-        {/* <Row>
+            <Col  xl={4}>
+              <VisibilitySensor>
+                {({ isVisible }) => (
+                  <FadeIn isVisible={isVisible} y={-10}>
+                    <div className="profPicContainer">
+                      <ProfPicBoop timing={300}>
+                        
+                        <Image className="profPic" src={`${profPic}`} fluid/>
+                        
+                      </ProfPicBoop>
+                      </div>
+                    
+                  </FadeIn>
+                )}
+              </VisibilitySensor>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <VisibilitySensor>
+                {({ isVisible }) => (
+                  <FadeIn isVisible={isVisible} y={-10}>
+                    <div id="about" className="about">
+                      <About />
+                    </div>
+                  </FadeIn>
+                )}
+              </VisibilitySensor>
+            </Col>
+          </Row>
+          
+          {/* <Row>
           <Col >
             <Image
               className="profPic"
@@ -65,8 +104,8 @@ function App() {
             />
           </Col>
         </Row> */}
-</Container>
         </Container>
+      </Container>
     </>
   );
 }
