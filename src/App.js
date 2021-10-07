@@ -4,6 +4,7 @@ import "./components/Navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./sections/Home.css";
 import "./sections/About.css";
+import "./sections/Work.css"
 import "./components/SocialButtons.css";
 import "./components/Accordion.css";
 import Navigation from "./components/Navbar.js";
@@ -16,6 +17,7 @@ import VisibilitySensor from "react-visibility-sensor";
 import React, { useEffect, useState } from "react";
 import About from "./sections/About.js";
 import Home from "./sections/Home.js";
+import Work from "./sections/Work.js";
 
 import {
   Navbar,
@@ -32,36 +34,30 @@ import {
 } from "react-bootstrap";
 import Boop from "./animators/SocialIconsBoop.js";
 import FadeIn from "./animators/FadeIn.js";
-function App() {
-  const h2Styles = {
-    fontSize: "82px",
-  };
 
-  const centeredStyles = {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    flexDirection: "column",
-    height: "100%",
-    overflowX: "hidden",
-  };
+function App() {
+  const [homeVisible, setHomeVisible] = useState(false);
+  const [aboutVisible, setAboutVisible] = useState(false);
+  const [workVisible, setWorkVisible] = useState(false);
   return (
-    <>
+    < div id="home" className="appContainer" >
+      
       <Navigation />
-      <Container id="home" className="appContainer" fluid>
-        <Container >
-          <Row xl={4}>
-            <Col xl={8}>
-              <VisibilitySensor>
-                {({ isVisible, }) => (
-                  <FadeIn isVisible={isVisible} y={-10}>
-                    <div className="home">
-                      <Home />
-                    </div>
-                  </FadeIn>
-                )}
-              </VisibilitySensor>
-            </Col>
+   
+        <Container>
+          {/* <Row xl={4}>
+            <Col xl={8}> */}
+            
+          <VisibilitySensor>
+            {({ isVisible }) => (
+              <div className="home">
+                <FadeIn   isVisible={isVisible} y={-40}>
+                  <Home />
+                </FadeIn>
+              </div>
+            )}
+          </VisibilitySensor>
+          {/* </Col>
             <Col  xl={4}>
               <VisibilitySensor>
                 {({ isVisible }) => (
@@ -78,21 +74,35 @@ function App() {
                 )}
               </VisibilitySensor>
             </Col>
-          </Row>
+          </Row> */}
+          <div id="about" className="sectionSeperator"></div>
           <Row>
             <Col>
-              <VisibilitySensor>
+              {/* <VisibilitySensor>
                 {({ isVisible }) => (
-                  <FadeIn isVisible={isVisible} y={-10}>
-                    <div id="about" className="about">
-                      <About />
-                    </div>
-                  </FadeIn>
+                  <FadeIn isVisible={aboutVisible} y={-40}>
+                    {isVisible ? setAboutVisible(true) : ""} */}
+
+                    <About />
+                  {/* </FadeIn>
                 )}
-              </VisibilitySensor>
+              </VisibilitySensor> */}
             </Col>
           </Row>
-          
+          <div id="work" className="sectionSeperator"></div>
+          <Row>
+            <Col>
+              {/* <VisibilitySensor>
+                {({ isVisible }) => ( */}
+                  <FadeIn isVisible={true} y={-40}>
+                    {/* {isVisible ? setWorkVisible(true) : ""} */}
+
+                    <Work />
+                  </FadeIn>
+                {/* )}
+              </VisibilitySensor> */}
+            </Col>
+          </Row>
           {/* <Row>
           <Col >
             <Image
@@ -105,8 +115,8 @@ function App() {
           </Col>
         </Row> */}
         </Container>
-      </Container>
-    </>
+      
+    </div>
   );
 }
 

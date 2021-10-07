@@ -1,0 +1,21 @@
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25% ;/* Player ratio: 100 / (1280 / 720) */
+    
+ 
+  }
+  
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+    
+    
+  }
+.workContainer{
+  background: linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%);
+ border-width: 1px;
+ border-style: solid; border-color: #A5A5AF;
+
+}

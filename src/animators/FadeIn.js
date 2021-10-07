@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 
 function FadeIn({
     isVisible=false,
+    delay=0,
   x = 0,
   y = 0,
   rotation = 0,
@@ -12,32 +13,44 @@ function FadeIn({
 }) {
   const [flip, set] = useState(false);
   const props = useSpring({
-    to: {
-      opacity: 1,
+    
+      opacity: isVisible? 1:0,
       
-      transform: `translate(${x}px, ${y}px)
+      transform: isVisible?`translate(${x}px, ${y}px)
          rotate(${rotation}deg)
-         scale(${scale})`,
+         scale(${scale})`: `translate(0px, 0px)
+         rotate(0deg)
+         
+         scale(1)`,
       
-    },
-    from: {
-      transform: `translate(0px, 0px)
-           rotate(0deg)
-           
-           scale(1)`,
-      opacity: 0,
+    
+    
+    //   opacity: 0,
       
-    },
-    reset: true,
+    // },
+    
     display: "inline-block",
     backfaceVisibility: "hidden",
-    reverse: !isVisible,
-    
+   
+    delay: {delay},
     config: { mass: 1, tension: 280, friction: 60 },
     //   onRest: () => set(!flip),
-  });
 
-  return <animated.div style={props}>{children}</animated.div>;
+    
+  });
+  useEffect(() => {
+    if (isVisible) {
+      return;
+    }
+    const timeoutId = window.setTimeout(() => {
+      
+    }, timing);
+    return () => {
+      window.clearTimeout(timeoutId);
+    };
+  }, [isVisible, timing]);
+
+  return <animated.span style={props}>{children}</animated.span>;
 }
 
 export default FadeIn;

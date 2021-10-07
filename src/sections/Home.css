@@ -20,6 +20,16 @@
     font-size:25px;
     
 }
+.profPicContainer{
+    position: relative;
+    bottom:60px;
+    
+   }
+   .profPic{
+     border-radius:5px;
+     
+     
+   }
 /* .introductionText{
     font-family:'Pacifico', cursive;
     color:#015249!important;

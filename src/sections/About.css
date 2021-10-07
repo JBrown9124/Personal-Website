@@ -5,17 +5,23 @@
     font-family:'Merriweather', serif;
     color:white;
     font-size:35px;
-    text-align: left;
-}
-.aboutText{
-    font-family: 'Merriweather',;
-    color:#015249!important;
-    font-size:20px;
-    text-align:"." center;;
     
 }
+/* .aboutText{
+    font-family: 'Merriweather'!important;
+    color:#015249!important;
+    
+    
+    
+} */
 
 
 .aboutDivider{
-    height:1%
+    color:white;
+    
+}
+.accordion{
+    margin-top:20px;
+
+
 }

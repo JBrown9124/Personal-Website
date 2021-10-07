@@ -14,23 +14,58 @@ import {
   Placeholder,
   
 } from "react-bootstrap";
-import Accordion from "../components/Accordion"
-
-
+import ReactDOM from 'react-dom';
+import theme from "../themes/theme1"
+import {createTheme, responsiveFontSizes, ThemeProvider, Typography, } from "@material-ui/core";
+import Accordion from "../components/Accordion";
+import Divider from '@mui/material/Divider';
+import VisibilitySensor from "react-visibility-sensor";
+import FadeIn from "../animators/FadeIn.js";
 export default function About(props) {
+
+  
+  const [titleVisible, setTitleVisible] = useState(false);
+  const [textVisible, setTextVisible] = useState(false);
+  
+  
   return (
     <>
-    <Container fluid>
-      <h1 className="aboutTitleText">
-        About Me{" "}
-        <Placeholder className="aboutDivider" animation="wave">
-          <Placeholder className="aboutDivider" size="xs" xs={12} />
-        </Placeholder>
-      </h1>
+   
+      
+      
+     
       <Container fluid>
-      <p className="aboutText">
-          <Row>
-              <Col>
+      <VisibilitySensor>
+                {({ isVisible }) => (
+                  <FadeIn isVisible={titleVisible} y={-40}>
+                    {isVisible ? setTitleVisible(true) : ""}
+        <Row>
+          <Col>
+         
+        
+        <Divider orientation="horizontal" textAlign="left" sx={{marginBottom:"30px", }} flexItem={true}>
+        <h1 className="aboutTitleText"> About me</h1>
+  </Divider>
+
+     
+      </Col>
+      </Row>
+        </FadeIn>
+                )}
+              </VisibilitySensor>
+    
+
+      <VisibilitySensor>
+                {({ isVisible }) => (
+                  <FadeIn isVisible={textVisible} y={-40}>
+                    {isVisible ? setTextVisible(true) : ""}
+      <Container >
+    
+          <Row >
+              <Col >
+              <ThemeProvider theme={theme}>
+              <Typography className="aboutText" variant="body2" >
+                
         My name is Jonathan Brown and I would like to express my strong interest
         in the Junior Software Engineer. I believe that my qualifications,
         education, and personal project experience would make me a strong
@@ -38,23 +73,41 @@ export default function About(props) {
         who would like to collaborate closely with your software team to develop
         and implement software, ensuring optimal functionality, quality, and
         reliability. 
+      
+        </Typography>
+        </ThemeProvider>
         </Col>
         <Col>
-                    Enclosed is my resume that more fully details my background
-        and work experience, and how they relate to your position. I developed
-        and deployed two full-stack web applications (with many more on the
-        way!) with a full understanding of using backend/frontend frameworks and
-        libraries. I also have extensive knowledge of data structures and
-        algorithms such as how and when to apply them, making processes in
-        applications as efficient and optimal as possible. When creating
-        projects, I apply many business-like principles into the development
-        process. As a self-taught engineer I pride myself on learning software
-        technologies fast and efficiently.
+     
+        <ThemeProvider theme={theme}>
+              <Typography   className="aboutText" variant="body2" >
+                
+        My name is Jonathan Brown and I would like to express my strong interest
+        in the Junior Software Engineer. I believe that my qualifications,
+        education, and personal project experience would make me a strong
+        candidate for the position. Moreover, I am a hard working professional
+        who would like to collaborate closely with your software team to develop
+        and implement software, ensuring optimal functionality, quality, and
+        reliability. 
+      
+        </Typography>
+        </ThemeProvider>
         </Col>
+        
+      
+        
+       
         </Row>
-      </p>
       </Container>
-      <Accordion/>
+      </FadeIn>
+       )}
+     </VisibilitySensor>
+      <div className="accordion">
+      <Accordion  />
+      </div>
+      </Container>
+      
+      
       {/* <Accordion flush>
   <Accordion.Item eventKey="0" >
     <Accordion.Header>Technlogies I use</Accordion.Header>
@@ -72,7 +125,7 @@ export default function About(props) {
 </Accordion> */}
 
     
-</Container>
+
     </>
   );
 }

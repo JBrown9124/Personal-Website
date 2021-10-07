@@ -3,10 +3,14 @@ import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import Typography from '@mui/material/Typography';
+import { createTheme, ThemeProvider,  } from '@material-ui/core/styles';
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
-import Typography from "@mui/material/Typography";
+import theme from "../themes/theme1"
 import CertificateBoop from "../animators/CertificateBoop";
+import VisibilitySensor from "react-visibility-sensor";
+import FadeIn from "../animators/FadeIn.js";
 import {
   Navbar,
   Nav,
@@ -29,14 +33,16 @@ const Accordion = styled((props) => (
 ))(({ theme }) => ({
   //   border: `1px solid ${theme.palette.divider}`,
   "&:not(:last-child)": {
-    borderBottom: 0,
+    borderBottom: "none",
   },
   "&:before": {
     display: "none",
-    fontFamily: "'Pacifico', cursive;",
+    
     color: "#015249!important",
+    borderBottom: "none"
   },
 }));
+
 function openInNewTab(url) {
     var win = window.open(url, '_blank');
     win.focus();
@@ -51,8 +57,8 @@ const AccordionSummary = styled((props) => (
     theme.palette.mode === "dark"
       ? "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)"
       : "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)",
-  fontFamily: "'Pacifico', cursive;",
-  color: "#015249!important",
+    
+  
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
@@ -63,8 +69,9 @@ const AccordionSummary = styled((props) => (
         ? "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)"
         : "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)",
     marginLeft: theme.spacing(1),
-    fontFamily: "'Pacifico', cursive;",
-    color: "#015249!important",
+    borderBottom: "none"
+    
+    
   },
 }));
 
@@ -75,9 +82,11 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
     theme.palette.mode === "dark"
       ? "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)"
       : "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)",
-  fontFamily: "'Pacifico', cursive;",
-  color: "#015249!important",
+   
+      borderBottom: "none"
+  
 }));
+
 const myTechnologies = [
   "Python",
   "JavaScript",
@@ -93,47 +102,76 @@ const myTechnologies = [
   "Heroku",
 ];
 export default function CustomizedAccordions() {
-  const [expanded1, setExpanded1] = React.useState(false);
-  const [expanded2, setExpanded2] = React.useState(false);
+  const [expanded1, setExpanded1] = React.useState(true);
+  const [expanded2, setExpanded2] = React.useState(true);
+  const [accordion2Visible, setAccordion2Visible] = React.useState(false);
+  const [accordion1Visible, setAccordion1Visible] = React.useState(false);
+
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded1(newExpanded ? panel : false);
   };
 
+
+ 
   return (
-    <>
+    <Row>
+      <Col>
+      <VisibilitySensor>
+                {({ isVisible }) => (
+                  <FadeIn isVisible={accordion1Visible} y={-40}>
+                    {isVisible ? setAccordion1Visible(true) : ""}
         <Accordion
+        
+        disableGutters
           expanded={expanded1}
           onChange={()=>setExpanded1(!expanded1)}
         >
           <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-            <Typography className="accordionTitle">
+            <ThemeProvider theme={theme}>
+            <Typography  variant="h6" className="accordionTitle">
               Technologies I use
             </Typography>
+            </ThemeProvider>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography className="accordionText">
-              <Container fluid>
-                <Row>
+          <ThemeProvider theme={theme}>
+            <Typography  variant="body1" className="accordionText">
+             
+                <Row  >
                   {myTechnologies.map((tech, idx) => (
-                    <Col xl={4}>
+                    <Col xl={3} xs={"auto"}>
                       <ul key={idx}>
-                        <DoubleArrowIcon />
+                        <DoubleArrowIcon sx={{ fontSize: "0.7rem" }}/>
                         {tech}
                       </ul>
                     </Col>
                   ))}
                 </Row>
-              </Container>
+              
             </Typography>
+            </ThemeProvider>
           </AccordionDetails>
         </Accordion>
-      
+        </FadeIn>
+                )}
+              </VisibilitySensor>
+      </Col>
+      <Col>
+      <VisibilitySensor>
+                {({ isVisible }) => (
+                  <FadeIn isVisible={accordion2Visible} y={-40}>
+                    {isVisible ? setAccordion2Visible(true) : ""}
         <Accordion
+        disableGutters
           expanded={expanded2}
           onChange={()=>setExpanded2(!expanded2)}
         >
           <AccordionSummary aria-controls="panel2d-content" id="panel2d-header">
-            <Typography className="accordionTitle">Certificates</Typography>
+          <ThemeProvider theme={theme}>
+            <Typography  variant="h6" className="accordionTitle">
+              Certificates
+            </Typography>
+            </ThemeProvider>
           </AccordionSummary>
           <AccordionDetails>
             <Typography className="accordionText">
@@ -154,6 +192,10 @@ export default function CustomizedAccordions() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-      </>
+        </FadeIn>
+                )}
+              </VisibilitySensor>
+      </Col>
+    </Row>
   );
 }

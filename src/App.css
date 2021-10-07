@@ -46,16 +46,7 @@
   
   
 }
-.profPicContainer{
- border-radius:5px;
- margin-top:90px
- 
-}
-.profPic{
-  border-radius:5px;
-  
-  
-}
+
 
 .make{
   margin-bottom:1000px
@@ -63,11 +54,14 @@
 
 .home{
   
-  
-  margin-top:200px;
+  position: relative;
+  top:200px;
  
 }
 .about{
   
-  margin-bottom:200px
+  
+}
+.sectionSeperator{
+  margin-top:400px
 }
