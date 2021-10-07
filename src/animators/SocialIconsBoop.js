@@ -7,6 +7,8 @@ import React, { useEffect, useState } from "react";
 
 
 const SocialIconsBoop = ({  x = 0,
+  beforeColor= 'white',
+  afterColor="rgba(87,188,144,1)",
     y = 0,
     rotation = 0,
     scale = 1, 
@@ -22,7 +24,7 @@ const SocialIconsBoop = ({  x = 0,
       : `translate(0px, 0px)
          rotate(0deg)
          scale(1)`,
-         color: isBooped?'rgba(87,188,144,1)': 'white' ,
+         color: isBooped?afterColor: beforeColor ,
           config: {
             mass: 1, tension: 280, friction: 60
             

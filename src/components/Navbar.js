@@ -13,9 +13,11 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
+
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
 import navIcon from "../images/navIcon.jpeg";
+import LinkUnderline from "../animators/LinkUnderline"
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -66,18 +68,26 @@ export default function Navigation(props) {
               <Nav className="me-auto"></Nav>
 
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
-                <Nav.Link href="#about" className="navText">About</Nav.Link>
+                <LinkUnderline>
+               
+              <Nav.Link href="#about" className="navText">About</Nav.Link>
+             
+              </LinkUnderline>
               </Col>
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
+              <LinkUnderline>
                 <Nav.Link href="#work"className="navText">Work</Nav.Link>
+                </LinkUnderline>
               </Col>
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
+        <LinkUnderline>
                 <Nav.Link className="navText">Contact</Nav.Link>
+                </LinkUnderline>
               </Col>
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
-            
+              <LinkUnderline>
                 <Nav.Link href={Jonathan_Brown_Resume} without rel="noopener noreferrer" target="_blank"trailingIcon="picture_as_pdf"label="Resume"className="navText">Resume</Nav.Link>
-                
+                </LinkUnderline>
               </Col>
             </Navbar.Collapse>
           </Container>

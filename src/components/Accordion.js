@@ -25,6 +25,7 @@ import {
   Image,
   Placeholder,
 } from "react-bootstrap";
+import LinkUnderline from "../animators/LinkUnderline"
 
 import CourseraCertificate1 from "../images/CourseraCertificate1.png";
 import CourseraCertificate2 from "../images/CourseraCertificate2.png";

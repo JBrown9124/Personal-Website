@@ -8,7 +8,7 @@ function FadeIn({
   y = 0,
   rotation = 0,
   scale = 1.0,
-  timing = 150,
+  
   children,
 }) {
   const [flip, set] = useState(false);
@@ -29,8 +29,7 @@ function FadeIn({
       
     // },
     
-    display: "inline-block",
-    backfaceVisibility: "hidden",
+   
    
     delay: {delay},
     config: { mass: 1, tension: 280, friction: 60 },
@@ -38,19 +37,9 @@ function FadeIn({
 
     
   });
-  useEffect(() => {
-    if (isVisible) {
-      return;
-    }
-    const timeoutId = window.setTimeout(() => {
-      
-    }, timing);
-    return () => {
-      window.clearTimeout(timeoutId);
-    };
-  }, [isVisible, timing]);
+ 
 
-  return <animated.span style={props}>{children}</animated.span>;
+  return <animated.div style={props}>{children}</animated.div>;
 }
 
 export default FadeIn;

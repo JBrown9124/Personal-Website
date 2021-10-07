@@ -19,6 +19,17 @@
     
     
 }
+.navText:hover{
+    color:rgba(115,199,204,1)!important;
+}
 .resumeNav{
     
 }
+.underline {
+    position: relative;
+    height: 2px;
+  }
+
+ 
+
+

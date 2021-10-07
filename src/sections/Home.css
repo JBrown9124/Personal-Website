@@ -15,9 +15,7 @@
 }
 
 .whoText{
-    font-family: 'Merriweather', serif;
-    color:white;
-    font-size:25px;
+   margin-top:10px !important;
     
 }
 .profPicContainer{
@@ -30,6 +28,9 @@
      
      
    }
+   .socialButtons{
+   margin-top: 10px;
+}
 /* .introductionText{
     font-family:'Pacifico', cursive;
     color:#015249!important;

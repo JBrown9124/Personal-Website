@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Fauna One");
+@import url("https://fonts.googleapis.com/css?family=Cinzel");
 .player-wrapper {
     position: relative;
     padding-top: 56.25% ;/* Player ratio: 100 / (1280 / 720) */
@@ -13,9 +15,61 @@
     
     
   }
-.workContainer{
-  background: linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%);
+  .doTitle{
+    font-family: "Helvetica", sans-serif !important;
+    color:black !important
+  }
+  .doText{
+    font-family: "Helvetica", sans-serif !important;
+    color:black !important
+  }
+.doContainer{
+  
+  background: white;
  border-width: 1px;
  border-style: solid; border-color: #A5A5AF;
+ color:black!important;
 
+}
+.doInnerContainer{
+  background:#F8F9FA!important;
+}
+.loveContainer{
+  background: #c8d8e4!important;
+ border-width: 1px;
+ border-style: solid; border-color: #A5A5AF;
+}
+.loveInnerContainer{
+  background:#2b6777!important;
+}
+.loveTitle{
+  font-family: "Cinzel"!important;
+  color:white !important;
+}
+.loveText{
+  font-family: "Fauna One", sans-serif !important;
+}
+
+.discordContainer{
+  background: #36393f !important;
+  border-width: 1px;
+  border-style: solid; border-color: #A5A5AF;
+}
+.discordInnerContainer{
+  background: #4f545c !important;
+}
+.discordTitle{
+  font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+  color:white !important;
+}
+.discordInfo{
+  font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+  color:white !important;
+}
+.socialCardIcons{
+  margin-top:5px;
+  margin-bottom:5px;
+}
+.cardDivider{
+  margin-top:15px;
 }

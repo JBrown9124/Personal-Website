@@ -76,8 +76,7 @@ function App() {
             </Col>
           </Row> */}
           <div id="about" className="sectionSeperator"></div>
-          <Row>
-            <Col>
+       
               {/* <VisibilitySensor>
                 {({ isVisible }) => (
                   <FadeIn isVisible={aboutVisible} y={-40}>
@@ -87,22 +86,19 @@ function App() {
                   {/* </FadeIn>
                 )}
               </VisibilitySensor> */}
-            </Col>
-          </Row>
+        
           <div id="work" className="sectionSeperator"></div>
-          <Row>
-            <Col>
+          
               {/* <VisibilitySensor>
                 {({ isVisible }) => ( */}
-                  <FadeIn isVisible={true} y={-40}>
+                 
                     {/* {isVisible ? setWorkVisible(true) : ""} */}
 
                     <Work />
-                  </FadeIn>
+               
                 {/* )}
               </VisibilitySensor> */}
-            </Col>
-          </Row>
+           
           {/* <Row>
           <Col >
             <Image

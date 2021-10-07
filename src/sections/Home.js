@@ -15,24 +15,27 @@ import {
 import profPic from "../images/profPic.jpg";
 import SocialButtons from "../components/SocialButtons.js";
 import ProfPicBoop from "../animators/ProfPicBoop.js";
+import { createTheme, ThemeProvider,  } from '@material-ui/core/styles';
+import Typography from '@mui/material/Typography';
+import theme from "../themes/theme1"
 export default function Home(props) {
   return (
     <>
       <Row xs={"auto"}>
-        <Col  xs={"auto"}xl={8}>
-          <p className="introductionText">Welcome, I am</p>
+        <Col xs={7} xl={8}>
+          <Typography variant="h2">Welcome, I am</Typography >
 
-          <h1 className="nameText">Jonathan Brown</h1>
+          <Typography variant="h1" className="nameText">Jonathan Brown</Typography >
 
-          <p className="whoText">
-            {" "}
+          <Typography variant="h3" className="whoText">
+           
             I'm a software engineer who likes to build things.
-          </p>
+          </Typography >
           <div className="socialButtons">
             <SocialButtons />
           </div>
         </Col>
-        <Col  xs={"auto"} xl={4}>
+        <Col xs={5} xl={4}>
           <div className="profPicContainer">
             <ProfPicBoop timing={300}>
               <Image className="profPic" src={`${profPic}`} fluid/>
