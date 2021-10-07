@@ -50,15 +50,7 @@ export default function About(props) {
      
       </Col>
       </Row>
-        </FadeIn>
-                )}
-              </VisibilitySensor>
-    
-
-      <VisibilitySensor>
-                {({ isVisible }) => (
-                  <FadeIn isVisible={textVisible} y={-40}>
-                    {isVisible ? setTextVisible(true) : ""}
+       
       <Container >
     
           <Row >
