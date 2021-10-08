@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 
-.navIcon{
-    
-    
-}
 .navBar{
     background: white;
     
@@ -21,6 +17,10 @@
 }
 .navText:hover{
     color:rgba(115,199,204,1)!important;
+}
+.navbar-brand{
+   margin:0px 0px 0px 0px !important;
+   padding:0px 0px 0px 0px !important;
 }
 .resumeNav{
     

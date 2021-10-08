@@ -63,14 +63,11 @@ export default function About(props) {
             <FadeIn isVisible={leftTextVisible} y={-40}>
               {isVisible ? setLeftTextVisible(true) : ""}
                       <Typography className="aboutText" variant="body2">
-                        My name is Jonathan Brown and I would like to express my
-                        strong interest in the Junior Software Engineer. I
-                        believe that my qualifications, education, and personal
-                        project experience would make me a strong candidate for
-                        the position. Moreover, I am a hard working professional
-                        who would like to collaborate closely with your software
-                        team to develop and implement software, ensuring optimal
-                        functionality, quality, and reliability.
+                        Greetings friend! My name is Jonathan and I have a passion for creating things through the art of code.
+                        My software engineer journey began in 2018 with a couple of text books and a strong passion for the inner workings of computers.
+                        Since then I have taken online courses on data structures and algorithms, built full-stack projects, and solved countless leetcode problems,
+                        all for the benefit of deeply understanding what it means to be a professional software engineer. 
+
                       </Typography>
                       </FadeIn>
           )}
@@ -84,14 +81,9 @@ export default function About(props) {
             <FadeIn isVisible={rightTextVisible} y={-40}>
               {isVisible ? setRightTextVisible(true) : ""}
                       <Typography className="aboutText" variant="body2">
-                        My name is Jonathan Brown and I would like to express my
-                        strong interest in the Junior Software Engineer. I
-                        believe that my qualifications, education, and personal
-                        project experience would make me a strong candidate for
-                        the position. Moreover, I am a hard working professional
-                        who would like to collaborate closely with your software
-                        team to develop and implement software, ensuring optimal
-                        functionality, quality, and reliability.
+                     But my journey doesn't stop there. 
+                        Everyday I am learning something new and exciting. Whether it's a new language, framework or library, my cravings for a deeper understanding of software development never
+                        cease! Directly below are the technologies I have used as well as the certificates I have received.
                       </Typography>
                       </FadeIn>
           )}

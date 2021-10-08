@@ -54,7 +54,7 @@ let theme = createTheme();
       fontSize: '1.6rem',
     },
     [theme.breakpoints.down('md')]: {
-      fontSize: '.8rem',
+      fontSize: '.9rem',
     },
   };
   theme.typography.h1 = {
@@ -73,7 +73,7 @@ let theme = createTheme();
         fontSize: '1.7rem',
       },
       [theme.breakpoints.down('md')]: {
-        fontSize: '.5rem',
+        fontSize: '.6rem',
       },}
       theme.typography.h4 = {
         fontFamily: 'Merriweather, serif',

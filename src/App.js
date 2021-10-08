@@ -54,7 +54,8 @@ function App() {
           <VisibilitySensor>
             {({ isVisible }) => (
               <div className="home">
-                <FadeIn   isVisible={isVisible} y={-40}>
+               {isVisible ? setHomeVisible(true) : ""}
+                <FadeIn   isVisible={homeVisible} y={-40}>
                   <Home />
                 </FadeIn>
               </div>

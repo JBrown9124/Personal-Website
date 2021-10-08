@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import Jonathan_Brown_Resume from "../images/Jonathan_Brown_Resume.pdf";
 import {
@@ -16,8 +16,12 @@ import {
 
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
-import navIcon from "../images/navIcon.jpeg";
+import navIcon from "../images/navIcon.mp4";
+import navIconB from "../images/navIconB.mp4";
 import LinkUnderline from "../animators/LinkUnderline"
+import FadeIn from "../animators/FadeIn.js";
+import VisibilitySensor from "react-visibility-sensor";
+import ReactCardFlip from 'react-card-flip';
 
 function HideOnScroll(props) {
   const { children, window } = props;
@@ -45,23 +49,59 @@ HideOnScroll.propTypes = {
 };
 
 export default function Navigation(props) {
+  const [playBrand, setPlayBrand] =useState(false)
+  const [flipDirection, setFlipDirection] = useState("vertical")
+  const triggerFlip =()=>{
+    setPlayBrand(!playBrand)
+  }
   return (
     <>
       <HideOnScroll {...props}>
         <Navbar className="navBar" expand="sm" fixed="top" collapseOnSelect>
+
           <Container fluid>
             <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
-              <Navbar.Brand href="#home" className="navBrand">
-                <img
-                
+          
+            <Navbar.Brand  href="#home" onMouseLeave={()=>setPlayBrand(false)} onMouseEnter={()=>setPlayBrand(true)}
+                >
+              <ReactCardFlip  isFlipped={playBrand} flipDirection="vertical">
+             
+                <video
+            pause={false}
+              play={playBrand}
+               paused={false}
+                muted={true}
                   type="button"
+                  autoPlay={true}
                   src={navIcon}
                   width="60"
                   height="40"
-                  className="navIcon"
-                  alt="React Bootstrap logo"
+               
+                   
+                  
                 />
-              </Navbar.Brand>
+                     <video
+            pause={false}
+              play={playBrand}
+               paused={false}
+                muted={true}
+                  type="button"
+                  autoPlay={true}
+                  src={navIconB}
+                  width="60"
+                  height="40"
+             
+                   
+                
+                />
+                   
+                
+              
+                
+                
+                </ReactCardFlip>
+            </Navbar.Brand>
+              
             </Col>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
@@ -81,7 +121,7 @@ export default function Navigation(props) {
               </Col>
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
         <LinkUnderline>
-                <Nav.Link className="navText">Contact</Nav.Link>
+                <Nav.Link href="#contact"className="navText">Contact</Nav.Link>
                 </LinkUnderline>
               </Col>
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>

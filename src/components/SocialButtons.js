@@ -46,7 +46,7 @@ export default function SocialButtons(props){
         <SocialIconsBoop rotation={0} x={0} y={-4} timing={200}>
         <FaLinkedin type="button" onClick={()=>openInNewTab("https://www.linkedin.com/in/jonathan-brown-858814201/")} className="linkedInIcon"></FaLinkedin>
         </SocialIconsBoop>
-        <SocialIconsBoop rotation={0} x={0} y={-4} timing={200}>
+        <SocialIconsBoop afterColor={"#57BC90"}rotation={0} x={0} y={-4} timing={200}>
         <FaGithub type="button" className="githubIcon" onClick={()=>openInNewTab("https://github.com/JBrown9124")}></FaGithub>
         </SocialIconsBoop>
         <SocialIconsBoop rotation={0} x={0} y={-4} timing={200}>

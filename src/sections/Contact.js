@@ -4,7 +4,6 @@ import {
   Nav,
   OverlayTrigger,
   ButtonGroup,
-  
   Popover,
   Badge,
   Container,
@@ -13,7 +12,7 @@ import {
   Image,
   Placeholder,
 } from "react-bootstrap";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 
 import ReactDOM from "react-dom";
 import theme from "../themes/theme1";
@@ -33,6 +32,7 @@ export default function Contact(props) {
   const [titleVisible, setTitleVisible] = useState(false);
   const [leftTextVisible, setLeftTextVisible] = useState(false);
   const [rightTextVisible, setRightTextVisible] = useState(false);
+  const [buttonVisible, setButtonVisible] = useState(false);
 
   return (
     <>
@@ -45,7 +45,7 @@ export default function Contact(props) {
               <Divider
                 orientation="horizontal"
                 textAlign="center"
-                sx={{ marginBottom: "30px" }}
+                sx={{ marginBottom: "50px" }}
                 flexItem={true}
               >
                 <Typography variant="h4"> Start a Dialogue</Typography>
@@ -71,9 +71,16 @@ export default function Contact(props) {
                   </FadeIn>
                 )}
               </VisibilitySensor>
-              <div className="contactButton">
-              <WorkButton  >Contained</WorkButton></div>
-
+              <VisibilitySensor>
+                {({ isVisible }) => (
+                  <FadeIn isVisible={buttonVisible} y={-40}>
+                    {isVisible ? setButtonVisible(true) : ""}
+                    <div className="contactButton">
+                      <WorkButton />
+                    </div>
+                  </FadeIn>
+                )}
+              </VisibilitySensor>
             </Container>
           </ThemeProvider>
         </Container>

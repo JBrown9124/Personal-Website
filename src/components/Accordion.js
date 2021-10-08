@@ -142,7 +142,7 @@ export default function CustomizedAccordions() {
              
                 <Row  >
                   {myTechnologies.map((tech, idx) => (
-                    <Col xl={3} xs={"auto"}>
+                    <Col xl={4} xs={10} lg={4} sm={7}>
                       <ul key={idx}>
                        
                         <LinkUnderline top={"100%"} width={"80%"} background={"#015249"}>

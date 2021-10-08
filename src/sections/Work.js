@@ -38,7 +38,7 @@ export default function Work(props) {
   };
   return (
     <>
-      <Container>
+      <Container fluid>
       <VisibilitySensor>
               {({ isVisible }) => (
                 <FadeIn isVisible={titleVisible} y={-40}>
@@ -61,8 +61,8 @@ export default function Work(props) {
         </FadeIn>
               )}
             </VisibilitySensor>
-        <Row>
-          <Col xs={"auto"}>
+        <Row className="centerRow">
+          <Col xs={"auto"} >
             <VisibilitySensor>
               {({ isVisible }) => (
                 <FadeIn isVisible={doVisible} y={-40}>
@@ -81,6 +81,7 @@ export default function Work(props) {
                             height="100%"
                             muted={true}
                             loop={true}
+                            controls
                           />
                         </div>
 
@@ -125,7 +126,7 @@ export default function Work(props) {
                               type="button"
                               className="githubIcon"
                               onClick={() =>
-                                openInNewTab("https://github.com/JBrown9124")
+                                openInNewTab("https://github.com/JBrown9124/Do-or-Do-Not")
                               }
                             ></FaGithub>
                           </SocialIconsBoop>
@@ -157,8 +158,9 @@ export default function Work(props) {
               )}
             </VisibilitySensor>
           </Col>
-
-          <Col xs={"auto"}>
+</Row>
+<Row className="centerRow">
+          <Col xs={"auto"} >
           
               <VisibilitySensor>
                 {({ isVisible }) => (
@@ -179,6 +181,7 @@ export default function Work(props) {
                             height="100%"
                             muted={true}
                             loop={true}
+                            controls
                           />
                         </div>
                         <CardContent className="loveInnerContainer">
@@ -218,7 +221,7 @@ export default function Work(props) {
                               type="button"
                               className="githubIcon"
                               onClick={() =>
-                                openInNewTab("https://github.com/JBrown9124")
+                                openInNewTab("https://github.com/JBrown9124/Love-and-Pain-Experiment-Python-Flask-SQLAlchemy-MySQL-React.js")
                               }
                             ></FaGithub>
                           </SocialIconsBoop>
@@ -270,6 +273,7 @@ export default function Work(props) {
                             height="100%"
                             muted={true}
                             loop={true}
+                            controls
                           />
                         </div>
                         <CardContent className="discordInnerContainer">
@@ -309,7 +313,7 @@ export default function Work(props) {
                               type="button"
                               className="githubIcon"
                               onClick={() =>
-                                openInNewTab("https://github.com/JBrown9124")
+                                openInNewTab("https://github.com/JBrown9124/Discord_Utility_Bot")
                               }
                             ></FaGithub>
                           </SocialIconsBoop>
@@ -324,7 +328,7 @@ export default function Work(props) {
                               className="githubIcon"
                               onClick={() =>
                                 openInNewTab(
-                                  "https://do-or-do-not-1.herokuapp.com"
+                                  "https://discord.com/"
                                 )
                               }
                             ></FiExternalLink>

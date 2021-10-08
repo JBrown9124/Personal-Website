@@ -24,6 +24,7 @@ const SocialIconsBoop = ({  x = 0,
       : `translate(0px, 0px)
          rotate(0deg)
          scale(1)`,
+         
          color: isBooped?afterColor: beforeColor ,
           config: {
             mass: 1, tension: 280, friction: 60

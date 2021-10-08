@@ -21,8 +21,8 @@ import theme from "../themes/theme1"
 export default function Home(props) {
   return (
     <>
-      <Row xs={"auto"}>
-        <Col xs={7} xl={8}>
+      <Row xs={"auto"} xl={"auto"} >
+        <Col xs={7} xl={8} >
           <Typography variant="h2">Welcome, I am</Typography >
 
           <Typography variant="h1" className="nameText">Jonathan Brown</Typography >
