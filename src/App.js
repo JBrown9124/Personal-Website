@@ -7,6 +7,8 @@ import "./sections/About.css";
 import "./sections/Work.css"
 import "./components/SocialButtons.css";
 import "./components/Accordion.css";
+import "./sections/Contact.css"
+import "./sections/Built.css"
 import Navigation from "./components/Navbar.js";
 import profPic from "./images/profPic.jpg";
 import ProfPicBoop from "./animators/ProfPicBoop.js";
@@ -18,7 +20,8 @@ import React, { useEffect, useState } from "react";
 import About from "./sections/About.js";
 import Home from "./sections/Home.js";
 import Work from "./sections/Work.js";
-
+import Contact from "./sections/Contact.js";
+import Built from "./sections/Built.js";
 import {
   Navbar,
   Nav,
@@ -82,7 +85,7 @@ function App() {
                   <FadeIn isVisible={aboutVisible} y={-40}>
                     {isVisible ? setAboutVisible(true) : ""} */}
 
-                    <About />
+                    <About  />
                   {/* </FadeIn>
                 )}
               </VisibilitySensor> */}
@@ -95,6 +98,11 @@ function App() {
                     {/* {isVisible ? setWorkVisible(true) : ""} */}
 
                     <Work />
+                    <div id="contact" className="sectionSeperator"></div>
+
+                    <Contact/>
+                    <div  className="builtSeperator"></div>
+                    <Built/>
                
                 {/* )}
               </VisibilitySensor> */}

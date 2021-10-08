@@ -75,4 +75,13 @@ let theme = createTheme();
       [theme.breakpoints.down('md')]: {
         fontSize: '.5rem',
       },}
+      theme.typography.h4 = {
+        fontFamily: 'Merriweather, serif',
+        color:"white",
+        [theme.breakpoints.up('md')]: {
+          fontSize: '2.3rem',
+        },
+        [theme.breakpoints.down('md')]: {
+          fontSize: '1.5rem',
+        },}
 export default theme;

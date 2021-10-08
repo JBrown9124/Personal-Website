@@ -19,15 +19,18 @@ import {
   createTheme,
   responsiveFontSizes,
   ThemeProvider,
-  Typography,
+  Typography, 
 } from "@material-ui/core";
 import Accordion from "../components/Accordion";
 import Divider from "@mui/material/Divider";
 import VisibilitySensor from "react-visibility-sensor";
 import FadeIn from "../animators/FadeIn.js";
+
 export default function About(props) {
   const [titleVisible, setTitleVisible] = useState(false);
-  const [textVisible, setTextVisible] = useState(false);
+  const [leftTextVisible, setLeftTextVisible] = useState(false);
+  const [rightTextVisible, setRightTextVisible] = useState(false);
+  
 
   return (
     <>
@@ -44,15 +47,21 @@ export default function About(props) {
                     sx={{ marginBottom: "30px" }}
                     flexItem={true}
                   >
-                    <h1 className="aboutTitleText"> About me</h1>
+                    <Typography variant="h4"> About me</Typography>
                   </Divider>
                 </Col>
               </Row>
-
+              </FadeIn>
+          )}
+        </VisibilitySensor>
               <Container>
                 <Row>
                   <Col>
                     <ThemeProvider theme={theme}>
+                    <VisibilitySensor>
+          {({ isVisible }) => (
+            <FadeIn isVisible={leftTextVisible} y={-40}>
+              {isVisible ? setLeftTextVisible(true) : ""}
                       <Typography className="aboutText" variant="body2">
                         My name is Jonathan Brown and I would like to express my
                         strong interest in the Junior Software Engineer. I
@@ -63,10 +72,17 @@ export default function About(props) {
                         team to develop and implement software, ensuring optimal
                         functionality, quality, and reliability.
                       </Typography>
+                      </FadeIn>
+          )}
+        </VisibilitySensor>
                     </ThemeProvider>
                   </Col>
                   <Col>
                     <ThemeProvider theme={theme}>
+                    <VisibilitySensor>
+          {({ isVisible }) => (
+            <FadeIn isVisible={rightTextVisible} y={-40}>
+              {isVisible ? setRightTextVisible(true) : ""}
                       <Typography className="aboutText" variant="body2">
                         My name is Jonathan Brown and I would like to express my
                         strong interest in the Junior Software Engineer. I
@@ -77,13 +93,14 @@ export default function About(props) {
                         team to develop and implement software, ensuring optimal
                         functionality, quality, and reliability.
                       </Typography>
+                      </FadeIn>
+          )}
+        </VisibilitySensor>
                     </ThemeProvider>
                   </Col>
                 </Row>
               </Container>
-            </FadeIn>
-          )}
-        </VisibilitySensor>
+            
         <div className="accordion">
           <Accordion />
         </div>

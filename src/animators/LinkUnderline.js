@@ -7,6 +7,9 @@ import React, { useEffect, useState } from "react";
 
 
 const LinkUnderline = ({ children, weight = 1 , x = 0,
+  background= "rgba(115,199,204,1)",
+  width='70%',
+  top="86%",
     y = 0,
     rotation = 0,
     scale = 1, 
@@ -22,15 +25,15 @@ const LinkUnderline = ({ children, weight = 1 , x = 0,
              rotate(0deg)
              scale(1)`,
              position: "absolute",
-            top: "86%",
+            top: top,
             left: 12,
-            width: isBooped?'70%':"0%",
+            width: isBooped?width:"0%",
             height: `${weight}px`,
-            background: "rgba(115,199,204,1)",
+            background: background,
              
            
               config: {
-                mass: 1, tension: 280, friction: 60
+                mass: 1, tension: 170, friction: 26 
                 
               },
               

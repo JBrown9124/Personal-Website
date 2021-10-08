@@ -48,11 +48,11 @@ export default function Work(props) {
           <Col>
             <Divider
               orientation="horizontal"
-              textAlign="left"
-              sx={{ marginBottom: "60px" }}
+              textAlign="Center"
+              sx={{ marginBottom: "20px" }}
               flexItem
             >
-              <Typography variant="h3" className="aboutTitleText"> Personal projects</Typography>
+              <Typography variant="h4" > Personal projects</Typography>
             </Divider>
           </Col>
         </Row>
@@ -115,7 +115,7 @@ export default function Work(props) {
                         <div className="socialCardIcons">
                           <SocialIconsBoop
                             beforeColor={"black"}
-                            afterColor={"blue"}
+                            afterColor={"#77C9D4"}
                             rotation={0}
                             x={0}
                             y={-4}
@@ -131,7 +131,7 @@ export default function Work(props) {
                           </SocialIconsBoop>
                           <SocialIconsBoop
                             beforeColor={"black"}
-                            afterColor={"blue"}
+                            afterColor={"#77C9D4"}
                             rotation={0}
                             x={0}
                             y={-4}

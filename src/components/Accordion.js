@@ -6,6 +6,7 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider,  } from '@material-ui/core/styles';
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import Link from "@mui/material/Link"
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import theme from "../themes/theme1"
 import CertificateBoop from "../animators/CertificateBoop";
@@ -24,6 +25,7 @@ import {
   Col,
   Image,
   Placeholder,
+ 
 } from "react-bootstrap";
 import LinkUnderline from "../animators/LinkUnderline"
 
@@ -89,19 +91,19 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 const myTechnologies = [
-  "Python",
-  "JavaScript",
-  "React.js",
-  "Django",
-  "Flask",
-  "SQLAlchemy",
-  "Bootstrap",
-  "PostgreSQL",
-  "MySQL",
-  "Git",
-  "GitHub",
-  "Heroku",
-];
+  {tech:"Python",link:"https://www.python.org/doc/essays/blurb/"},
+  {tech:"JavaScript",link:"https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript"},
+  {tech:"React.js",link:"https://reactjs.org/"},
+  {tech:"Django",link:"https://www.djangoproject.com/"},
+  {tech:"Flask",link:"https://pythonbasics.org/what-is-flask-python/"},
+  {tech:"SQLAlchemy",link:"https://www.sqlalchemy.org/"},
+  {tech:"MaterialUI",link:"https://mui.com/company/about/"},
+  {tech:"Bootstrap",link:"https://react-bootstrap.github.io/"},
+  {tech:"PostgreSQL",link:"https://www.postgresql.org/"},
+  {tech:"Git",link:"https://git-scm.com/"},
+  {tech:"GitHub",link:"https://kinsta.com/knowledgebase/what-is-github/"},
+  {tech:"Heroku",link:"https://www.heroku.com/what"}
+  ];
 export default function CustomizedAccordions() {
   const [expanded1, setExpanded1] = React.useState(true);
   const [expanded2, setExpanded2] = React.useState(true);
@@ -142,8 +144,11 @@ export default function CustomizedAccordions() {
                   {myTechnologies.map((tech, idx) => (
                     <Col xl={3} xs={"auto"}>
                       <ul key={idx}>
+                       
+                        <LinkUnderline top={"100%"} width={"80%"} background={"#015249"}>
                         <DoubleArrowIcon sx={{ fontSize: "0.7rem" }}/>
-                        {tech}
+                        <Link type="button" onClick={()=>openInNewTab(tech.link)}underline="none" color={"rgb(255, 255, 255)"}>
+                        {tech.tech}</Link></LinkUnderline>
                       </ul>
                     </Col>
                   ))}

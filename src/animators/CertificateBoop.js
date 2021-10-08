@@ -26,7 +26,8 @@ const CertificateBoop = ({  x = 0,
          rotate(0deg)
          
          scale(1)`,
-         
+         border: "1px solid",
+         borderColor:"grey",
          
          
           config: {
