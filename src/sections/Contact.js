@@ -39,8 +39,8 @@ export default function Contact(props) {
       <Container>
         <VisibilitySensor>
           {({ isVisible }) => (
-            <FadeIn isVisible={titleVisible} y={-40}>
-              {isVisible ? setTitleVisible(true) : ""}
+            <FadeIn delay={200}  isVisible={isVisible} y={-40}>
+              {/* {isVisible ? setTitleVisible(true) : ""} */}
 
               <Divider
                 orientation="horizontal"
@@ -54,11 +54,11 @@ export default function Contact(props) {
           )}
         </VisibilitySensor>
         <Container>
-          <ThemeProvider theme={theme}>
+          
             <Container>
               <VisibilitySensor>
                 {({ isVisible }) => (
-                  <FadeIn isVisible={rightTextVisible} y={-40}>
+                  <FadeIn  delay={200} isVisible={rightTextVisible} y={-40}>
                     {isVisible ? setRightTextVisible(true) : ""}
                     <Typography className="contactText" variant="body2">
                       I am currently in the process of finding a software
@@ -73,7 +73,7 @@ export default function Contact(props) {
               </VisibilitySensor>
               <VisibilitySensor>
                 {({ isVisible }) => (
-                  <FadeIn isVisible={buttonVisible} y={-40}>
+                  <FadeIn delay={200} isVisible={buttonVisible} y={-40}>
                     {isVisible ? setButtonVisible(true) : ""}
                     <div className="contactButton">
                       <WorkButton />
@@ -82,7 +82,7 @@ export default function Contact(props) {
                 )}
               </VisibilitySensor>
             </Container>
-          </ThemeProvider>
+       
         </Container>
       </Container>
 

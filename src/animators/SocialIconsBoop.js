@@ -12,7 +12,7 @@ const SocialIconsBoop = ({  x = 0,
     y = 0,
     rotation = 0,
     scale = 1, 
-    timing = 150, children }) => {
+   children }) => {
     const [isBooped, setIsBooped] = React.useState(false);
     const style = useSpring({
         display: 'inline-block',
@@ -32,17 +32,7 @@ const SocialIconsBoop = ({  x = 0,
           },
           
       });
-    React.useEffect(() => {
-      if (isBooped) {
-        return;
-      }
-      const timeoutId = window.setTimeout(() => {
-        setIsBooped(false);
-      }, timing);
-      return () => {
-        window.clearTimeout(timeoutId);
-      };
-    }, [isBooped, timing]);
+    
     const trigger = () => {
       setIsBooped(true);
     };

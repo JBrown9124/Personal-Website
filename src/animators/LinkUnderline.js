@@ -9,7 +9,7 @@ import React, { useEffect, useState } from "react";
 const LinkUnderline = ({ children, weight = 1 , x = 0,
   background= "rgba(115,199,204,1)",
   width='70%',
-  top="86%",
+  top="75%",
     y = 0,
     rotation = 0,
     scale = 1, 
@@ -82,9 +82,9 @@ const LinkUnderline = ({ children, weight = 1 , x = 0,
           style={style
           }
         />
-        <animated.span onMouseEnter={trigger} onMouseLeave={triggerLeave} style={style2}>
+        <animated.div onMouseEnter={trigger} onMouseLeave={triggerLeave} style={style2}>
         {children}
-        </animated.span>
+        </animated.div>
       </div>
       
     );

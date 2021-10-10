@@ -22,6 +22,7 @@ import Home from "./sections/Home.js";
 import Work from "./sections/Work.js";
 import Contact from "./sections/Contact.js";
 import Built from "./sections/Built.js";
+import { Scrollbars } from 'react-custom-scrollbars';
 import {
   Navbar,
   Nav,
@@ -38,90 +39,57 @@ import {
 import Boop from "./animators/SocialIconsBoop.js";
 import FadeIn from "./animators/FadeIn.js";
 
+
 function App() {
   const [homeVisible, setHomeVisible] = useState(false);
   const [aboutVisible, setAboutVisible] = useState(false);
   const [workVisible, setWorkVisible] = useState(false);
+  
   return (
-    < div id="home" className="appContainer" >
+  
+    < Container id="home" className="appContainer" fluid>
       
-      <Navigation />
-   
+    
+            <Navigation />
         <Container>
-          {/* <Row xl={4}>
-            <Col xl={8}> */}
-            
-          <VisibilitySensor>
-            {({ isVisible }) => (
+      
+          
               <div className="home">
-               {isVisible ? setHomeVisible(true) : ""}
-                <FadeIn   isVisible={homeVisible} y={-40}>
+             
+               
                   <Home />
-                </FadeIn>
+              
               </div>
-            )}
-          </VisibilitySensor>
-          {/* </Col>
-            <Col  xl={4}>
-              <VisibilitySensor>
-                {({ isVisible }) => (
-                  <FadeIn isVisible={isVisible} y={-10}>
-                    <div className="profPicContainer">
-                      <ProfPicBoop timing={300}>
-                        
-                        <Image className="profPic" src={`${profPic}`} fluid/>
-                        
-                      </ProfPicBoop>
-                      </div>
-                    
-                  </FadeIn>
-                )}
-              </VisibilitySensor>
-            </Col>
-          </Row> */}
-          <div id="about" className="sectionSeperator"></div>
+           
+         
+          <div id="about" className="about">
        
-              {/* <VisibilitySensor>
-                {({ isVisible }) => (
-                  <FadeIn isVisible={aboutVisible} y={-40}>
-                    {isVisible ? setAboutVisible(true) : ""} */}
+             
 
                     <About  />
-                  {/* </FadeIn>
-                )}
-              </VisibilitySensor> */}
-        
-          <div id="work" className="sectionSeperator"></div>
-          
-              {/* <VisibilitySensor>
-                {({ isVisible }) => ( */}
+                    </div>
                  
-                    {/* {isVisible ? setWorkVisible(true) : ""} */}
+        
+          <div id="work" className="sectionSeperator">
+         
 
                     <Work />
-                    <div id="contact" className="sectionSeperator"></div>
+                    </div>
+                    <div id="contact" className="sectionSeperator">
 
                     <Contact/>
-                    <div  className="builtSeperator"></div>
+                    </div>
+                    <div  className="builtSeperator">
                     <Built/>
+                    </div>
                
-                {/* )}
-              </VisibilitySensor> */}
+             
            
-          {/* <Row>
-          <Col >
-            <Image
-              className="profPic"
-              src={`${profPic}`}
-              width="300px"
-              height="300px"
-              lazyLoad
-            />
-          </Col>
-        </Row> */}
+    
         </Container>
-      
-    </div>
+    
+    </Container>
+  
   );
 }
 

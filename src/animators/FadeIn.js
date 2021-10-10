@@ -2,42 +2,46 @@ import { animated, useSpring } from "react-spring";
 import React, { useEffect, useState } from "react";
 
 function FadeIn({
-    isVisible=false,
-    delay=0,
+  isVisible = false,
+  delay = 0,
   x = 0,
   y = 0,
+  fromY=0,
+  fromX=0,
   rotation = 0,
   scale = 1.0,
-  
+  fromScale=1,
   children,
 }) {
   const [flip, set] = useState(false);
   const props = useSpring({
-    
-      opacity: isVisible? 1:0,
+    opacity: isVisible ? 1 : 0,
+    display: 'inline-block',
+    backfaceVisibility: 'hidden',
+    from: {
+      transform: `translate(${fromX}px, ${fromY}px)
+      rotate(0deg)
       
-      transform: isVisible?`translate(${x}px, ${y}px)
-         rotate(${rotation}deg)
-         scale(${scale})`: `translate(0px, 0px)
-         rotate(0deg)
-         
-         scale(1)`,
-      
-    
-    
-    //   opacity: 0,
-      
-    // },
-    
-   
-   
-    delay: {delay},
-    config: { mass: 1, tension: 280, friction: 60 },
-    //   onRest: () => set(!flip),
+      scale(${fromScale})`,
+      opacity: 0,
+    },
 
-    
+    to: {
+      transform: `translate(${x}px, ${y}px)
+         rotate(${rotation}deg)
+         scale(${scale})`,
+      opacity: 1,
+    },
+   cancel:isVisible===false,
+    delay: delay,
+
+    //   opacity: 0,
+
+    // },
+
+    config: {   mass: 1, tension: 280, friction: 120},
+    //   onRest: () => set(!flip),
   });
- 
 
   return <animated.div style={props}>{children}</animated.div>;
 }

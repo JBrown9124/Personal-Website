@@ -37,7 +37,7 @@ export default function About(props) {
       <Container fluid>
         <VisibilitySensor>
           {({ isVisible }) => (
-            <FadeIn isVisible={titleVisible} y={-40}>
+            <FadeIn delay={200} isVisible={titleVisible} y={-40}>
               {isVisible ? setTitleVisible(true) : ""}
               <Row>
                 <Col>
@@ -47,7 +47,7 @@ export default function About(props) {
                     sx={{ marginBottom: "30px" }}
                     flexItem={true}
                   >
-                    <Typography variant="h4"> About me</Typography>
+                    <Typography variant="h4"> About Me</Typography>
                   </Divider>
                 </Col>
               </Row>
@@ -60,7 +60,7 @@ export default function About(props) {
                     <ThemeProvider theme={theme}>
                     <VisibilitySensor>
           {({ isVisible }) => (
-            <FadeIn isVisible={leftTextVisible} y={-40}>
+            <FadeIn delay={200} isVisible={rightTextVisible || leftTextVisible} y={-40}>
               {isVisible ? setLeftTextVisible(true) : ""}
                       <Typography className="aboutText" variant="body2">
                         Greetings friend! My name is Jonathan and I have a passion for creating things through the art of code.
@@ -78,7 +78,7 @@ export default function About(props) {
                     <ThemeProvider theme={theme}>
                     <VisibilitySensor>
           {({ isVisible }) => (
-            <FadeIn isVisible={rightTextVisible} y={-40}>
+            <FadeIn delay={300}  isVisible={rightTextVisible || leftTextVisible} y={-40}>
               {isVisible ? setRightTextVisible(true) : ""}
                       <Typography className="aboutText" variant="body2">
                      But my journey doesn't stop there. 

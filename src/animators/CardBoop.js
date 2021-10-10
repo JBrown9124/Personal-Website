@@ -52,9 +52,9 @@ const CardBoop = ({  x = 0,
         setIsBooped(false)
     }
     return (
-      <animated.div onMouseEnter={trigger} onMouseLeave={triggerLeave} style={style}>
+      <animated.span onMouseEnter={trigger} onMouseLeave={triggerLeave} style={style}>
         {children}
-      </animated.div>
+      </animated.span>
     );
   };
 

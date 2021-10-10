@@ -23,7 +23,9 @@ import { FiExternalLink } from "react-icons/fi";
 import SocialIconsBoop from "../animators/SocialIconsBoop.js";
 import VisibilitySensor from "react-visibility-sensor";
 import FadeIn from "../animators/FadeIn.js";
-
+import Tooltip from "@mui/material/Tooltip";
+import Fade from "@mui/material/Fade";
+import Zoom from "@mui/material/Zoom";
 export default function Work(props) {
   const [titleVisible, setTitleVisible] = useState(false);
   const [doVisible, setDoVisible] = useState(false);
@@ -41,18 +43,18 @@ export default function Work(props) {
       <Container fluid>
       <VisibilitySensor>
               {({ isVisible }) => (
-                <FadeIn isVisible={titleVisible} y={-40}>
+                <FadeIn delay={200}  isVisible={titleVisible} y={-40}>
                   {isVisible ? setTitleVisible(true) : false}
         <div>
         <Row>
           <Col>
             <Divider
               orientation="horizontal"
-              textAlign="Center"
+              textAlign="center"
               sx={{ marginBottom: "20px" }}
               flexItem
             >
-              <Typography variant="h4" > Personal projects</Typography>
+              <Typography variant="h4" > Personal Projects</Typography>
             </Divider>
           </Col>
         </Row>
@@ -65,7 +67,7 @@ export default function Work(props) {
           <Col xs={"auto"} >
             <VisibilitySensor>
               {({ isVisible }) => (
-                <FadeIn isVisible={doVisible} y={-40}>
+                <FadeIn delay={200}  isVisible={doVisible} y={-40}>
                   {isVisible ? setDoVisible(true) : false}
                 
                   <CardBoop>
@@ -122,13 +124,16 @@ export default function Work(props) {
                             y={-4}
                             timing={200}
                           >
+                            <Tooltip title="GitHub" TransitionComponent={Zoom}>
+                              <div>
                             <FaGithub
                               type="button"
                               className="githubIcon"
                               onClick={() =>
                                 openInNewTab("https://github.com/JBrown9124/Do-or-Do-Not")
                               }
-                            ></FaGithub>
+                            ></FaGithub></div>
+                            </Tooltip>
                           </SocialIconsBoop>
                           <SocialIconsBoop
                             beforeColor={"black"}
@@ -140,7 +145,7 @@ export default function Work(props) {
                           >
                             <FiExternalLink
                               type="button"
-                              className="githubIcon"
+                              className="linkIcon"
                               onClick={() =>
                                 openInNewTab(
                                   "https://do-or-do-not-1.herokuapp.com"
@@ -164,7 +169,7 @@ export default function Work(props) {
           
               <VisibilitySensor>
                 {({ isVisible }) => (
-                  <FadeIn isVisible={loveVisible} y={-40}>
+                  <FadeIn delay={200} isVisible={loveVisible} y={-40}>
                     {isVisible ? setLoveVisible(true) : false}
                     <CardBoop>
                     <div className="cardDivider">
@@ -217,6 +222,8 @@ export default function Work(props) {
                             y={-4}
                             timing={200}
                           >
+                              <Tooltip title="GitHub" TransitionComponent={Zoom}>
+                              <div>
                             <FaGithub
                               type="button"
                               className="githubIcon"
@@ -224,6 +231,8 @@ export default function Work(props) {
                                 openInNewTab("https://github.com/JBrown9124/Love-and-Pain-Experiment-Python-Flask-SQLAlchemy-MySQL-React.js")
                               }
                             ></FaGithub>
+                            </div>
+                            </Tooltip>
                           </SocialIconsBoop>
                           <SocialIconsBoop
                             beforeColor={"#2b6777"}
@@ -235,7 +244,7 @@ export default function Work(props) {
                           >
                             <FiExternalLink
                               type="button"
-                              className="githubIcon"
+                              className="linkIcon"
                               onClick={() =>
                                 openInNewTab(
                                   "https://love-and-pain-survey.herokuapp.com/home"
@@ -258,7 +267,7 @@ export default function Work(props) {
          
               <VisibilitySensor>
                 {({ isVisible }) => (
-                  <FadeIn isVisible={discordVisible} y={-40}>
+                  <FadeIn delay={200}  isVisible={discordVisible} y={-40}>
                     {isVisible ? setDiscordVisible(true) : false}
                     <CardBoop>
                     <div className="cardDivider">
@@ -308,7 +317,10 @@ export default function Work(props) {
                             x={0}
                             y={-4}
                             timing={200}
+                            
                           >
+                            <Tooltip title="GitHub" TransitionComponent={Zoom}>
+                              <div>
                             <FaGithub
                               type="button"
                               className="githubIcon"
@@ -316,6 +328,8 @@ export default function Work(props) {
                                 openInNewTab("https://github.com/JBrown9124/Discord_Utility_Bot")
                               }
                             ></FaGithub>
+                            </div>
+                            </Tooltip>
                           </SocialIconsBoop>
                           <SocialIconsBoop
                             rotation={0}
@@ -325,7 +339,7 @@ export default function Work(props) {
                           >
                             <FiExternalLink
                               type="button"
-                              className="githubIcon"
+                              className="linkIcon"
                               onClick={() =>
                                 openInNewTab(
                                   "https://discord.com/"

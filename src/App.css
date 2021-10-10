@@ -55,17 +55,17 @@
 .home{
   
   position: relative;
-  top:240px;
+  top:300px;
  
 }
 .builtSeperator{
   margin-top:300px;
 }
 .about{
-  
+  margin-top:800px;
   
 }
 .sectionSeperator{
-  margin-top:500px;
+  margin-top:600px;
   background: linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%);
 }
