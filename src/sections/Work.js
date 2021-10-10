@@ -94,15 +94,16 @@ export default function Work(props) {
                             variant="body2"
                             color="text.secondary"
                           >
+                            <div className="pSeperator">
                             Developed and deployed a social task managing web
                             application that allows you to share, edit, delete,
                             create (drawing and image importing features
                             included) and complete tasks with users on your
-                            friends list. Also handles useful social functions
+                            friends list. </div><div className="pSeperator"> Also handles useful social functions
                             such as user authentication, a friends list
                             (received and sent friend requests) and friend
                             alerts (ex. notifying a user when a friend has
-                            completed a shared task).Uses Django as the backend
+                            completed a shared task). </div>Uses Django as the backend
                             web framework and React.js as the frontend library.
                             All data is queried from and stored in a PostgreSQL
                             database using a ReST API developed with Django.
@@ -191,16 +192,22 @@ export default function Work(props) {
                           >
                             The Love and Pain Experiment
                           </Typography>
+                       
                           <Typography
                             className="loveText"
                             variant="body2"
                             color="text.secondary"
                           >
+                               <div className="pSeperator">
                             Developed and deployed a web application to process
-                            data for an experimental questionnaire. The
+                            data for an experimental questionnaire.   </div >   <div className="pSeperator">The
                             questions, possible answers, and user input is
                             stored in a MySQL database. A Python based ReST API
-                            queries and manipulates the data. The frontend web
+                            queries and manipulates the data. </div>
+                         
+                           
+                          
+                            The frontend web
                             app uses React.js to present the survey. Upon
                             completion, a chart is displayed which is meant to
                             prove a psychological theory.
@@ -292,13 +299,16 @@ export default function Work(props) {
                             variant="body2"
                             color="text.secondary"
                           >
+                             <div className="pSeperator">
                             Developed a Discord bot that performs a variety of
                             functions for users such as calling a Lord of the
                             Rings or Star Wars ReST API which returns a random
-                            quote. The random quote along with the character’s
+                            quote. </div><div className="pSeperator">The random quote along with the character’s
                             name who said it are then placed in a YouTube search
                             to pair its respective movie scene in the response
-                            to the user. Other functions include but are not
+                            to the user. </div> 
+                            
+                            Other functions include but are not
                             limited to playing music per request and remembering
                             user provided information (stores memories in a
                             MySQL database).
