@@ -171,7 +171,7 @@ export default function CustomizedAccordions() {
         <VisibilitySensor>
           {({ isVisible }) => (
             <FadeIn
-              delay={200}
+              delay={250}
               isVisible={accordion1Visible || accordion2Visible}
               y={-40}
             >
@@ -193,13 +193,13 @@ export default function CustomizedAccordions() {
                   </ThemeProvider>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <ThemeProvider theme={theme}>
+                 <ThemeProvider theme={theme}>
                     <Typography variant="body1" className="accordionText">
                       <Row>
                         {myTechnologies.map((tech, idx) => (
                           <Col xl={4} xs={10} lg={4} sm={7}>
                             <LinkUnderline
-                              top={"65%"}
+                             top={"65%"}
                               width={"80%"}
                               background={"rgba(115,199,204,1)"}
                             >
@@ -233,7 +233,7 @@ export default function CustomizedAccordions() {
         <VisibilitySensor>
           {({ isVisible }) => (
             <FadeIn
-              delay={300}
+              delay={350}
               isVisible={accordion1Visible || accordion2Visible}
               y={-40}
             >

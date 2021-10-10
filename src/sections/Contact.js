@@ -42,14 +42,9 @@ export default function Contact(props) {
             <FadeIn delay={200}  isVisible={isVisible} y={-40}>
               {/* {isVisible ? setTitleVisible(true) : ""} */}
 
-              <Divider
-                orientation="horizontal"
-                textAlign="center"
-                sx={{ marginBottom: "50px" }}
-                flexItem={true}
-              >
+              <div className="separator">
                 <Typography variant="h4"> Start a Dialogue</Typography>
-              </Divider>
+              </div>
             </FadeIn>
           )}
         </VisibilitySensor>

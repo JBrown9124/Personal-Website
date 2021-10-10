@@ -80,6 +80,7 @@ let theme = createTheme();
       theme.typography.h4 = {
         fontFamily:  "Open Sans, sans-serif",
         color:"white",
+       
         [theme.breakpoints.up('md')]: {
           fontSize: '2.3rem',
         },

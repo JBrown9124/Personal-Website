@@ -15,13 +15,31 @@
     
 } */
 
+.aboutText{margin-bottom:15px}
 
-.aboutDivider{
-    color:white;
-    
-}
 .accordion{
-    margin-top:20px;
-
+    margin-top:50px;
 
 }
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom:50px;
+  }
+  
+  .separator::before,
+  .separator::after {
+    content: '';
+    flex: 1;
+    border-bottom: .1px solid #e0f7fa;
+    opacity:.2
+  }
+  
+  .separator:not(:empty)::before {
+    margin-right: 1.0em;
+  }
+  
+  .separator:not(:empty)::after {
+    margin-left: 1.0em;
+  }

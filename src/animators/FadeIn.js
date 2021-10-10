@@ -15,7 +15,7 @@ function FadeIn({
 }) {
   const [flip, set] = useState(false);
   const props = useSpring({
-    opacity: isVisible ? 1 : 0,
+    
     display: 'inline-block',
     backfaceVisibility: 'hidden',
     from: {

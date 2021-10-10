@@ -45,20 +45,13 @@ export default function Work(props) {
               {({ isVisible }) => (
                 <FadeIn delay={200}  isVisible={titleVisible} y={-40}>
                   {isVisible ? setTitleVisible(true) : false}
-        <div>
-        <Row>
-          <Col>
-            <Divider
-              orientation="horizontal"
-              textAlign="center"
-              sx={{ marginBottom: "20px" }}
-              flexItem
-            >
-              <Typography variant="h4" > Personal Projects</Typography>
-            </Divider>
-          </Col>
-        </Row>
-        </div>
+        
+       
+            <div className="separator">
+              <Typography variant="h4" > Personal Projects</Typography></div>
+            
+          
+       
             
         </FadeIn>
               )}
