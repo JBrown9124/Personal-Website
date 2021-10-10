@@ -164,7 +164,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
   '&:hover': {
     backgroundColor: 'rgba(150,230,253,0.07)',
   },
-  fontFamily:"Merriweather, sans-serif",
+  fontFamily:"Oswald, sans-serif",
   
   fill: "transparent",
 

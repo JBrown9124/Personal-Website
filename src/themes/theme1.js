@@ -6,8 +6,8 @@ let theme = createTheme();
 
  
   theme.typography.h6 = {
-    fontFamily:'Pacifico, cursive',
-    color:'#015249',
+    fontFamily:'Oswald, sans-serif',
+    color:"white",
     [theme.breakpoints.up('md')]: {
       fontSize: '1rem',
     },
@@ -16,8 +16,8 @@ let theme = createTheme();
     },
   };
   theme.typography.body1 = {
-    fontFamily: 'Merriweather',
-    color:"white",
+    fontFamily: 'Open Sans, sans-serif',
+    color:"#e0f7fa",
     [theme.breakpoints.up('md')]: {
       fontSize: '.7rem',
     },
@@ -26,8 +26,8 @@ let theme = createTheme();
     },
   };
   theme.typography.body2 = {
-    fontFamily: 'Merriweather',
-    color:"white",
+    fontFamily: 'Open Sans, sans-serif',
+    color:"#e0f7fa",
     [theme.breakpoints.up('md')]: {
       fontSize: '1.0rem',
     },
@@ -36,8 +36,8 @@ let theme = createTheme();
     },
   };
   theme.typography.h5 = {
-    fontFamily:'Pacifico, cursive',
-    color:"#015249",
+    fontFamily:'Oswald, sans-serif',
+    color:'#e2f1f8',
     textAlign:"center",
     [theme.breakpoints.up('md')]: {
       fontSize: '1.6rem',
@@ -47,8 +47,9 @@ let theme = createTheme();
     },
   };
   theme.typography.h2 = {
-    fontFamily:'Pacifico, cursive',
-    color:"#015249",
+    fontFamily:'Oswald, sans-serif',
+    fontWeight:'light',
+    color:'rgba(115,199,204,1)',
     
     [theme.breakpoints.up('md')]: {
       fontSize: '1.6rem',
@@ -58,7 +59,8 @@ let theme = createTheme();
     },
   };
   theme.typography.h1 = {
-    fontFamily: 'Merriweather',
+    fontFamily:  "Open Sans, sans-serif",
+    
     color:"white",
     [theme.breakpoints.up('md')]: {
       fontSize: '5.8rem',
@@ -67,16 +69,16 @@ let theme = createTheme();
       fontSize: '1.5rem',
     },}
     theme.typography.h3 = {
-      fontFamily: 'Merriweather',
-      color:"white",
+      fontFamily:  "Open Sans, sans-serif",
+      color:'#e2f1f8',
       [theme.breakpoints.up('md')]: {
-        fontSize: '1.7rem',
+        fontSize: '2.0rem',
       },
       [theme.breakpoints.down('md')]: {
         fontSize: '.6rem',
       },}
       theme.typography.h4 = {
-        fontFamily: 'Merriweather, serif',
+        fontFamily:  "Open Sans, sans-serif",
         color:"white",
         [theme.breakpoints.up('md')]: {
           fontSize: '2.3rem',

@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 
 const LinkUnderline = ({ children, weight = 1 , x = 0,
   background= "rgba(115,199,204,1)",
-  width='70%',
+  width='65%',
   top="75%",
     y = 0,
     rotation = 0,

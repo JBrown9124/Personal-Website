@@ -10,6 +10,9 @@
     
 } */
 .MuiLink-underlineNone:hover{
-    color:#015249;
+    color:rgba(115,199,204,1);
     text-decoration:none;
+}
+.tech{
+    margin-bottom:10px
 }

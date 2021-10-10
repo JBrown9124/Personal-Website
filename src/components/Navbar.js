@@ -100,7 +100,7 @@ export default function Navigation(props) {
 
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
                 <FadeIn delay={400} fromY={-10} isVisible={true}>
-                  <LinkUnderline>
+                  <LinkUnderline width={"60"}>
                     <Nav.Link href="#about" className="navText">
                       About
                     </Nav.Link>
@@ -109,7 +109,7 @@ export default function Navigation(props) {
               </Col>
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
               <FadeIn delay={500} fromY={-10} isVisible={true}>
-                <LinkUnderline>
+                <LinkUnderline width={"60"}>
                   <Nav.Link href="#work" className="navText">
                     Work
                   </Nav.Link>
@@ -126,7 +126,7 @@ export default function Navigation(props) {
                 
                 </FadeIn>
               </Col>
-              <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
+              <Col xs={"auto"} sm={"auto"} md={"auto"} lg={"auto"} xl={"auto"} xxl={"auto"}>
               <FadeIn delay={700} fromY={-10} isVisible={true}>
                 <LinkUnderline>
                   <Nav.Link

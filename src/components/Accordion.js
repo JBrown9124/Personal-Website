@@ -57,8 +57,8 @@ const AccordionSummary = styled((props) => (
 ))(({ theme }) => ({
   background:
     theme.palette.mode === "dark"
-      ? "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)"
-      : "rgba(115,199,204,1) ",
+      ? "#5c6bc0"
+      : "#5c6bc0 ",
 
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
@@ -67,8 +67,8 @@ const AccordionSummary = styled((props) => (
   "& .MuiAccordionSummary-content": {
     background:
       theme.palette.mode === "dark"
-        ? "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)"
-        : "rgba(115,199,204,1) ",
+        ? "#5c6bc0"
+        : "#5c6bc0 ",
     marginLeft: theme.spacing(1),
     borderBottom: "none",
     
@@ -80,8 +80,8 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   //   borderTop: '1px solid rgba(0, 0, 0, .125)',
   background:
     theme.palette.mode === "dark"
-      ? "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)"
-      : "rgba(115,199,204,1) ",
+      ? "#5c6bc0"
+      : "#5c6bc0 ",
  
   borderBottom: "none",
 }));
@@ -95,7 +95,7 @@ const Accordion2 = styled((props) => (
   "&:before": {
     display: "none",
 
-    color: "#015249!important",
+    color: "#5c6bc0",
     borderBottom: "none",
   },
 }));
@@ -110,7 +110,7 @@ const AccordionSummary2 = styled((props) => (
   background:
     theme.palette.mode === "dark"
       ? "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)"
-      : "rgba(87,188,144,1) ",
+      : "#5c6bc0",
 
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
@@ -120,7 +120,7 @@ const AccordionSummary2 = styled((props) => (
     background:
       theme.palette.mode === "dark"
         ? "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)"
-        : "rgba(87,188,144,1)",
+        : "#5c6bc0",
     marginLeft: theme.spacing(1),
     borderBottom: "none",
     
@@ -133,7 +133,7 @@ const AccordionDetails2 = styled(MuiAccordionDetails)(({ theme }) => ({
   background:
     theme.palette.mode === "dark"
       ? "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)"
-      : "rgba(87,188,144,1)",
+      : "#5c6bc0",
  
   borderBottom: "none",
 }));
@@ -199,21 +199,23 @@ export default function CustomizedAccordions() {
                         {myTechnologies.map((tech, idx) => (
                           <Col xl={4} xs={10} lg={4} sm={7}>
                             <LinkUnderline
-                              top={"90%"}
+                              top={"65%"}
                               width={"80%"}
-                              background={"#015249"}
+                              background={"rgba(115,199,204,1)"}
                             >
                               <DoubleArrowIcon
-                                sx={{ color: "#015249", fontSize: "0.7rem" }}
+                                sx={{ color: "rgba(115,199,204,1)", fontSize: "0.7rem" }}
                               />
                               <Link
                                 key={idx}
                                 type="button"
                                 onClick={() => openInNewTab(tech.link)}
                                 underline="none"
-                                color={"rgb(255, 255, 255)"}
+                                color={"#e0f7fa"}
+                              
                               >
-                                {tech.tech}
+                                <div className="tech">
+                                {tech.tech}</div>
                               </Link>
                             </LinkUnderline>
                           </Col>

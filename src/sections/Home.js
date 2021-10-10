@@ -63,8 +63,8 @@ export default function Home(props) {
         </VisibilitySensor>
         <VisibilitySensor>
     {({ isVisible }) => (
-    <FadeIn delay={1100}  isVisible={mottoVisible} y={-40}>
-        {isVisible ? setMottoVisible(true) : false}
+    <FadeIn delay={1100}  isVisible={buttonsVisible} y={-40}>
+        {isVisible ? setButtonsVisible(true) : false}
           <div className="socialButtons">
             <SocialButtons />
           </div>
@@ -75,8 +75,8 @@ export default function Home(props) {
         <Col xs={5} xl={4}>
         <VisibilitySensor>
     {({ isVisible }) => (
-    <FadeIn delay={1200}  isVisible={pictureVisible} y={-40}>
-        {isVisible ? setPictureVisible(true) : false}
+    <FadeIn delay={1200}  isVisible={buttonsVisible} y={-40}>
+        
           <div className="profPicContainer">
             <ProfPicBoop >
               <Image className="profPic" src={`${profPic}`} fluid/>

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 /* .App {
   text-align: center;
 }
@@ -38,7 +41,7 @@
 } */
 
 .appContainer{
-  background: linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%);
+  background: #26418f;
   margin-top:60px;
   color:black;
   
@@ -67,5 +70,5 @@
 }
 .sectionSeperator{
   margin-top:600px;
-  background: linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%);
+  
 }

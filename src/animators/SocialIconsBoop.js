@@ -7,7 +7,7 @@ import React, { useEffect, useState } from "react";
 
 
 const SocialIconsBoop = ({  x = 0,
-  beforeColor= 'white',
+  beforeColor= '#e2f1f8',
   afterColor="rgba(87,188,144,1)",
     y = 0,
     rotation = 0,

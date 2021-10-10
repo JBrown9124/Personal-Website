@@ -15,7 +15,7 @@ const ProfPicBoop = ({  x = 0,
     const style = useSpring({
         display: 'inline-block',
         backfaceVisibility: 'hidden',
-        filter: isBooped? 'sepia(0%) hue-rotate(0deg) saturate(100%)':'sepia(80%) hue-rotate(150deg) saturate(300%)',
+        filter: isBooped? 'sepia(0%) hue-rotate(0deg) saturate(100%)':'sepia(80%) hue-rotate(200deg) saturate(125%)',
         boxShadow: isBooped? '0 4px 8px 0 rgba(0, 0, 0, 0.0), 0 0px 0px 0 rgba(0, 0, 0, 0.0u)':'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
         transform: isBooped
         

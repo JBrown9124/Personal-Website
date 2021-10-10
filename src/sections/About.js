@@ -44,7 +44,7 @@ export default function About(props) {
                   <Divider
                     orientation="horizontal"
                     textAlign="left"
-                    sx={{ marginBottom: "30px" }}
+                    sx={{ marginBottom: "30px" , color:"white",}}
                     flexItem={true}
                   >
                     <Typography variant="h4"> About Me</Typography>

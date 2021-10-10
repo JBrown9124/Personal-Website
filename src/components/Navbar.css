@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 
 .navBar{
-    background: white;
+    background: #26418f;
     
    
-    font-family: 'Pacifico', cursive;
+    font-family:'Oswald', sans-serif
      /* box-shadow: 10px 10px 5px grey; */
 }
 
 .navText{
-    color: #015249!important;
-    font-family: 'Pacifico', cursive;
+    color: #e0f7fa!important;
+    font-family:'Oswald', sans-serif
     
     
 }

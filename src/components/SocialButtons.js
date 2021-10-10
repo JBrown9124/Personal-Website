@@ -48,7 +48,7 @@ export default function SocialButtons(props) {
         </ButtonGroup> */}
 <Row>
     <Col xl={"auto"} xs={2} md={"auto"}>
-      <SocialIconsBoop afterColor={"#015249"} rotation={0} x={0} y={-4}>
+      <SocialIconsBoop afterColor={"rgba(115,199,204,1)"} rotation={0} x={0} y={-4}>
         <Tooltip TransitionComponent={Zoom} title="LinkedIn">
           <div>
             <FaLinkedin
@@ -65,7 +65,7 @@ export default function SocialButtons(props) {
       </SocialIconsBoop>
       </Col>
       <Col xl={"auto"} xs={2} md={"auto"}>
-      <SocialIconsBoop afterColor={"#015249"} rotation={0} x={0} y={-4}>
+      <SocialIconsBoop afterColor={"rgba(115,199,204,1)"} rotation={0} x={0} y={-4}>
         <Tooltip TransitionComponent={Zoom} title="GitHub">
           <div>
             <FaGithub
@@ -78,7 +78,7 @@ export default function SocialButtons(props) {
       </SocialIconsBoop>
       </Col>
       <Col xl={"auto"} xs={1} md={"auto"}>
-      <SocialIconsBoop afterColor={"#015249"} rotation={0} x={5} y={0}>
+      <SocialIconsBoop afterColor={"rgba(115,199,204,1)"} rotation={0} x={5} y={0}>
         {/* <AiOutlineMail
           type="button"
           className="emailIcon"
