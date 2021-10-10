@@ -57,8 +57,8 @@ const AccordionSummary = styled((props) => (
 ))(({ theme }) => ({
   background:
     theme.palette.mode === "dark"
-      ? "#5c6bc0"
-      : "#5c6bc0 ",
+      ? "#26418f"
+      : "#26418f ",
 
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
@@ -67,10 +67,11 @@ const AccordionSummary = styled((props) => (
   "& .MuiAccordionSummary-content": {
     background:
       theme.palette.mode === "dark"
-        ? "#5c6bc0"
-        : "#5c6bc0 ",
+        ? "#26418f"
+        : "#26418f ",
     marginLeft: theme.spacing(1),
     borderBottom: "none",
+   
     
   },
 }));
@@ -80,10 +81,10 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   //   borderTop: '1px solid rgba(0, 0, 0, .125)',
   background:
     theme.palette.mode === "dark"
-      ? "#5c6bc0"
-      : "#5c6bc0 ",
- 
+      ? "#26418f"
+      : "#26418f ",
   borderBottom: "none",
+  
 }));
 const Accordion2 = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -95,7 +96,7 @@ const Accordion2 = styled((props) => (
   "&:before": {
     display: "none",
 
-    color: "#5c6bc0",
+    color: "#26418f",
     borderBottom: "none",
   },
 }));
@@ -109,8 +110,8 @@ const AccordionSummary2 = styled((props) => (
 ))(({ theme }) => ({
   background:
     theme.palette.mode === "dark"
-      ? "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)"
-      : "#5c6bc0",
+      ? "#26418f"
+      : "#26418f",
 
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
@@ -119,8 +120,8 @@ const AccordionSummary2 = styled((props) => (
   "& .MuiAccordionSummary-content": {
     background:
       theme.palette.mode === "dark"
-        ? "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)"
-        : "#5c6bc0",
+        ? "#26418f"
+        : "#26418f",
     marginLeft: theme.spacing(1),
     borderBottom: "none",
     
@@ -132,8 +133,8 @@ const AccordionDetails2 = styled(MuiAccordionDetails)(({ theme }) => ({
   //   borderTop: '1px solid rgba(0, 0, 0, .125)',
   background:
     theme.palette.mode === "dark"
-      ? "linear-gradient(90deg, rgba(115,199,204,1) 39%, rgba(87,188,144,1) 100%)"
-      : "#5c6bc0",
+      ? "#26418f"
+      : "#26418f",
  
   borderBottom: "none",
 }));
@@ -193,11 +194,12 @@ export default function CustomizedAccordions() {
                   </ThemeProvider>
                 </AccordionSummary>
                 <AccordionDetails>
+                  <Container>
                  <ThemeProvider theme={theme}>
                     <Typography variant="body1" className="accordionText">
                       <Row>
                         {myTechnologies.map((tech, idx) => (
-                          <Col xl={4} xs={10} lg={4} sm={7}>
+                          <Col xl={4} xs={12} md={4} lg={4} sm={6}>
                             <LinkUnderline
                              top={"65%"}
                               width={"80%"}
@@ -223,6 +225,7 @@ export default function CustomizedAccordions() {
                       </Row>
                     </Typography>
                   </ThemeProvider>
+                  </Container>
                 </AccordionDetails>
               </Accordion>
             </FadeIn>
