@@ -37,7 +37,7 @@ let theme = createTheme();
   };
   theme.typography.h5 = {
     fontFamily:'Oswald, sans-serif',
-    color:'#e2f1f8',
+    color:'#77C9D4',
     textAlign:"center",
     [theme.breakpoints.up('md')]: {
       fontSize: '1.6rem',
@@ -49,7 +49,7 @@ let theme = createTheme();
   theme.typography.h2 = {
     fontFamily:'Oswald, sans-serif',
     fontWeight:'light',
-    color:'rgba(115,199,204,1)',
+    color:'#77C9D4',
     
     [theme.breakpoints.up('md')]: {
       fontSize: '1.6rem',

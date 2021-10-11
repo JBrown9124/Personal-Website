@@ -54,7 +54,12 @@
 .make{
   margin-bottom:1000px
 }
-
+@media (max-width: 480px) { .home{
+  
+  position: relative;
+  top:250px !important;
+ 
+} }
 .home{
   
   position: relative;

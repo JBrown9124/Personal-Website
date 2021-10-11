@@ -58,9 +58,9 @@ export default function Work(props) {
             </VisibilitySensor>
         <Row className="centerRow">
           <Col xs={"auto"} >
-            <VisibilitySensor>
+            <VisibilitySensor partialVisibility={true}>
               {({ isVisible }) => (
-                <FadeIn delay={200}  isVisible={doVisible} y={-40}>
+                <FadeIn delay={400}  isVisible={doVisible} y={-40}>
                   {isVisible ? setDoVisible(true) : false}
                 
                   <CardBoop>
@@ -135,7 +135,7 @@ export default function Work(props) {
                             rotation={0}
                             x={0}
                             y={-4}
-                            timing={200}
+                          
                           >
                             <FiExternalLink
                               type="button"
@@ -157,13 +157,13 @@ export default function Work(props) {
               )}
             </VisibilitySensor>
           </Col>
-</Row>
-<Row className="centerRow">
+
+
           <Col xs={"auto"} >
           
-              <VisibilitySensor>
+              <VisibilitySensor partialVisibility={true}>
                 {({ isVisible }) => (
-                  <FadeIn delay={200} isVisible={loveVisible} y={-40}>
+                  <FadeIn delay={400} isVisible={loveVisible} y={-40}>
                     {isVisible ? setLoveVisible(true) : false}
                     <CardBoop>
                     <div className="cardDivider">
@@ -265,9 +265,9 @@ export default function Work(props) {
           </Col>
           <Col xs={"auto"}>
          
-              <VisibilitySensor>
+              <VisibilitySensor partialVisibility={true}>
                 {({ isVisible }) => (
-                  <FadeIn delay={200}  isVisible={discordVisible} y={-40}>
+                  <FadeIn delay={400}  isVisible={discordVisible} y={-40}>
                     {isVisible ? setDiscordVisible(true) : false}
                     <CardBoop>
                     <div className="cardDivider">

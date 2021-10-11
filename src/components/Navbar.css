@@ -33,4 +33,16 @@
 
  
 
-
+  .navbar-toggler.collapsed{
+    border-color: rgba(115,199,204,1)!important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.navbar-toggler{
+    
+        border-color: rgba(115,199,204,1)!important;
+        outline: none !important;
+        box-shadow: none !important;
+    
+}
+.navbar-toggler-icon{ color:rgba(115,199,204,1)}

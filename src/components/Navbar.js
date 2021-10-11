@@ -76,8 +76,8 @@ export default function Navigation(props) {
                     type="button"
                     autoPlay={true}
                     src={navIcon}
-                    width="60"
-                    height="40"
+                    width="65"
+                    height="45"
                   />
                   <video
                     pause={false}
@@ -87,8 +87,8 @@ export default function Navigation(props) {
                     type="button"
                     autoPlay={true}
                     src={navIconB}
-                    width="60"
-                    height="40"
+                    width="65"
+                    height="45"
                   />
                 </ReactCardFlip>
               </Navbar.Brand>

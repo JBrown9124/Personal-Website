@@ -28,18 +28,30 @@ import Divider from "@mui/material/Divider";
 import VisibilitySensor from "react-visibility-sensor";
 import FadeIn from "../animators/FadeIn.js";
 import WorkButton from "../components/WorkButton.js";
-
+import Link from "@mui/material/Link";
 export default function Built(props) {
   const [titleVisible, setTitleVisible] = useState(false);
   const [leftTextVisible, setLeftTextVisible] = useState(false);
   const [rightTextVisible, setRightTextVisible] = useState(false);
-
+  function openInNewTab(url) {
+    var win = window.open(url, "_blank");
+    win.focus();
+  }
   return (
     <>
       <Container>
-        
-                <Typography variant="body1" className="builtText"> Designed and Built by Jonathan Brown</Typography>
-             
+        <div className="builtText">
+        <Typography variant="body1" >
+        <Link
+                              
+                                type="button"
+                                onClick={() => openInNewTab("https://github.com/JBrown9124/Personal-Website")}
+                                underline="none"
+                                color={"#e0f7fa"}
+                              
+                              >
+                Designed and Built by Jonathan Brown</Link></Typography>
+                </div>
       </Container>
 
       {/* <Accordion flush>

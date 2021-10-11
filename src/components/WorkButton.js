@@ -165,18 +165,18 @@ const ColorButton = styled(Button)(({ theme }) => ({
     backgroundColor: 'rgba(150,230,253,0.07)',
   },
   fontFamily:"Oswald, sans-serif",
-  
+  color:"#77C9D4",
   fill: "transparent",
-
- border:"solid 1px",
+  textTransform: 'none',
+ border:"solid #77C9D4 1px",
   
 
     
-    color:"white",
+   
     [theme.breakpoints.up('md')]: {
       fontSize: '1.1rem',
       height:"50px",
-  width:"135px",
+  width:"130px",
     },
     [theme.breakpoints.down('md')]: {
       fontSize: '.6rem',

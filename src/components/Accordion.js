@@ -51,7 +51,7 @@ function openInNewTab(url) {
 }
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+    expandIcon={<ArrowForwardIosSharpIcon sx={{color: "#e0f7fa", fontSize: "0.9rem" }} />}
     {...props}
   />
 ))(({ theme }) => ({
@@ -104,7 +104,7 @@ const Accordion2 = styled((props) => (
 
 const AccordionSummary2 = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: "0.9rem" }} />}
+    expandIcon={<ArrowForwardIosSharpIcon sx={{ color: "#e0f7fa",fontSize: "0.9rem" }} />}
     {...props}
   />
 ))(({ theme }) => ({
@@ -199,15 +199,15 @@ export default function CustomizedAccordions() {
                     <Typography variant="body1" className="accordionText">
                       <Row>
                         {myTechnologies.map((tech, idx) => (
-                          <Col xl={4} xs={12} md={4} lg={4} sm={6}>
+                          <Col xl={4} xs={13} md={4} lg={4} sm={6}>
                             <LinkUnderline
                              top={"65%"}
                               width={"80%"}
                               background={"rgba(115,199,204,1)"}
                             >
                               <DoubleArrowIcon
-                                sx={{ color: "rgba(115,199,204,1)", fontSize: "0.7rem" }}
-                              />
+                                sx={{ color: "rgba(115,199,204,1)", fontSize: "0.6rem" }}
+                              /> {" "}
                               <Link
                                 key={idx}
                                 type="button"
@@ -217,7 +217,7 @@ export default function CustomizedAccordions() {
                               
                               >
                                 <div className="tech">
-                                {tech.tech}</div>
+                               {tech.tech}</div>
                               </Link>
                             </LinkUnderline>
                           </Col>
