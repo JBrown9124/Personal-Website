@@ -58,6 +58,7 @@ export default function Contact(props) {
                     <Typography className="contactText" variant="body2">
                       I am currently in the process of finding a software
                       engineer position.
+                      
                       <Typography className="contactText" variant="body2">
                         Please feel free contacting me about anything software
                         related!

@@ -51,40 +51,30 @@ function openInNewTab(url) {
 }
 const AccordionSummary = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{color: "#e0f7fa", fontSize: "0.9rem" }} />}
+    expandIcon={
+      <ArrowForwardIosSharpIcon sx={{ color: "#e0f7fa", fontSize: "0.9rem" }} />
+    }
     {...props}
   />
 ))(({ theme }) => ({
-  background:
-    theme.palette.mode === "dark"
-      ? "#26418f"
-      : "#26418f ",
+  background: theme.palette.mode === "dark" ? "#26418f" : "#26418f ",
 
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
   },
   "& .MuiAccordionSummary-content": {
-    background:
-      theme.palette.mode === "dark"
-        ? "#26418f"
-        : "#26418f ",
+    background: theme.palette.mode === "dark" ? "#26418f" : "#26418f ",
     marginLeft: theme.spacing(1),
     borderBottom: "none",
-   
-    
   },
 }));
 
 const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   //   borderTop: '1px solid rgba(0, 0, 0, .125)',
-  background:
-    theme.palette.mode === "dark"
-      ? "#26418f"
-      : "#26418f ",
+  background: theme.palette.mode === "dark" ? "#26418f" : "#26418f ",
   borderBottom: "none",
-  
 }));
 const Accordion2 = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -101,41 +91,32 @@ const Accordion2 = styled((props) => (
   },
 }));
 
-
 const AccordionSummary2 = styled((props) => (
   <MuiAccordionSummary
-    expandIcon={<ArrowForwardIosSharpIcon sx={{ color: "#e0f7fa",fontSize: "0.9rem" }} />}
+    expandIcon={
+      <ArrowForwardIosSharpIcon sx={{ color: "#e0f7fa", fontSize: "0.9rem" }} />
+    }
     {...props}
   />
 ))(({ theme }) => ({
-  background:
-    theme.palette.mode === "dark"
-      ? "#26418f"
-      : "#26418f",
+  background: theme.palette.mode === "dark" ? "#26418f" : "#26418f",
 
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
   },
   "& .MuiAccordionSummary-content": {
-    background:
-      theme.palette.mode === "dark"
-        ? "#26418f"
-        : "#26418f",
+    background: theme.palette.mode === "dark" ? "#26418f" : "#26418f",
     marginLeft: theme.spacing(1),
     borderBottom: "none",
-    
   },
 }));
 
 const AccordionDetails2 = styled(MuiAccordionDetails)(({ theme }) => ({
   padding: theme.spacing(2),
   //   borderTop: '1px solid rgba(0, 0, 0, .125)',
-  background:
-    theme.palette.mode === "dark"
-      ? "#26418f"
-      : "#26418f",
- 
+  background: theme.palette.mode === "dark" ? "#26418f" : "#26418f",
+
   borderBottom: "none",
 }));
 
@@ -168,143 +149,131 @@ export default function CustomizedAccordions() {
   };
 
   return (
-    <Row>
-      <Col>
-        <VisibilitySensor>
-          {({ isVisible }) => (
-            <FadeIn
-              delay={400}
-              isVisible={accordion1Visible || accordion2Visible}
-              y={-40}
-            >
-              {isVisible ? setAccordion1Visible(true) : false}
-              <Accordion
-              
-                disableGutters
-                expanded={expanded1}
-                onChange={() => setExpanded1(!expanded1)}
+    <>
+      <Row>
+        <Col>
+          <VisibilitySensor>
+            {({ isVisible }) => (
+              <FadeIn
+                delay={400}
+                isVisible={accordion1Visible || accordion2Visible}
+                y={-40}
               >
-                <AccordionSummary
-                  aria-controls="panel1d-content"
-                  id="panel1d-header"
+                {isVisible ? setAccordion1Visible(true) : false}
+                <Accordion
+                  disableGutters
+                  expanded={expanded1}
+                  onChange={() => setExpanded1(!expanded1)}
                 >
-                  <ThemeProvider theme={theme}>
+                  <AccordionSummary
+                    aria-controls="panel1d-content"
+                    id="panel1d-header"
+                  >
                     <Typography variant="h6" className="accordionTitle">
                       Technologies I Use
                     </Typography>
-                  </ThemeProvider>
-                </AccordionSummary>
-                <AccordionDetails>
-               
-                 <ThemeProvider theme={theme}>
+                  </AccordionSummary>
+                  <AccordionDetails>
                     <Typography variant="body1" className="accordionText">
                       <Row>
                         {myTechnologies.map((tech, idx) => (
                           <Col xl={4} xs={13} md={5} lg={4} sm={6}>
                             <div key={idx} className="accordionItems">
-                            <LinkUnderline
-                             top={"65%"}
-                              width={"80%"}
-                              background={"rgba(115,199,204,1)"}
-                            >
-                              <DoubleArrowIcon
-                                sx={{ color: "rgba(115,199,204,1)", fontSize: "0.6rem" }}
-                              /> {" "}
-                              <Link
-                                
-                                type="button"
-                                onClick={() => openInNewTab(tech.link)}
-                                underline="none"
-                                color={"#e0f7fa"}
-                              
+                              <LinkUnderline
+                                top={"65%"}
+                                width={"80%"}
+                                background={"rgba(115,199,204,1)"}
                               >
-                                <div className="tech">
-                               {tech.tech}</div>
-                              </Link>
-                            </LinkUnderline>
+                                <DoubleArrowIcon
+                                  sx={{
+                                    color: "rgba(115,199,204,1)",
+                                    fontSize: "0.6rem",
+                                  }}
+                                />{" "}
+                                <Link
+                                  type="button"
+                                  onClick={() => openInNewTab(tech.link)}
+                                  underline="none"
+                                  color={"#e0f7fa"}
+                                >
+                                  <div className="tech">{tech.tech}</div>
+                                </Link>
+                              </LinkUnderline>
                             </div>
                           </Col>
                         ))}
                       </Row>
                     </Typography>
-                  </ThemeProvider>
-                
-                </AccordionDetails>
-              </Accordion>
-            </FadeIn>
-          )}
-        </VisibilitySensor>
-      </Col>
-      <Col>
-        <VisibilitySensor>
-          {({ isVisible }) => (
-            <FadeIn
-              delay={400}
-              isVisible={accordion1Visible || accordion2Visible}
-              y={-40}
-            >
-              {isVisible ? setAccordion2Visible(true) : false}
-              <Accordion2
-            
-                disableGutters
-                expanded={expanded2}
-                onChange={() => setExpanded2(!expanded2)}
+                  </AccordionDetails>
+                </Accordion>
+              </FadeIn>
+            )}
+          </VisibilitySensor>
+        </Col>
+        <Col>
+          <VisibilitySensor>
+            {({ isVisible }) => (
+              <FadeIn
+                delay={600}
+                isVisible={accordion1Visible || accordion2Visible}
+                y={-40}
               >
-                <AccordionSummary2
-                  aria-controls="panel2d-content"
-                  id="panel2d-header"
+                {isVisible ? setAccordion2Visible(true) : false}
+                <Accordion2
+                  disableGutters
+                  expanded={expanded2}
+                  onChange={() => setExpanded2(!expanded2)}
                 >
-                  <ThemeProvider theme={theme}>
+                  <AccordionSummary2
+                    aria-controls="panel2d-content"
+                    id="panel2d-header"
+                  >
                     <Typography variant="h6" className="accordionTitle">
                       Certificates
                     </Typography>
-                  </ThemeProvider>
-                </AccordionSummary2>
-                <AccordionDetails2>
-                  <Typography className="accordionText">
-                  
-                      <Row>
-                        <Col>
-                        <div className="accordionItems">
-                          <CertificateBoop>
-                            <Image
-                              type="button"
-                              src={CourseraCertificate1}
-                              onClick={() =>
-                                openInNewTab(
-                                  "https://www.coursera.org/account/accomplishments/certificate/YL6AHDSWBFU6"
-                                )
-                              }
-                              fluid
-                            />
-                          </CertificateBoop>
-                          </div>
-                        </Col>
-                        <Col>
-                        <div className="accordionItems">
-                          <CertificateBoop>
-                            <Image
-                              type="button"
-                              src={CourseraCertificate2}
-                              onClick={() =>
-                                openInNewTab(
-                                  "https://www.coursera.org/account/accomplishments/certificate/8HN48YFWNRAQ"
-                                )
-                              }
-                              fluid
-                            />
-                          </CertificateBoop>
-                          </div>
-                        </Col>
-                      </Row>
-                  
-                  </Typography>
-                </AccordionDetails2>
-              </Accordion2>
-            </FadeIn>
-          )}
-        </VisibilitySensor>
-      </Col>
-    </Row>
+                  </AccordionSummary2>
+                  <AccordionDetails2>
+                    <Typography className="accordionText">
+                      <Container>
+                        <Row>
+                          <Col>
+                            <CertificateBoop>
+                              <Image
+                                type="button"
+                                src={CourseraCertificate1}
+                                onClick={() =>
+                                  openInNewTab(
+                                    "https://www.coursera.org/account/accomplishments/certificate/YL6AHDSWBFU6"
+                                  )
+                                }
+                                fluid
+                              />
+                            </CertificateBoop>
+                          </Col>
+                          <Col>
+                            <CertificateBoop>
+                              <Image
+                                type="button"
+                                src={CourseraCertificate2}
+                                onClick={() =>
+                                  openInNewTab(
+                                    "https://www.coursera.org/account/accomplishments/certificate/8HN48YFWNRAQ"
+                                  )
+                                }
+                                fluid
+                              />
+                            </CertificateBoop>
+                          </Col>
+                        </Row>
+                      </Container>
+                    </Typography>
+                  </AccordionDetails2>
+                </Accordion2>
+              </FadeIn>
+            )}
+          </VisibilitySensor>
+        </Col>
+      </Row>
+    </>
   );
 }

@@ -85,7 +85,7 @@ export default function About(props) {
                 <VisibilitySensor>
                   {({ isVisible }) => (
                     <FadeIn
-                      delay={400}
+                      delay={600}
                       isVisible={rightTextVisible || leftTextVisible}
                       y={-40}
                     >
