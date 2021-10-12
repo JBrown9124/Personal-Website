@@ -24,7 +24,7 @@ import {
 import Accordion from "../components/Accordion";
 import Divider from "@mui/material/Divider";
 import { styled } from "@mui/material/styles";
-
+import Accordion2 from "../components/Accordion2.js"
 import VisibilitySensor from "react-visibility-sensor";
 import FadeIn from "../animators/FadeIn.js";
 
@@ -32,9 +32,10 @@ export default function About(props) {
   const [titleVisible, setTitleVisible] = useState(false);
   const [leftTextVisible, setLeftTextVisible] = useState(false);
   const [rightTextVisible, setRightTextVisible] = useState(false);
-
+  const [accordion2Visible, setAccordion2Visible] = React.useState(false);
+  const [accordion1Visible, setAccordion1Visible] = React.useState(false);
   return (
-    <>
+    
       <Container fluid>
         <VisibilitySensor>
           {({ isVisible }) => (
@@ -48,17 +49,18 @@ export default function About(props) {
           )}
         </VisibilitySensor>
         <Container>
-          <Row>
-            <Col>
-              <ThemeProvider theme={theme}>
-                <VisibilitySensor>
+        <VisibilitySensor>
                   {({ isVisible }) => (
                     <FadeIn
                       delay={400}
-                      isVisible={rightTextVisible || leftTextVisible}
+                      isVisible={leftTextVisible}
                       y={-40}
                     >
                       {isVisible ? setLeftTextVisible(true) : false}
+          <Row>
+            <Col>
+             
+                
                       <div className="aboutText">
                       <Typography variant="body2">
                         Greetings friend! My name is Jonathan and I have a
@@ -75,21 +77,11 @@ export default function About(props) {
                         for the benefit of deeply understanding what it means to
                         be a professional software engineer.
                       </Typography>
-                    </FadeIn>
-                  )}
-                </VisibilitySensor>
-              </ThemeProvider>
+             
             </Col>
             <Col>
-              <ThemeProvider theme={theme}>
-                <VisibilitySensor>
-                  {({ isVisible }) => (
-                    <FadeIn
-                      delay={600}
-                      isVisible={rightTextVisible || leftTextVisible}
-                      y={-40}
-                    >
-                      {isVisible ? setRightTextVisible(true) : false}
+             
+              
                       <Typography className="aboutText" variant="body2">
                         But my journey doesn't end there. Everyday I am
                         learning something new and exciting. Whether it's a new
@@ -98,34 +90,38 @@ export default function About(props) {
                         Directly below are the technologies I currently use as well
                         as the certificates I have received.
                       </Typography>
-                    </FadeIn>
-                  )}
-                </VisibilitySensor>
-              </ThemeProvider>
+                  
+            
             </Col>
           </Row>
+          </FadeIn>
+                  )}
+                </VisibilitySensor>
         </Container>
-
+       
+            <FadeIn delay={400} isVisible={leftTextVisible} y={-40}>
+             
         <div className="accordion">
+          <Row>
+            <Col>
+           
+
           <Accordion />
+        
+          </Col>
+          <Col>
+         
+          <Accordion2 />
+        
+          </Col>
+          </Row>
+
         </div>
+        </FadeIn>
+                
       </Container>
 
-      {/* <Accordion flush>
-  <Accordion.Item eventKey="0" >
-    <Accordion.Header>Technlogies I use</Accordion.Header>
-    <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </Accordion.Body>
-  </Accordion.Item>
- 
-</Accordion> */}
-    </>
+     
+    
   );
 }

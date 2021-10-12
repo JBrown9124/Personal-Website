@@ -12,10 +12,11 @@ import "./sections/Built.css"
 import Navigation from "./components/Navbar.js";
 import profPic from "./images/profPic.jpg";
 import ProfPicBoop from "./animators/ProfPicBoop.js";
-
+import theme from "./themes/theme1";
 import ReactDOM from "react-dom";
 import VisibilitySensor from "react-visibility-sensor";
 // import 'mdb-ui-kit/css/mdb.min.css';
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import React, { useEffect, useState } from "react";
 import About from "./sections/About.js";
 import Home from "./sections/Home.js";
@@ -52,7 +53,7 @@ function App() {
     
             <Navigation />
         <Container>
-      
+      <ThemeProvider theme={theme}>
           
               <div className="home">
              
@@ -84,7 +85,7 @@ function App() {
                     </div>
                
              
-           
+                    </ThemeProvider>
     
         </Container>
     
