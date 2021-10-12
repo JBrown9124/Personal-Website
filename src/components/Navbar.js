@@ -22,7 +22,11 @@ import LinkUnderline from "../animators/LinkUnderline";
 import FadeIn from "../animators/FadeIn.js";
 import VisibilitySensor from "react-visibility-sensor";
 import ReactCardFlip from "react-card-flip";
-
+import {GiHamburgerMenu} from "react-icons/gi"
+import {VscChromeClose} from "react-icons/vsc"
+import Tooltip from "@mui/material/Tooltip";
+import Fade from "@mui/material/Fade";
+import Zoom from "@mui/material/Zoom";
 function HideOnScroll(props) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -51,6 +55,7 @@ HideOnScroll.propTypes = {
 export default function Navigation(props) {
   const [playBrand, setPlayBrand] = useState(false);
   const [flipDirection, setFlipDirection] = useState("vertical");
+  const [showX, setShowX] = useState(false);
   const triggerFlip = () => {
     setPlayBrand(!playBrand);
   };
@@ -60,7 +65,9 @@ export default function Navigation(props) {
         <Navbar className="navBar" expand="sm" fixed="top" collapseOnSelect>
           <Container fluid>
             <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
-              <FadeIn fromScale={0} isVisible={true} delay={300}>
+              <FadeIn fromScale={0} isVisible={true} delay={400}>
+              <Tooltip TransitionComponent={Zoom} title="Home">
+          <div>
               <Navbar.Brand
                 href="#home"
                 
@@ -92,34 +99,39 @@ export default function Navigation(props) {
                   />
                 </ReactCardFlip>
               </Navbar.Brand>
+              </div>
+              </Tooltip>
               </FadeIn>
             </Col>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <FadeIn delay={600} fromY={-10} isVisible={true}>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={()=>setShowX(!showX)}><span>{showX===false?<GiHamburgerMenu color="rgba(115,199,204,1)"/>:<VscChromeClose color="rgba(115,199,204,1)"/>}</span></Navbar.Toggle>
+            </FadeIn>
             <Navbar.Collapse id="responsive-navbar-nav">
+           
               <Nav className="me-auto"></Nav>
 
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
-                <FadeIn delay={400} fromY={-10} isVisible={true}>
+                <FadeIn delay={600} fromY={-10} isVisible={true}>
                   <LinkUnderline width={"60"}>
-                    <Nav.Link href="#about" className="navText">
+                    <Nav.Link href="#about" className="navText" onClick={()=>setShowX(false)}>
                       About
                     </Nav.Link>
                   </LinkUnderline>
                 </FadeIn>
               </Col>
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
-              <FadeIn delay={500} fromY={-10} isVisible={true}>
+              <FadeIn delay={800} fromY={-10} isVisible={true}>
                 <LinkUnderline width={"60"}>
-                  <Nav.Link href="#work" className="navText">
+                  <Nav.Link href="#work" className="navText" onClick={()=>setShowX(false)}>
                     Work
                   </Nav.Link>
                 </LinkUnderline>
                 </FadeIn>
               </Col>
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
-              <FadeIn delay={600} fromY={-10} isVisible={true}>
+              <FadeIn delay={1000} fromY={-10} isVisible={true}>
                 <LinkUnderline>
-                  <Nav.Link href="#contact" className="navText">
+                  <Nav.Link href="#contact" className="navText"onClick={()=>setShowX(false)}>
                     Contact
                   </Nav.Link>
                 </LinkUnderline>
@@ -127,7 +139,7 @@ export default function Navigation(props) {
                 </FadeIn>
               </Col>
               <Col xs={"auto"} sm={"auto"} md={"auto"} lg={"auto"} xl={"auto"} xxl={"auto"}>
-              <FadeIn delay={700} fromY={-10} isVisible={true}>
+              <FadeIn delay={1200} fromY={-10} isVisible={true}>
                 <LinkUnderline>
                   <Nav.Link
                     href={Jonathan_Brown_Resume}
@@ -137,6 +149,7 @@ export default function Navigation(props) {
                     trailingIcon="picture_as_pdf"
                     label="Resume"
                     className="navText"
+                    onClick={()=>setShowX(false)}
                   >
                     Resume
                   </Nav.Link>

@@ -188,7 +188,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
 export default function WorkButton() {
   return (
   
-      <ColorButton onClick={()=>window.open('mailto:brownjs193@gmail.com?subject=Subject&body=Body%20goes%20here')}variant="contained">Start</ColorButton>
+      <ColorButton onClick={()=>window.open('mailto:brownjs193@gmail.com?subject=Subject&body=Body%20goes%20here')}variant="contained">Contact</ColorButton>
       
   );
 }

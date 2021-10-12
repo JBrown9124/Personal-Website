@@ -8,30 +8,30 @@ let theme = createTheme();
   theme.typography.h6 = {
     fontFamily:'Oswald, sans-serif',
     color:"white",
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       fontSize: '1rem',
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       fontSize: '.6rem',
     },
   };
   theme.typography.body1 = {
     fontFamily: 'Open Sans, sans-serif',
     color:"#e0f7fa",
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       fontSize: '.7rem',
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       fontSize: '.5rem',
     },
   };
   theme.typography.body2 = {
     fontFamily: 'Open Sans, sans-serif',
     color:"#e0f7fa",
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       fontSize: '1.0rem',
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       fontSize: '.6rem',
     },
   };
@@ -39,10 +39,10 @@ let theme = createTheme();
     fontFamily:'Oswald, sans-serif',
     color:'#77C9D4',
     textAlign:"center",
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       fontSize: '1.6rem',
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       fontSize: '1.0rem',
     },
   };
@@ -51,10 +51,10 @@ let theme = createTheme();
     fontWeight:'light',
     color:'#77C9D4',
     
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       fontSize: '1.6rem',
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('sm')]: {
       fontSize: '.9rem',
     },
   };
@@ -62,29 +62,33 @@ let theme = createTheme();
     fontFamily:  "Open Sans, sans-serif",
     
     color:"white",
-    [theme.breakpoints.up('md')]: {
+    
+    [theme.breakpoints.up('sm')]: {
       fontSize: '5.8rem',
     },
-    [theme.breakpoints.down('md')]: {
-      fontSize: '1.5rem',
-    },}
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '1.4rem',
+    },
+  
+    
+  }
     theme.typography.h3 = {
       fontFamily:  "Open Sans, sans-serif",
       color:'#e2f1f8',
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('sm')]: {
         fontSize: '2.0rem',
       },
-      [theme.breakpoints.down('md')]: {
+      [theme.breakpoints.down('sm')]: {
         fontSize: '.6rem',
       },}
       theme.typography.h4 = {
         fontFamily:  "Open Sans, sans-serif",
         color:"white",
        
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up('sm')]: {
           fontSize: '2.3rem',
         },
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down('sm')]: {
           fontSize: '1.5rem',
         },}
 export default theme;

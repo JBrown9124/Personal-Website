@@ -30,10 +30,7 @@ const CertificateBoop = ({  x = 0,
          borderColor:"grey",
          
          
-          config: {
-            mass: 1, tension: 280, friction: 60
-            
-          },
+          config: { mass: 1, tension: 170, friction: 26 }
           
       });
     React.useEffect(() => {

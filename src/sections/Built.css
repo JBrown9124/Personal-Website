@@ -1,3 +1,5 @@
 .builtText{
-    text-align: center
+    text-align: center;
+    position: relative;
+    bottom: 5px!important;
 }

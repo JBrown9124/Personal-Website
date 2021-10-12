@@ -3,17 +3,21 @@
 
 
 .navBar{
-    background: #26418f;
+    background-color: #26418f;
     
+    opacity: 0.85;
+  
    
-    font-family:'Oswald', sans-serif
+ 
      /* box-shadow: 10px 10px 5px grey; */
 }
 
+
 .navText{
     color: #e0f7fa!important;
-    font-family:'Oswald', sans-serif
-    
+    font-family:'Oswald', sans-serif;
+    opacity: 1.0!important;
+   
     
 }
 .navText:hover{
@@ -34,15 +38,17 @@
  
 
   .navbar-toggler.collapsed{
-    border-color: rgba(115,199,204,1)!important;
+    border:none;
     outline: none !important;
     box-shadow: none !important;
 }
 .navbar-toggler{
     
-        border-color: rgba(115,199,204,1)!important;
+        border:none;
         outline: none !important;
         box-shadow: none !important;
     
 }
 .navbar-toggler-icon{ color:rgba(115,199,204,1)}
+.hamIcon{ color:rgba(115,199,204,);
+background-color:rgba(115,199,204,)}

@@ -85,17 +85,17 @@ export default function About(props) {
                 <VisibilitySensor>
                   {({ isVisible }) => (
                     <FadeIn
-                      delay={350}
+                      delay={450}
                       isVisible={rightTextVisible || leftTextVisible}
                       y={-40}
                     >
                       {isVisible ? setRightTextVisible(true) : ""}
                       <Typography className="aboutText" variant="body2">
-                        But my journey doesn't stop there. Everyday I am
+                        But my journey doesn't end there. Everyday I am
                         learning something new and exciting. Whether it's a new
                         language, framework or library, my cravings for a deeper
                         understanding of software development never cease!
-                        Directly below are the technologies I have used as well
+                        Directly below are the technologies I currently use as well
                         as the certificates I have received.
                       </Typography>
                     </FadeIn>

@@ -145,7 +145,7 @@ const myTechnologies = [
     tech: "JavaScript",
     link: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript",
   },
-  { tech: "React.js", link: "https://reactjs.org/" },
+  { tech: "React", link: "https://reactjs.org/" },
   { tech: "Django", link: "https://www.djangoproject.com/" },
   { tech: "Flask", link: "https://pythonbasics.org/what-is-flask-python/" },
   { tech: "SQLAlchemy", link: "https://www.sqlalchemy.org/" },
@@ -153,7 +153,8 @@ const myTechnologies = [
   { tech: "Bootstrap", link: "https://react-bootstrap.github.io/" },
   { tech: "PostgreSQL", link: "https://www.postgresql.org/" },
   { tech: "Git", link: "https://git-scm.com/" },
-  { tech: "GitHub", link: "https://kinsta.com/knowledgebase/what-is-github/" },
+  { tech: "GitHub", link: "https://github.com/JBrown9124" },
+  { tech: "Firebase", link: "https://firebase.google.com/" },
   { tech: "Heroku", link: "https://www.heroku.com/what" },
 ];
 export default function CustomizedAccordions() {
@@ -194,12 +195,13 @@ export default function CustomizedAccordions() {
                   </ThemeProvider>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Container>
+               
                  <ThemeProvider theme={theme}>
                     <Typography variant="body1" className="accordionText">
                       <Row>
                         {myTechnologies.map((tech, idx) => (
-                          <Col xl={4} xs={13} md={4} lg={4} sm={6}>
+                          <Col xl={4} xs={13} md={5} lg={4} sm={6}>
+                            <div className="accordionItems">
                             <LinkUnderline
                              top={"65%"}
                               width={"80%"}
@@ -220,12 +222,13 @@ export default function CustomizedAccordions() {
                                {tech.tech}</div>
                               </Link>
                             </LinkUnderline>
+                            </div>
                           </Col>
                         ))}
                       </Row>
                     </Typography>
                   </ThemeProvider>
-                  </Container>
+                
                 </AccordionDetails>
               </Accordion>
             </FadeIn>
@@ -236,7 +239,7 @@ export default function CustomizedAccordions() {
         <VisibilitySensor>
           {({ isVisible }) => (
             <FadeIn
-              delay={350}
+              delay={450}
               isVisible={accordion1Visible || accordion2Visible}
               y={-40}
             >
@@ -259,9 +262,10 @@ export default function CustomizedAccordions() {
                 </AccordionSummary2>
                 <AccordionDetails2>
                   <Typography className="accordionText">
-                    <Container fluid>
+                  
                       <Row>
                         <Col>
+                        <div className="accordionItems">
                           <CertificateBoop>
                             <Image
                               type="button"
@@ -274,8 +278,10 @@ export default function CustomizedAccordions() {
                               fluid
                             />
                           </CertificateBoop>
+                          </div>
                         </Col>
                         <Col>
+                        <div className="accordionItems">
                           <CertificateBoop>
                             <Image
                               type="button"
@@ -288,9 +294,10 @@ export default function CustomizedAccordions() {
                               fluid
                             />
                           </CertificateBoop>
+                          </div>
                         </Col>
                       </Row>
-                    </Container>
+                  
                   </Typography>
                 </AccordionDetails2>
               </Accordion2>

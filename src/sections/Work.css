@@ -39,10 +39,14 @@
 }
 .loveInnerContainer{
   background:#2b6777!important;
+  
+  padding: 43.0px!important;
+  
 }
 .loveTitle{
   font-family: "Cinzel"!important;
   color:white !important;
+  margin-bottom:9.6px !important;
 }
 .loveText{
   font-family: "Fauna One", sans-serif !important;
@@ -60,14 +64,21 @@
 }
 .discordInnerContainer{
   background: #4f545c !important;
+  padding: 27.4px !important;
+  
 }
 .discordTitle{
   font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important;
   color:white !important;
+  margin-bottom:29.89px!important;
 }
 .discordInfo{
   font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important;
   color:rgb(255, 255, 255) !important;
+}
+.discordCardIcons{
+  margin-top:5px;
+  margin-bottom:5px;
 }
 .socialCardIcons{
   margin-top:5px;
@@ -79,11 +90,76 @@
   
 }
 .centerRow{
- 
+
   justify-content:center !important;
-  
+  align-items: stretch!important;
 }
 .linkIcon{
 margin-left:15px;
 width:25px;
 height:25px;}
+.gitIcon{
+  width:25px;
+height:25px;
+}
+/* @media screen and (max-width: 1024px){
+ 
+.loveContainer{
+  background: #c8d8e4!important;
+ 
+}
+.loveInnerContainer{
+  background:#2b6777!important;
+  
+  
+}
+.loveTitle{
+  font-family: "Cinzel"!important;
+  color:white !important;
+  
+}
+.loveText{
+  font-family: "Fauna One", sans-serif !important;
+  color:white !important;
+  
+}
+.pSeperator{
+  margin-bottom:10px;
+}
+
+.discordContainer{
+  background: #36393f !important;
+
+  
+}
+.discordInnerContainer{
+  background: #4f545c !important;
+  padding:0px !important;
+}
+.discordTitle{
+  font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+  color:white !important;
+}
+.discordInfo{
+  font-family:Whitney,Helvetica Neue,Helvetica,Arial,sans-serif !important;
+  color:rgb(255, 255, 255) !important;
+}
+.discordCardIcons{
+  margin-top:5px;
+  margin-bottom:5px;
+}
+.socialCardIcons{
+  margin-top:5px;
+  margin-bottom:5px;
+}
+.cardDivider{
+  margin-top:35px;
+  
+  
+}
+.centerRow{
+
+  justify-content:center !important;
+ 
+}
+} */

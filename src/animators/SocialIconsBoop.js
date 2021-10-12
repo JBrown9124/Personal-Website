@@ -26,10 +26,10 @@ const SocialIconsBoop = ({  x = 0,
          scale(1)`,
          
          color: isBooped?afterColor: beforeColor ,
-          config: {
-            mass: 1, tension: 280, friction: 60
+          config: 
+            { mass: 1, tension: 170, friction: 26 }
             
-          },
+          
           
       });
     

@@ -10,30 +10,20 @@ margin-left:15px;
     margin-left:15px;
    
 }
-.btn-primary {
-    color: #fff !important;
-    background-color:rgba(115,199,204,1) !important;
-    
-    border-color: #fff  !important/*set the color you want here*/
-}
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active,.btn-primary.active.focus,
-.btn-primary.active:focus, .btn-primary.active, .open .dropdown-toggle.btn-primary {
-    color: #fff !important;
-    background-color: rgba(87,188,144,1) !important;
-    border-color: #fff !important; /*set the color you want here*/
-    outline: none !important;
-    box-shadow: none !important;
-    
-    
-}
-.btn-primary:active, .btn-primary.active{
-    color: #fff !important;
-    background-color: rgba(87,188,144,1) !important;
-    border-color: #fff !important; /*set the color you want here*/
-    outline: none !important;
-    box-shadow: none !important;
-}
+@media (max-width: 480px) { 
+.githubIcon{
+    /* margin-left:15px; */
+    width:15px!important;
+    height:15px!important;
+    /* color: #fff !important; */
+   
 
+} .linkedInIcon{
+    width:15px!important;
+    height:15px!important;
+    
+    /* color: #fff !important; */
+}}
 .linkedInIcon{
     width:25px;
     height:25px;

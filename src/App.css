@@ -42,14 +42,14 @@
 
 .appContainer{
   background: #26418f;
-  margin-top:60px;
+  
   color:black;
   
   
   
   
 }
-
+/* 
 
 .make{
   margin-bottom:1000px
@@ -57,23 +57,159 @@
 @media (max-width: 480px) { .home{
   
   position: relative;
-  top:250px !important;
- 
-} }
-.home{
-  
-  position: relative;
-  top:300px;
+  top:350px!important;
  
 }
 .builtSeperator{
-  margin-top:300px;
+  margin-top:300px !important;
 }
 .about{
-  margin-top:800px;
+  margin-top:200vw;
   
 }
 .sectionSeperator{
-  margin-top:600px;
+  margin-top:700px!important;
+  
+} }
+/* ipad Pro */
+/* @media (width: 1024px) { .home{
+  
+  position: relative;
+  top:60vw!important;
+ 
+}
+.builtSeperator{
+  margin-top:300px !important;
+}
+.about{
+  margin-top:200vw;
   
 }
+.sectionSeperator{
+  margin-top:100vw!important;
+  
+} }  */
+
+
+.home{
+  
+  position: relative;
+  top:20.5vw;
+ 
+}
+.builtSeperator{
+  margin-top:17vw;
+}
+.about{
+  margin-top:35vw;padding-top: 107px!important;  }
+  
+.sectionSeperator{
+  margin-top:20vw;
+  padding-top: 107px!important; 
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 480px) { .home{
+  
+  position: relative;
+  top:90vw!important;
+ 
+}
+.builtSeperator{
+  margin-top:60vw !important;
+}
+.about{
+  margin-top:200vw; padding-top: 107px!important;
+  
+}
+.sectionSeperator{
+  margin-top:70vw!important; padding-top:107px!important;
+  
+} }
+/* ipad Pro */
+
+
+
+
+
+@media (max-width: 768px) and (min-width:481px) { .home{
+  
+  position: relative;
+  top:60vw!important;
+ 
+}
+.builtSeperator{
+  margin-top:35vw !important;
+}
+.about{
+  margin-top:100vw; padding-top: 107px!important;
+  
+}
+.sectionSeperator{
+  margin-top:40vw!important; padding-top: 107px!important;
+  
+} }
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) { .home{
+  
+  position: relative;
+  top:40vw!important;
+ 
+}
+.builtSeperator{
+  margin-top:25vw !important;
+}
+.about{
+  margin-top:60vw; padding-top: 107px!important;
+  
+}
+.sectionSeperator{
+  margin-top:25vw!important;padding-top: 107px!important;
+  
+} }
+/* ipad Pro */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

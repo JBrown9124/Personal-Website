@@ -8,6 +8,7 @@
     
 }
 .nameText{
+    margin-top:10px !important;
     font-family: 'Merriweather', serif;
     color:white;
     font-size:70px;
@@ -23,10 +24,11 @@
     bottom: 13px!important;
     
    } }
+   
   
 .profPicContainer{
     position: relative;
-    bottom: 105px;
+    bottom: 6vw;
     
    }
    .profPic{
