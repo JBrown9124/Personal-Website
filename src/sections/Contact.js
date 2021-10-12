@@ -1,36 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
-  Navbar,
-  Nav,
-  OverlayTrigger,
-  ButtonGroup,
-  Popover,
-  Badge,
+  
   Container,
-  Row,
-  Col,
-  Image,
-  Placeholder,
+ 
 } from "react-bootstrap";
-import Button from "@mui/material/Button";
 
-import ReactDOM from "react-dom";
-import theme from "../themes/theme1";
-import {
-  createTheme,
-  responsiveFontSizes,
-  ThemeProvider,
-  Typography,
-} from "@material-ui/core";
-import Accordion from "../components/Accordion";
-import Divider from "@mui/material/Divider";
+import Typography from "@mui/material/Typography";
+
 import VisibilitySensor from "react-visibility-sensor";
 import FadeIn from "../animators/FadeIn.js";
 import WorkButton from "../components/WorkButton.js";
 
 export default function Contact(props) {
-  const [titleVisible, setTitleVisible] = useState(false);
-  const [leftTextVisible, setLeftTextVisible] = useState(false);
+  
   const [rightTextVisible, setRightTextVisible] = useState(false);
   const [buttonVisible, setButtonVisible] = useState(false);
 
@@ -39,7 +21,7 @@ export default function Contact(props) {
       <Container>
         <VisibilitySensor>
           {({ isVisible }) => (
-            <FadeIn delay={400}  isVisible={isVisible} y={-40}>
+            <FadeIn delay={200}  isVisible={isVisible} y={-40}>
               {/* {isVisible ? setTitleVisible(true) : ""} */}
 
               <div className="separator">
@@ -53,8 +35,8 @@ export default function Contact(props) {
             <Container>
               <VisibilitySensor>
                 {({ isVisible }) => (
-                  <FadeIn  delay={400} isVisible={rightTextVisible} y={-40}>
-                    {isVisible ? setRightTextVisible(true) : ""}
+                  <FadeIn  delay={200} isVisible={rightTextVisible} y={-40}>
+                    {isVisible ? setRightTextVisible(true) : null}
                     <Typography className="contactText" variant="body2">
                       I am currently in the process of finding a software
                       engineer position.
@@ -69,8 +51,8 @@ export default function Contact(props) {
               </VisibilitySensor>
               <VisibilitySensor>
                 {({ isVisible }) => (
-                  <FadeIn delay={400} isVisible={buttonVisible} y={-40}>
-                    {isVisible ? setButtonVisible(true) : ""}
+                  <FadeIn delay={200} isVisible={buttonVisible} y={-40}>
+                    {isVisible ? setButtonVisible(true) : null}
                     <div className="contactButton">
                       <WorkButton />
                     </div>

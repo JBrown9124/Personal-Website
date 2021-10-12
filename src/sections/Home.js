@@ -1,13 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
-  Navbar,
-  Nav,
-  OverlayTrigger,
-  ButtonGroup,
-  Button,
-  Popover,
-  Badge,
-  Container,
+ 
   Row,
   Col,
   Image,
@@ -15,18 +8,14 @@ import {
 import profPic from "../images/profPic.jpg";
 import SocialButtons from "../components/SocialButtons.js";
 import ProfPicBoop from "../animators/ProfPicBoop.js";
-import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+
 import Typography from "@mui/material/Typography";
-import theme from "../themes/theme1";
+
 import FadeIn from "../animators/FadeIn.js";
 import VisibilitySensor from "react-visibility-sensor";
 export default function Home(props) {
   const [welcomeVisible, setWelcomeVisible] = useState(false);
-  const [nameVisible, setNameVisible] = useState(false);
-  const [mottoVisible, setMottoVisible] = useState(false);
-  const [buttonsVisible, setButtonsVisible] = useState(false);
-
-  const [pictureVisible, setPictureVisible] = useState(false);
+  
 
   return (
     <div>
@@ -35,55 +24,46 @@ export default function Home(props) {
           <VisibilitySensor>
             {({ isVisible }) => (
               <FadeIn delay={1400} isVisible={welcomeVisible} y={-40}>
-                {isVisible ? setWelcomeVisible(true) : false}
+                {isVisible ? setWelcomeVisible(true) : null}
 
                 <Typography variant="h2">Welcome, I am</Typography>
               </FadeIn>
             )}
           </VisibilitySensor>
-          <VisibilitySensor>
-            {({ isVisible }) => (
-              <FadeIn delay={1600} isVisible={nameVisible} y={-40}>
-                {isVisible ? setNameVisible(true) : false}
+        
+              <FadeIn delay={1600} isVisible={welcomeVisible} y={-40}>
+               
                 <Typography variant="h1" className="nameText">
                   Jonathan Brown.
                 </Typography>
               </FadeIn>
-            )}
-          </VisibilitySensor>
-          <VisibilitySensor>
-            {({ isVisible }) => (
-              <FadeIn delay={1800} isVisible={mottoVisible} y={-40}>
-                {isVisible ? setMottoVisible(true) : false}
+        
+        
+              <FadeIn delay={1800} isVisible={welcomeVisible} y={-40}>
+            
                 <Typography variant="h3" className="whoText">
                   A creator, designer, and software engineer.
                 </Typography>
-              </FadeIn>
-            )}
-          </VisibilitySensor>
-          <VisibilitySensor>
-            {({ isVisible }) => (
-              <FadeIn delay={2000} isVisible={buttonsVisible} y={-40}>
-                {isVisible ? setButtonsVisible(true) : false}
+                </FadeIn>
+         
+              <FadeIn delay={2000} isVisible={welcomeVisible} y={-40}>
+                
                 <div className="socialButtons">
                   <SocialButtons />
                 </div>
-              </FadeIn>
-            )}
-          </VisibilitySensor>
+                </FadeIn>
+      
         </Col>
         <Col xs={5} xl={4}>
-          <VisibilitySensor>
-            {({ isVisible }) => (
-              <FadeIn delay={2200} isVisible={buttonsVisible} y={-40}>
+          
+              <FadeIn delay={2200} isVisible={welcomeVisible} y={-40}>
                 <div className="profPicContainer">
                   <ProfPicBoop>
                     <Image className="profPic" src={`${profPic}`} fluid />
                   </ProfPicBoop>
                 </div>
               </FadeIn>
-            )}
-          </VisibilitySensor>
+           
         </Col>
       </Row>
     </div>

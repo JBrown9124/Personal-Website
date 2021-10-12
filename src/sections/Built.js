@@ -1,38 +1,15 @@
 import React, { useEffect, useState } from "react";
-import {
-  Navbar,
-  Nav,
-  OverlayTrigger,
-  ButtonGroup,
-  
-  Popover,
-  Badge,
-  Container,
-  Row,
-  Col,
-  Image,
-  Placeholder,
-} from "react-bootstrap";
-import Button from '@mui/material/Button';
+import { Container } from "react-bootstrap";
 
-import ReactDOM from "react-dom";
-import theme from "../themes/theme1";
 import {
   createTheme,
   responsiveFontSizes,
   ThemeProvider,
   Typography,
 } from "@material-ui/core";
-import Accordion from "../components/Accordion";
-import Divider from "@mui/material/Divider";
-import VisibilitySensor from "react-visibility-sensor";
-import FadeIn from "../animators/FadeIn.js";
-import WorkButton from "../components/WorkButton.js";
+
 import Link from "@mui/material/Link";
 export default function Built(props) {
-  const [titleVisible, setTitleVisible] = useState(false);
-  const [leftTextVisible, setLeftTextVisible] = useState(false);
-  const [rightTextVisible, setRightTextVisible] = useState(false);
   function openInNewTab(url) {
     var win = window.open(url, "_blank");
     win.focus();
@@ -41,17 +18,19 @@ export default function Built(props) {
     <>
       <Container>
         <div className="builtText">
-        <Typography variant="body1" >
-        <Link
-                              
-                                type="button"
-                                onClick={() => openInNewTab("https://github.com/JBrown9124/Personal-Website")}
-                                underline="none"
-                                color={"#e0f7fa"}
-                              
-                              >
-                Designed and Built by Jonathan Brown</Link></Typography>
-                </div>
+          <Typography variant="body1">
+            <Link
+              type="button"
+              onClick={() =>
+                openInNewTab("https://github.com/JBrown9124/Personal-Website")
+              }
+              underline="none"
+              color={"#e0f7fa"}
+            >
+              Designed and Built by Jonathan Brown
+            </Link>
+          </Typography>
+        </div>
       </Container>
 
       {/* <Accordion flush>

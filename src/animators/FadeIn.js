@@ -16,8 +16,6 @@ function FadeIn({
   const [flip, set] = useState(false);
   const props = useSpring({
     
-    display: 'inline-block',
-    backfaceVisibility: 'hidden',
     from: {
       transform: `translate(${fromX}px, ${fromY}px)
       rotate(0deg)

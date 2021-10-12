@@ -1,127 +1,87 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
-  Navbar,
-  Nav,
-  OverlayTrigger,
-  ButtonGroup,
-  Button,
-  Popover,
-  Badge,
+ 
   Container,
   Row,
   Col,
-  Image,
-  Placeholder,
+  
 } from "react-bootstrap";
-import ReactDOM from "react-dom";
-import theme from "../themes/theme1";
-import {
-  createTheme,
-  responsiveFontSizes,
-  ThemeProvider,
-  Typography,
-} from "@material-ui/core";
+
+import Typography from "@mui/material/Typography";
 import Accordion from "../components/Accordion";
-import Divider from "@mui/material/Divider";
-import { styled } from "@mui/material/styles";
-import Accordion2 from "../components/Accordion2.js"
+
+import Accordion2 from "../components/Accordion2.js";
 import VisibilitySensor from "react-visibility-sensor";
 import FadeIn from "../animators/FadeIn.js";
 
 export default function About(props) {
   const [titleVisible, setTitleVisible] = useState(false);
   const [leftTextVisible, setLeftTextVisible] = useState(false);
-  const [rightTextVisible, setRightTextVisible] = useState(false);
-  const [accordion2Visible, setAccordion2Visible] = React.useState(false);
-  const [accordion1Visible, setAccordion1Visible] = React.useState(false);
+  
   return (
-    
-      <Container fluid>
+    <Container fluid>
+      <VisibilitySensor>
+        {({ isVisible }) => (
+          <FadeIn delay={200} isVisible={titleVisible} y={-40}>
+            {isVisible ? setTitleVisible(true) : null}
+
+            <div className="separator">
+              <Typography variant="h4"> About Me</Typography>
+            </div>
+          </FadeIn>
+        )}
+      </VisibilitySensor>
+      <Container>
         <VisibilitySensor>
           {({ isVisible }) => (
-            <FadeIn delay={400} isVisible={titleVisible} y={-40}>
-              {isVisible ? setTitleVisible(true) : false}
-
-              <div className="separator">
-                <Typography variant="h4"> About Me</Typography>
-              </div>
+            <FadeIn delay={200} isVisible={leftTextVisible} y={-40}>
+              {isVisible ? setLeftTextVisible(true) : null}
+              <Row>
+                <Col>
+                  <div className="aboutText">
+                    <Typography variant="body2">
+                      Greetings friend! My name is Jonathan and I have a passion
+                      for creating things through the art of code. My software
+                      engineer journey began in 2018 with a couple of text books
+                      and a strong passion for the inner workings of computers.
+                    </Typography>
+                  </div>
+                  <Typography variant="body2">
+                    Since then I have taken online courses on data structures
+                    and algorithms, built full-stack projects, and solved
+                    countless leetcode problems, all for the benefit of deeply
+                    understanding what it means to be a professional software
+                    engineer.
+                  </Typography>
+                </Col>
+                <Col>
+                  <Typography className="aboutText" variant="body2">
+                    But my journey doesn't end there. Everyday I am learning
+                    something new and exciting. Whether it's a new language,
+                    framework or library, my cravings for a deeper understanding
+                    of software development never cease! Directly below are the
+                    technologies I currently use as well as the certificates I
+                    have received.
+                  </Typography>
+                </Col>
+              </Row>
             </FadeIn>
           )}
         </VisibilitySensor>
-        <Container>
-        <VisibilitySensor>
-                  {({ isVisible }) => (
-                    <FadeIn
-                      delay={400}
-                      isVisible={leftTextVisible}
-                      y={-40}
-                    >
-                      {isVisible ? setLeftTextVisible(true) : false}
-          <Row>
-            <Col>
-             
-                
-                      <div className="aboutText">
-                      <Typography variant="body2">
-                        Greetings friend! My name is Jonathan and I have a
-                        passion for creating things through the art of code. My
-                        software engineer journey began in 2018 with a couple of
-                        text books and a strong passion for the inner workings
-                        of computers.
-                        </Typography>
-                        </div>
-                        <Typography  variant="body2">
-                         Since then I have taken online courses on
-                        data structures and algorithms, built full-stack
-                        projects, and solved countless leetcode problems, all
-                        for the benefit of deeply understanding what it means to
-                        be a professional software engineer.
-                      </Typography>
-             
-            </Col>
-            <Col>
-             
-              
-                      <Typography className="aboutText" variant="body2">
-                        But my journey doesn't end there. Everyday I am
-                        learning something new and exciting. Whether it's a new
-                        language, framework or library, my cravings for a deeper
-                        understanding of software development never cease!
-                        Directly below are the technologies I currently use as well
-                        as the certificates I have received.
-                      </Typography>
-                  
-            
-            </Col>
-          </Row>
-          </FadeIn>
-                  )}
-                </VisibilitySensor>
-        </Container>
-       
-            <FadeIn delay={400} isVisible={leftTextVisible} y={-40}>
-             
+      </Container>
+
+      <FadeIn delay={200} isVisible={leftTextVisible} y={-40}>
         <div className="accordion">
           <Row>
             <Col>
-           
-
-          <Accordion />
-        
-          </Col>
-          <Col>
-         
-          <Accordion2 />
-        
-          </Col>
+              <Accordion />
+            </Col>
+            <Col>
+              <Accordion2 />
+            </Col>
           </Row>
-
         </div>
-        </FadeIn>
-                
-      </Container>
-
-     
-    
+      </FadeIn>
+    </Container>
   );
 }

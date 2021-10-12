@@ -1,22 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Image, CardGroup } from "react-bootstrap";
-import Accordion from "../components/Accordion";
+import React, { useState } from "react";
+import { Container, Row, Col} from "react-bootstrap";
+
 import DoOrDoNotVid from "../images/DoOrDoNotVid.webm";
 import LoveAndPain from "../images/LoveAndPain.webm";
 import DiscordUtilityBot from "../images/DiscordUtilityBot.webm";
 import ReactPlayer from "react-player";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material/styles";
+
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
+
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
+
 import Typography from "@mui/material/Typography";
-import DoOrDoNotPic1 from "../images/DoOrDoNotPic1.png";
-import DoOrDoNotPic2 from "../images/DoOrDoNotPic2.png";
-import Divider from "@mui/material/Divider";
-import { createTheme, ThemeProvider } from "@material-ui/core/styles";
-import theme from "../themes/theme1";
+
 import CardBoop from "../animators/CardBoop.js";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
@@ -24,7 +19,7 @@ import SocialIconsBoop from "../animators/SocialIconsBoop.js";
 import VisibilitySensor from "react-visibility-sensor";
 import FadeIn from "../animators/FadeIn.js";
 import Tooltip from "@mui/material/Tooltip";
-import Fade from "@mui/material/Fade";
+
 import Zoom from "@mui/material/Zoom";
 export default function Work(props) {
   const [titleVisible, setTitleVisible] = useState(false);
@@ -36,15 +31,13 @@ export default function Work(props) {
     win.focus();
   }
   
-  const handleDoOrDoNot = () => {
-    openInNewTab("https://do-or-do-not-1.herokuapp.com");
-  };
+ 
   return (
     <>
       <Container fluid>
         <VisibilitySensor>
           {({ isVisible }) => (
-            <FadeIn delay={400} isVisible={titleVisible} y={-40}>
+            <FadeIn delay={200} isVisible={titleVisible} y={-40}>
               {isVisible ? setTitleVisible(true) : false}
 
               <div className="separator">
@@ -364,21 +357,7 @@ export default function Work(props) {
             </VisibilitySensor>
           </Col>
         </Row>
-        {/* <Accordion flush>
-  <Accordion.Item eventKey="0" >
-    <Accordion.Header>Technlogies I use</Accordion.Header>
-    <Accordion.Body>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </Accordion.Body>
-  </Accordion.Item>
- 
-</Accordion> */}
+       
 
       </Container>
     </>
