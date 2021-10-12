@@ -17,12 +17,12 @@ import FadeIn from "../animators/FadeIn.js";
 export default function About(props) {
   const [titleVisible, setTitleVisible] = useState(false);
   const [leftTextVisible, setLeftTextVisible] = useState(false);
-  
+  const [accordionVisible, setAccordionVisible] = useState(false);
   return (
     <Container fluid>
       <VisibilitySensor>
         {({ isVisible }) => (
-          <FadeIn delay={200} isVisible={titleVisible} y={-40}>
+          <FadeIn delay={0} isVisible={titleVisible} y={-40}>
             {isVisible ? setTitleVisible(true) : null}
 
             <div className="separator">
@@ -34,10 +34,14 @@ export default function About(props) {
       <Container>
         <VisibilitySensor>
           {({ isVisible }) => (
-            <FadeIn delay={200} isVisible={leftTextVisible} y={-40}>
-              {isVisible ? setLeftTextVisible(true) : null}
+            <FadeIn delay={0} isVisible={leftTextVisible} y={-40}>
+                  {isVisible ? setLeftTextVisible(true) : null}
               <Row>
+             
+              
+             
                 <Col>
+                
                   <div className="aboutText">
                     <Typography variant="body2">
                       Greetings friend! My name is Jonathan and I have a passion
@@ -46,6 +50,8 @@ export default function About(props) {
                       and a strong passion for the inner workings of computers.
                     </Typography>
                   </div>
+                  
+                 
                   <Typography variant="body2">
                     Since then I have taken online courses on data structures
                     and algorithms, built full-stack projects, and solved
@@ -53,8 +59,12 @@ export default function About(props) {
                     understanding what it means to be a professional software
                     engineer.
                   </Typography>
+              
                 </Col>
+        
+
                 <Col>
+              
                   <Typography className="aboutText" variant="body2">
                     But my journey doesn't end there. Everyday I am learning
                     something new and exciting. Whether it's a new language,
@@ -63,25 +73,38 @@ export default function About(props) {
                     technologies I currently use as well as the certificates I
                     have received.
                   </Typography>
+               
                 </Col>
               </Row>
-            </FadeIn>
+              </FadeIn>
           )}
         </VisibilitySensor>
       </Container>
+      <VisibilitySensor>
+          {({ isVisible }) => (
 
-      <FadeIn delay={200} isVisible={leftTextVisible} y={-40}>
+       <FadeIn delay={0} isVisible={accordionVisible} y={-40}>
+       {isVisible ? setAccordionVisible(true) : null}
         <div className="accordion">
+           
           <Row>
             <Col>
+           
               <Accordion />
+             
             </Col>
             <Col>
+            
+
               <Accordion2 />
+              
             </Col>
           </Row>
         </div>
-      </FadeIn>
+        </FadeIn>
+         )}
+         </VisibilitySensor>
+    
     </Container>
   );
 }

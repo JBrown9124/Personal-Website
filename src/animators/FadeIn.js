@@ -37,7 +37,7 @@ function FadeIn({
 
     // },
 
-    config: { mass: 1, tension: 170, friction: 26 },
+    config: 		{ mass: 1, tension: 170, friction: 26 },
     //   onRest: () => set(!flip),
   });
 

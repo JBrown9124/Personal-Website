@@ -23,7 +23,7 @@ export default function Home(props) {
         <Col xs={7} xl={8}>
           <VisibilitySensor>
             {({ isVisible }) => (
-              <FadeIn delay={1400} isVisible={welcomeVisible} y={-40}>
+              <FadeIn delay={750} isVisible={welcomeVisible} y={-40}>
                 {isVisible ? setWelcomeVisible(true) : null}
 
                 <Typography variant="h2">Welcome, I am</Typography>
@@ -31,7 +31,7 @@ export default function Home(props) {
             )}
           </VisibilitySensor>
         
-              <FadeIn delay={1600} isVisible={welcomeVisible} y={-40}>
+              <FadeIn delay={900} isVisible={welcomeVisible} y={-40}>
                
                 <Typography variant="h1" className="nameText">
                   Jonathan Brown.
@@ -39,14 +39,14 @@ export default function Home(props) {
               </FadeIn>
         
         
-              <FadeIn delay={1800} isVisible={welcomeVisible} y={-40}>
+              <FadeIn delay={1050} isVisible={welcomeVisible} y={-40}>
             
                 <Typography variant="h3" className="whoText">
                   A creator, designer, and software engineer.
                 </Typography>
                 </FadeIn>
          
-              <FadeIn delay={2000} isVisible={welcomeVisible} y={-40}>
+              <FadeIn delay={1200} isVisible={welcomeVisible} y={-40}>
                 
                 <div className="socialButtons">
                   <SocialButtons />
@@ -56,7 +56,7 @@ export default function Home(props) {
         </Col>
         <Col xs={5} xl={4}>
           
-              <FadeIn delay={2200} isVisible={welcomeVisible} y={-40}>
+              <FadeIn delay={1350} isVisible={welcomeVisible} y={-40}>
                 <div className="profPicContainer">
                   <ProfPicBoop>
                     <Image className="profPic" src={`${profPic}`} fluid />

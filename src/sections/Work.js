@@ -37,7 +37,7 @@ export default function Work(props) {
       <Container fluid>
         <VisibilitySensor>
           {({ isVisible }) => (
-            <FadeIn delay={200} isVisible={titleVisible} y={-40}>
+            <FadeIn delay={0} isVisible={titleVisible} y={-40}>
               {isVisible ? setTitleVisible(true) : false}
 
               <div className="separator">
@@ -52,7 +52,7 @@ export default function Work(props) {
             
             <VisibilitySensor partialVisibility={true}>
               {({ isVisible }) => (
-                <FadeIn delay={400} isVisible={doVisible} y={-40}>
+                <FadeIn delay={0} isVisible={doVisible} y={-40}>
                   {isVisible ? setDoVisible(true) : false}
 
                   <CardBoop>
@@ -163,7 +163,7 @@ export default function Work(props) {
 
             <VisibilitySensor partialVisibility={true}>
               {({ isVisible }) => (
-                <FadeIn delay={400} isVisible={discordVisible} y={-40}>
+                <FadeIn delay={150} isVisible={discordVisible} y={-40}>
                   {isVisible ? setDiscordVisible(true) : false}
                   <CardBoop>
                     <div className="cardDivider">
@@ -255,7 +255,7 @@ export default function Work(props) {
 
             <VisibilitySensor partialVisibility={true}>
               {({ isVisible }) => (
-                <FadeIn delay={400} isVisible={loveVisible} y={-40}>
+                <FadeIn delay={300} isVisible={loveVisible} y={-40}>
                   {isVisible ? setLoveVisible(true) : false}
                   <CardBoop>
                     <div className="cardDivider">
