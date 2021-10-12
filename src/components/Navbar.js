@@ -70,7 +70,7 @@ export default function Navigation(props) {
           <div>
               <Navbar.Brand
                 href="#home"
-                
+               
                 onMouseLeave={() => setPlayBrand(false)}
                 onMouseEnter={() => setPlayBrand(true)}
               >
@@ -85,6 +85,7 @@ export default function Navigation(props) {
                     src={navIcon}
                     width="65"
                     height="45"
+                    style={{opacity:1.0,borderColor:"rgba(115,199,204,1)!important", outline: "black", borderWidth:"10px!important", borderRadius:"13px", mixBlendMode:"difference!importnat", background:"transparent!important", color:"transparent!important"}}
                   />
                   <video
                     pause={false}
@@ -96,6 +97,8 @@ export default function Navigation(props) {
                     src={navIconB}
                     width="65"
                     height="45"
+                    sx={{opacity:1.0,borderColor:"rgba(115,199,204,1)!important", outline: "black", borderWidth:"10px!important", borderRadius:"13px", mixBlendMode:"difference!importnat", background:"transparent!important", color:"transparent!important"}}
+
                   />
                 </ReactCardFlip>
               </Navbar.Brand>
@@ -104,7 +107,7 @@ export default function Navigation(props) {
               </FadeIn>
             </Col>
             <FadeIn delay={600} fromY={-10} isVisible={true}>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={()=>setShowX(!showX)}><span>{showX===false?<GiHamburgerMenu color="rgba(115,199,204,1)"/>:<VscChromeClose color="rgba(115,199,204,1)"/>}</span></Navbar.Toggle>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={()=>setShowX(!showX)}><span>{showX===false?<GiHamburgerMenu className="collapseIcon" color="rgba(115,199,204,1)"/>:<VscChromeClose className="collapseIcon" color="rgba(115,199,204,1)"/>}</span></Navbar.Toggle>
             </FadeIn>
             <Navbar.Collapse id="responsive-navbar-nav">
            

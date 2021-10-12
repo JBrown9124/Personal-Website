@@ -44,7 +44,7 @@ export default function Work(props) {
       <Container fluid>
         <VisibilitySensor>
           {({ isVisible }) => (
-            <FadeIn delay={200} isVisible={titleVisible} y={-40}>
+            <FadeIn delay={400} isVisible={titleVisible} y={-40}>
               {isVisible ? setTitleVisible(true) : false}
 
               <div className="separator">

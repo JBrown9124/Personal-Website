@@ -5,14 +5,16 @@
 .navBar{
     background-color: #26418f;
     
-    opacity: 0.85;
+    opacity: 0.95;
   
    
  
      /* box-shadow: 10px 10px 5px grey; */
 }
 
-
+.brandIcon{
+    opacity:.5!important
+}
 .navText{
     color: #e0f7fa!important;
     font-family:'Oswald', sans-serif;
@@ -20,12 +22,17 @@
    
     
 }
+.collapseIcon{
+    height:39px;
+    width:39px;
+}
 .navText:hover{
     color:rgba(115,199,204,1)!important;
 }
 .navbar-brand{
    margin:0px 0px 0px 0px !important;
    padding:0px 0px 0px 0px !important;
+   
 }
 .resumeNav{
     
@@ -43,12 +50,14 @@
     box-shadow: none !important;
 }
 .navbar-toggler{
-    
+        border-color: rgba(115,199,204,1)!important;
         border:none;
         outline: none !important;
         box-shadow: none !important;
     
 }
-.navbar-toggler-icon{ color:rgba(115,199,204,1)}
+.navbar-toggler-icon{ color:rgba(115,199,204,1);border:none;
+    outline: none !important;
+    box-shadow: none !important;}
 .hamIcon{ color:rgba(115,199,204,);
 background-color:rgba(115,199,204,)}

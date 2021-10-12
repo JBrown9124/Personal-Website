@@ -38,8 +38,8 @@ export default function About(props) {
       <Container fluid>
         <VisibilitySensor>
           {({ isVisible }) => (
-            <FadeIn delay={250} isVisible={titleVisible} y={-40}>
-              {isVisible ? setTitleVisible(true) : ""}
+            <FadeIn delay={400} isVisible={titleVisible} y={-40}>
+              {isVisible ? setTitleVisible(true) : false}
 
               <div className="separator">
                 <Typography variant="h4"> About Me</Typography>
@@ -54,11 +54,11 @@ export default function About(props) {
                 <VisibilitySensor>
                   {({ isVisible }) => (
                     <FadeIn
-                      delay={250}
+                      delay={400}
                       isVisible={rightTextVisible || leftTextVisible}
                       y={-40}
                     >
-                      {isVisible ? setLeftTextVisible(true) : ""}
+                      {isVisible ? setLeftTextVisible(true) : false}
                       <div className="aboutText">
                       <Typography variant="body2">
                         Greetings friend! My name is Jonathan and I have a
@@ -85,11 +85,11 @@ export default function About(props) {
                 <VisibilitySensor>
                   {({ isVisible }) => (
                     <FadeIn
-                      delay={450}
+                      delay={400}
                       isVisible={rightTextVisible || leftTextVisible}
                       y={-40}
                     >
-                      {isVisible ? setRightTextVisible(true) : ""}
+                      {isVisible ? setRightTextVisible(true) : false}
                       <Typography className="aboutText" variant="body2">
                         But my journey doesn't end there. Everyday I am
                         learning something new and exciting. Whether it's a new

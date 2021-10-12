@@ -173,13 +173,13 @@ export default function CustomizedAccordions() {
         <VisibilitySensor>
           {({ isVisible }) => (
             <FadeIn
-              delay={250}
+              delay={400}
               isVisible={accordion1Visible || accordion2Visible}
               y={-40}
             >
-              {isVisible ? setAccordion1Visible(true) : ""}
+              {isVisible ? setAccordion1Visible(true) : false}
               <Accordion
-                key={1}
+              
                 disableGutters
                 expanded={expanded1}
                 onChange={() => setExpanded1(!expanded1)}
@@ -201,7 +201,7 @@ export default function CustomizedAccordions() {
                       <Row>
                         {myTechnologies.map((tech, idx) => (
                           <Col xl={4} xs={13} md={5} lg={4} sm={6}>
-                            <div className="accordionItems">
+                            <div key={idx} className="accordionItems">
                             <LinkUnderline
                              top={"65%"}
                               width={"80%"}
@@ -211,7 +211,7 @@ export default function CustomizedAccordions() {
                                 sx={{ color: "rgba(115,199,204,1)", fontSize: "0.6rem" }}
                               /> {" "}
                               <Link
-                                key={idx}
+                                
                                 type="button"
                                 onClick={() => openInNewTab(tech.link)}
                                 underline="none"
@@ -239,13 +239,13 @@ export default function CustomizedAccordions() {
         <VisibilitySensor>
           {({ isVisible }) => (
             <FadeIn
-              delay={450}
+              delay={400}
               isVisible={accordion1Visible || accordion2Visible}
               y={-40}
             >
-              {isVisible ? setAccordion2Visible(true) : ""}
+              {isVisible ? setAccordion2Visible(true) : false}
               <Accordion2
-                key={2}
+            
                 disableGutters
                 expanded={expanded2}
                 onChange={() => setExpanded2(!expanded2)}
