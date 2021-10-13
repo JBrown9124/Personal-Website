@@ -1,132 +1,116 @@
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
+import MuiAccordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import Typography from "@mui/material/Typography";
+import MuiAccordionDetails from "@mui/material/AccordionDetails";
+import CertificateBoop from "../animators/CertificateBoop";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import CourseraCertificate1 from "../images/CourseraCertificate1.png";
+import CourseraCertificate2 from "../images/CourseraCertificate2.png";
 
-  import * as React from "react";
-  import { styled } from "@mui/material/styles";
-  import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
-  import MuiAccordion from "@mui/material/Accordion";
-  import MuiAccordionSummary from "@mui/material/AccordionSummary";
-  import Typography from "@mui/material/Typography";
-  import MuiAccordionDetails from "@mui/material/AccordionDetails";
-  import CertificateBoop from "../animators/CertificateBoop";
-  import {
-    
-    Container,
-    Row,
-    Col,
-    Image,
-    
-  } from "react-bootstrap";
-  import CourseraCertificate1 from "../images/CourseraCertificate1.png";
-  import CourseraCertificate2 from "../images/CourseraCertificate2.png";
-  
-  
-  const Accordion2 = styled((props) => (
-    <MuiAccordion disableGutters elevation={0} square {...props} />
-  ))(({ theme }) => ({
-    //   border: `1px solid ${theme.palette.divider}`,
-    "&:not(:last-child)": {
-      borderBottom: "none",
-    },
-    "&:before": {
-      display: "none",
-  
-      color: "#26418f",
-      borderBottom: "none",
-    },
-  }));
-  
-  const AccordionSummary2 = styled((props) => (
-    <MuiAccordionSummary
-      expandIcon={
-        <ArrowForwardIosSharpIcon sx={{ color: "#e0f7fa", fontSize: "0.9rem" }} />
-      }
-      {...props}
-    />
-  ))(({ theme }) => ({
-    background: theme.palette.mode === "dark" ? "#26418f" : "#26418f",
-  
-    flexDirection: "row-reverse",
-    "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-      transform: "rotate(90deg)",
-    },
-    "& .MuiAccordionSummary-content": {
-      background: theme.palette.mode === "dark" ? "#26418f" : "#26418f",
-      marginLeft: theme.spacing(1),
-      borderBottom: "none",
-    },
-  }));
-  
-  const AccordionDetails2 = styled(MuiAccordionDetails)(({ theme }) => ({
-    padding: theme.spacing(2),
-    //   borderTop: '1px solid rgba(0, 0, 0, .125)',
-    background: theme.palette.mode === "dark" ? "#26418f" : "#26418f",
-  
+const Accordion2 = styled((props) => (
+  <MuiAccordion disableGutters elevation={0} square {...props} />
+))(({ theme }) => ({
+  //   border: `1px solid ${theme.palette.divider}`,
+  "&:not(:last-child)": {
     borderBottom: "none",
-  }));
-  
-  
-  export default function CustomizedAccordions() {
-    
-    const [expanded2, setExpanded2] = React.useState(true);
+  },
+  "&:before": {
+    display: "none",
 
-    function openInNewTab(url) {
-        var win = window.open(url, "_blank");
-        win.focus();
-      }
-    
-    return (
-  <>
+    color: "#26418f",
+    borderBottom: "none",
+  },
+}));
 
+const AccordionSummary2 = styled((props) => (
+  <MuiAccordionSummary
+    expandIcon={
+      <ArrowForwardIosSharpIcon sx={{ color: "#e0f7fa", fontSize: "0.9rem" }} />
+    }
+    {...props}
+  />
+))(({ theme }) => ({
+  background: theme.palette.mode === "dark" ? "#26418f" : "#26418f",
+
+  flexDirection: "row-reverse",
+  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
+    transform: "rotate(90deg)",
+  },
+  "& .MuiAccordionSummary-content": {
+    background: theme.palette.mode === "dark" ? "#26418f" : "#26418f",
+    marginLeft: theme.spacing(1),
+    borderBottom: "none",
+  },
+}));
+
+const AccordionDetails2 = styled(MuiAccordionDetails)(({ theme }) => ({
+  padding: theme.spacing(2),
+  //   borderTop: '1px solid rgba(0, 0, 0, .125)',
+  background: theme.palette.mode === "dark" ? "#26418f" : "#26418f",
+
+  borderBottom: "none",
+}));
+
+export default function CustomizedAccordions() {
+  const [expanded2, setExpanded2] = React.useState(true);
+
+  function openInNewTab(url) {
+    var win = window.open(url, "_blank");
+    win.focus();
+  }
+
+  return (
+    <>
       <Accordion2
-      disableGutters
-      expanded={expanded2}
-      onChange={() => setExpanded2(!expanded2)}
-    >
-      <AccordionSummary2
-        aria-controls="panel2d-content"
-        id="panel2d-header"
+        disableGutters
+        expanded={expanded2}
+        onChange={() => setExpanded2(!expanded2)}
       >
-        <Typography variant="h6" className="accordionTitle">
-          Certificates
-        </Typography>
-      </AccordionSummary2>
-      <AccordionDetails2>
-        <Typography className="accordionText">
-          <Container>
-            <Row>
-              <Col>
-                <CertificateBoop>
-                  <Image
-                    type="button"
-                    src={CourseraCertificate1}
-                    onClick={() =>
-                      openInNewTab(
-                        "https://www.coursera.org/account/accomplishments/certificate/YL6AHDSWBFU6"
-                      )
-                    }
-                    fluid
-                  />
-                </CertificateBoop>
-              </Col>
-              <Col>
-                <CertificateBoop>
-                  <Image
-                    type="button"
-                    src={CourseraCertificate2}
-                    onClick={() =>
-                      openInNewTab(
-                        "https://www.coursera.org/account/accomplishments/certificate/8HN48YFWNRAQ"
-                      )
-                    }
-                    fluid
-                  />
-                </CertificateBoop>
-              </Col>
-            </Row>
-          </Container>
-        </Typography>
-      </AccordionDetails2>
-    </Accordion2>
-     </>
-     );
-   }
-   
+        <AccordionSummary2 aria-controls="panel2d-content" id="panel2d-header">
+          <Typography variant="h6" className="accordionTitle">
+            Certificates
+          </Typography>
+        </AccordionSummary2>
+        <AccordionDetails2>
+          <Typography className="accordionText">
+            <Container>
+              <Row>
+                <Col>
+                  <CertificateBoop>
+                    <Image
+                      type="button"
+                      src={CourseraCertificate1}
+                      onClick={() =>
+                        openInNewTab(
+                          "https://www.coursera.org/account/accomplishments/certificate/YL6AHDSWBFU6"
+                        )
+                      }
+                      fluid
+                    />
+                  </CertificateBoop>
+                </Col>
+                <Col>
+                  <CertificateBoop>
+                    <Image
+                      type="button"
+                      src={CourseraCertificate2}
+                      onClick={() =>
+                        openInNewTab(
+                          "https://www.coursera.org/account/accomplishments/certificate/8HN48YFWNRAQ"
+                        )
+                      }
+                      fluid
+                    />
+                  </CertificateBoop>
+                </Col>
+              </Row>
+            </Container>
+          </Typography>
+        </AccordionDetails2>
+      </Accordion2>
+    </>
+  );
+}

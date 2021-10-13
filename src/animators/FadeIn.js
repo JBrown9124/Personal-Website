@@ -6,16 +6,15 @@ function FadeIn({
   delay = 0,
   x = 0,
   y = 0,
-  fromY=0,
-  fromX=0,
+  fromY = 0,
+  fromX = 0,
   rotation = 0,
   scale = 1.0,
-  fromScale=1,
+  fromScale = 1,
   children,
 }) {
   const [flip, set] = useState(false);
   const props = useSpring({
-    
     from: {
       transform: `translate(${fromX}px, ${fromY}px)
       rotate(0deg)
@@ -30,14 +29,14 @@ function FadeIn({
          scale(${scale})`,
       opacity: 1,
     },
-   cancel:isVisible===false,
+    cancel: isVisible === false,
     delay: delay,
 
     //   opacity: 0,
 
     // },
 
-    config: 		{ mass: 1, tension: 170, friction: 26 },
+    config: { mass: 1, tension: 170, friction: 26 },
     //   onRest: () => set(!flip),
   });
 

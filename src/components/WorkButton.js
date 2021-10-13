@@ -26,7 +26,7 @@
 //   overflow: visible;
 //   cursor: pointer;
 //   borderRadius:50px!important;
-  
+
 //   --main-color: ${
 //     theme.palette.mode === 'light' ? '#015249' : '#015249'
 //   };
@@ -40,13 +40,13 @@
 //       ? 'white'
 //       : 'white'
 //   };
- 
+
 //   & polygon {
 //     fill: transparent;
 //     transition: all 800ms ease;
 //     pointer-events: none;
 //   }
-  
+
 //   & .bg {
 //     stroke: var(--main-color);
 //     stroke-width: 0.5;
@@ -78,7 +78,7 @@
 //     outline: none;
 //   }
 
-//   &.${buttonUnstyledClasses.active} { 
+//   &.${buttonUnstyledClasses.active} {
 //     & .bg {
 //       fill: var(--active-color);
 //       transition: fill 300ms ease-out;
@@ -114,81 +114,47 @@
 //   return <SvgButton size="small" onClick={()=>window.open('mailto:brownjs193@gmail.com?subject=Subject&body=Body%20goes%20here')}>Start</SvgButton>;
 // }
 
-import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
-import { purple } from '@mui/material/colors';
+import * as React from "react";
+import { styled } from "@mui/material/styles";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import { purple } from "@mui/material/colors";
 
-const BootstrapButton = styled(Button)({
-  boxShadow: 'none',
-  textTransform: 'none',
-  fontSize: 16,
-  padding: '6px 12px',
-  border: '1px solid',
-  lineHeight: 1.5,
-  fill: "transparent",
-
-  backgroundColor: 'transparent',
-  borderColor: '#0063cc',
-  fontFamily: [
-    '-apple-system',
-    'BlinkMacSystemFont',
-    '"Segoe UI"',
-    'Roboto',
-    '"Helvetica Neue"',
-    'Arial',
-    'sans-serif',
-    '"Apple Color Emoji"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-  ].join(','),
-  '&:hover': {
-    backgroundColor: '#0069d9',
-    borderColor: '#0062cc',
-    boxShadow: 'none',
-  },
-  '&:active': {
-    boxShadow: 'none',
-    backgroundColor: '#0062cc',
-    borderColor: '#005cbf',
-  },
-  '&:focus': {
-    boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
-  },
-});
 
 const ColorButton = styled(Button)(({ theme }) => ({
-  
   backgroundColor: "transparent",
-  '&:hover': {
-    backgroundColor: 'rgba(150,230,253,0.07)',
+  "&:hover": {
+    backgroundColor: "rgba(150,230,253,0.07)",
   },
-  fontFamily:"Oswald, sans-serif",
-  color:"#77C9D4",
+  fontFamily: "Oswald, sans-serif",
+  color: "#77C9D4",
   fill: "transparent",
-  textTransform: 'none',
- border:"solid #77C9D4 1px",
-  
+  textTransform: "none",
+  border: "solid #77C9D4 1px",
 
-    
-   
-    [theme.breakpoints.up('md')]: {
-      fontSize: '1.1rem',
-      height:"50px",
-  width:"130px",
-    },
-    [theme.breakpoints.down('md')]: {
-      fontSize: '.6rem',
-      height:"30px",
-  width:"70px",
-    },
+  [theme.breakpoints.up("md")]: {
+    fontSize: "1.1rem",
+    height: "50px",
+    width: "130px",
+  },
+  [theme.breakpoints.down("md")]: {
+    fontSize: ".6rem",
+    height: "30px",
+    width: "70px",
+  },
 }));
 
 export default function WorkButton() {
   return (
-  
-      <ColorButton onClick={()=>window.open('mailto:brownjs193@gmail.com?subject=Subject&body=Body%20goes%20here')}variant="contained">Contact</ColorButton>
-      
+    <ColorButton
+      onClick={() =>
+        window.open(
+          "mailto:brownjs193@gmail.com?subject=Subject&body=Body%20goes%20here"
+        )
+      }
+      variant="contained"
+    >
+      Contact
+    </ColorButton>
   );
 }

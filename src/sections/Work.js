@@ -1,17 +1,12 @@
 import React, { useState } from "react";
-import { Container, Row, Col} from "react-bootstrap";
-
+import { Container, Row, Col } from "react-bootstrap";
 import DoOrDoNotVid from "../images/DoOrDoNotVid.webm";
 import LoveAndPain from "../images/LoveAndPain.webm";
 import DiscordUtilityBot from "../images/DiscordUtilityBot.webm";
 import ReactPlayer from "react-player";
-
 import Card from "@mui/material/Card";
-
 import CardContent from "@mui/material/CardContent";
-
 import Typography from "@mui/material/Typography";
-
 import CardBoop from "../animators/CardBoop.js";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
@@ -30,8 +25,7 @@ export default function Work(props) {
     var win = window.open(url, "_blank");
     win.focus();
   }
-  
- 
+
   return (
     <>
       <Container fluid>
@@ -46,10 +40,15 @@ export default function Work(props) {
             </FadeIn>
           )}
         </VisibilitySensor>
-        <Row className="centerRow"  flexItem={true}>
-          
-          <Col xs={"auto"} sm={"auto"} md={"auto"} lg={"auto"} xl={"auto"} xxl={"auto"}>
-            
+        <Row className="centerRow" flexItem={true}>
+          <Col
+            xs={"auto"}
+            sm={"auto"}
+            md={"auto"}
+            lg={"auto"}
+            xl={"auto"}
+            xxl={"auto"}
+          >
             <VisibilitySensor partialVisibility={true}>
               {({ isVisible }) => (
                 <FadeIn delay={0} isVisible={doVisible} y={-40}>
@@ -57,7 +56,7 @@ export default function Work(props) {
 
                   <CardBoop>
                     <div className="cardDivider">
-                      <Card className="doContainer" sx={{  maxWidth: 400,  }}>
+                      <Card className="doContainer" sx={{ maxWidth: 400 }}>
                         <Container>
                           <div className="player-wrapper">
                             <ReactPlayer
@@ -72,7 +71,7 @@ export default function Work(props) {
                             />
                           </div>
 
-                          <CardContent className="doInnerContainer" >
+                          <CardContent className="doInnerContainer">
                             <Typography
                               className="doTitle"
                               gutterBottom
@@ -159,15 +158,21 @@ export default function Work(props) {
             </VisibilitySensor>
           </Col>
 
-          <Col          xs={"auto"} sm={"auto"} md={"auto"} lg={"auto"} xl={"auto"} xxl={"auto"}>
-
+          <Col
+            xs={"auto"}
+            sm={"auto"}
+            md={"auto"}
+            lg={"auto"}
+            xl={"auto"}
+            xxl={"auto"}
+          >
             <VisibilitySensor partialVisibility={true}>
               {({ isVisible }) => (
                 <FadeIn delay={150} isVisible={discordVisible} y={-40}>
                   {isVisible ? setDiscordVisible(true) : false}
                   <CardBoop>
                     <div className="cardDivider">
-                      <Card className="discordContainer" sx={{ maxWidth: 400}}>
+                      <Card className="discordContainer" sx={{ maxWidth: 400 }}>
                         <Container>
                           <div className="player-wrapper">
                             <ReactPlayer
@@ -250,16 +255,22 @@ export default function Work(props) {
               )}
             </VisibilitySensor>
           </Col>
-          
-          <Col           xs={"auto"} sm={"auto"} md={"auto"} lg={"auto"} xl={"auto"} xxl={"auto"}>
 
+          <Col
+            xs={"auto"}
+            sm={"auto"}
+            md={"auto"}
+            lg={"auto"}
+            xl={"auto"}
+            xxl={"auto"}
+          >
             <VisibilitySensor partialVisibility={true}>
               {({ isVisible }) => (
                 <FadeIn delay={300} isVisible={loveVisible} y={-40}>
                   {isVisible ? setLoveVisible(true) : false}
                   <CardBoop>
                     <div className="cardDivider">
-                      <Card className="loveContainer" sx={{  maxWidth: 400 , }}>
+                      <Card className="loveContainer" sx={{ maxWidth: 400 }}>
                         <Container>
                           <div className="player-wrapper">
                             <ReactPlayer
@@ -273,7 +284,7 @@ export default function Work(props) {
                               controls
                             />
                           </div>
-                          <CardContent className="loveInnerContainer" >
+                          <CardContent className="loveInnerContainer">
                             <Typography
                               gutterBottom
                               className="loveTitle"
@@ -287,7 +298,6 @@ export default function Work(props) {
                               className="loveText"
                               variant="body2"
                               color="text.secondary"
-                              
                             >
                               <div className="pSeperator">
                                 Developed and deployed a web application to
@@ -310,7 +320,6 @@ export default function Work(props) {
                               rotation={0}
                               x={0}
                               y={-6}
-                            
                             >
                               <Tooltip
                                 title="GitHub"
@@ -335,7 +344,6 @@ export default function Work(props) {
                               rotation={0}
                               x={0}
                               y={-6}
-                            
                             >
                               <FiExternalLink
                                 type="button"
@@ -357,8 +365,6 @@ export default function Work(props) {
             </VisibilitySensor>
           </Col>
         </Row>
-       
-
       </Container>
     </>
   );

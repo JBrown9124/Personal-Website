@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
-.aboutTitleText{
-    font-family:'Merriweather', serif;
-    color:white;
-    font-size:35px;
-    
+
+.aboutTitleText {
+  font-family: 'Merriweather', serif;
+  color: white;
+  font-size: 35px;
+
 }
+
 /* .aboutText{
     font-family: 'Merriweather'!important;
     color:#015249!important;
@@ -15,31 +17,34 @@
     
 } */
 
-.aboutText{margin-bottom:15px}
+.aboutText {
+  margin-bottom: 15px
+}
 
-.accordion{
-    margin-top:50px;
+.accordion {
+  margin-top: 50px;
 
 }
+
 .separator {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    margin-bottom:50px;
-  }
-  
-  .separator::before,
-  .separator::after {
-    content: '';
-    flex: 1;
-    border-bottom: .1px solid #e0f7fa;
-    opacity:.2
-  }
-  
-  .separator:not(:empty)::before {
-    margin-right: 1.0em;
-  }
-  
-  .separator:not(:empty)::after {
-    margin-left: 1.0em;
-  }
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  border-bottom: .1px solid #e0f7fa;
+  opacity: .2
+}
+
+.separator:not(:empty)::before {
+  margin-right: 1.0em;
+}
+
+.separator:not(:empty)::after {
+  margin-left: 1.0em;
+}

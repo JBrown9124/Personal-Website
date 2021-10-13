@@ -1,4 +1,3 @@
-
 import { styled } from "@mui/material/styles";
 import ArrowForwardIosSharpIcon from "@mui/icons-material/ArrowForwardIosSharp";
 import MuiAccordion from "@mui/material/Accordion";
@@ -10,12 +9,7 @@ import Link from "@mui/material/Link";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 
 import React, { useEffect, useState } from "react";
-import {
-  
-  Row,
-  Col,
-  
-} from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import LinkUnderline from "../animators/LinkUnderline";
 
 const Accordion = styled((props) => (
@@ -65,8 +59,6 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderBottom: "none",
 }));
 
-
-
 const myTechnologies = [
   { tech: "Python", link: "https://www.python.org/doc/essays/blurb/" },
   {
@@ -87,8 +79,6 @@ const myTechnologies = [
 ];
 export default function CustomizedAccordions() {
   const [expanded1, setExpanded1] = useState(true);
-  
-  
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded1(newExpanded ? panel : false);
@@ -96,58 +86,49 @@ export default function CustomizedAccordions() {
 
   return (
     <>
-    
-          
-                <Accordion
-                  disableGutters
-                  expanded={expanded1}
-                  onChange={() => setExpanded1(!expanded1)}
-                >
-                  <AccordionSummary
-                    aria-controls="panel1d-content"
-                    id="panel1d-header"
-                  >
-                    <Typography variant="h6" className="accordionTitle">
-                      Technologies I Use
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography variant="body1" className="accordionText">
-                      <Row>
-                        {myTechnologies.map((tech, idx) => (
-                          <Col xl={4} xs={13} md={5} lg={4} sm={6}>
-                            <div key={idx} className="accordionItems">
-                              <LinkUnderline
-                                top={"65%"}
-                                width={"80%"}
-                                background={"rgba(115,199,204,1)"}
-                              >
-                                <DoubleArrowIcon
-                                  sx={{
-                                    color: "rgba(115,199,204,1)",
-                                    fontSize: "0.6rem",
-                                  }}
-                                />{" "}
-                                <Link
-                                  type="button"
-                                  onClick={() => openInNewTab(tech.link)}
-                                  underline="none"
-                                  color={"#e0f7fa"}
-                                >
-                                  <div className="tech">{tech.tech}</div>
-                                </Link>
-                              </LinkUnderline>
-                            </div>
-                          </Col>
-                        ))}
-                      </Row>
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-             
-        
-          
-             
+      <Accordion
+        disableGutters
+        expanded={expanded1}
+        onChange={() => setExpanded1(!expanded1)}
+      >
+        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
+          <Typography variant="h6" className="accordionTitle">
+            Technologies I Use
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography variant="body1" className="accordionText">
+            <Row>
+              {myTechnologies.map((tech, idx) => (
+                <Col xl={4} xs={13} md={5} lg={4} sm={6}>
+                  <div key={idx} className="accordionItems">
+                    <LinkUnderline
+                      top={"65%"}
+                      width={"80%"}
+                      background={"rgba(115,199,204,1)"}
+                    >
+                      <DoubleArrowIcon
+                        sx={{
+                          color: "rgba(115,199,204,1)",
+                          fontSize: "0.6rem",
+                        }}
+                      />{" "}
+                      <Link
+                        type="button"
+                        onClick={() => openInNewTab(tech.link)}
+                        underline="none"
+                        color={"#e0f7fa"}
+                      >
+                        <div className="tech">{tech.tech}</div>
+                      </Link>
+                    </LinkUnderline>
+                  </div>
+                </Col>
+              ))}
+            </Row>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
     </>
   );
 }

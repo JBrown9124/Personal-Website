@@ -1,44 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
-.introductionText{
-    font-family:'Pacifico', cursive;
-    color:#015249!important;
-    font-size:25px;
-    
-}
-.nameText{
-    margin-top:10px !important;
-    font-family: 'Merriweather', serif;
-    color:white;
-    font-size:70px;
-    
+
+.introductionText {
+    font-family: 'Pacifico', cursive;
+    color: #015249 !important;
+    font-size: 25px;
+
 }
 
-.whoText{
-   margin-top:10px !important;
-    
+.nameText {
+    margin-top: 10px !important;
+    font-family: 'Merriweather', serif;
+    color: white;
+    font-size: 70px;
+
 }
-@media (max-width: 480px) { .profPicContainer{
-    position: relative;
-    bottom: 13px!important;
-    
-   } }
-   
-  
-.profPicContainer{
+
+.whoText {
+    margin-top: 10px !important;
+
+}
+
+@media (max-width: 480px) {
+    .profPicContainer {
+        position: relative;
+        bottom: 13px !important;
+
+    }
+}
+
+
+.profPicContainer {
     position: relative;
     bottom: 6vw;
-    
-   }
-   .profPic{
-     border-radius:5px;
-     
-     
-   }
-   .socialButtons{
-   margin-top: 13px;
+
 }
+
+.profPic {
+    border-radius: 5px;
+
+
+}
+
+.socialButtons {
+    margin-top: 13px;
+}
+
 /* .introductionText{
     font-family:'Pacifico', cursive;
     color:#015249!important;

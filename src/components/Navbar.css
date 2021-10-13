@@ -2,62 +2,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
 
 
-.navBar{
+.navBar {
     background-color: #26418f;
-    
+
     opacity: 0.95;
-  
-   
- 
-     /* box-shadow: 10px 10px 5px grey; */
+
+
+
+    /* box-shadow: 10px 10px 5px grey; */
 }
 
-.brandIcon{
-    opacity:.5!important
+.brandIcon {
+    opacity: .5 !important
 }
-.navText{
-    color: #e0f7fa!important;
-    font-family:'Oswald', sans-serif;
-    opacity: 1.0!important;
-   
-    
+
+.navText {
+    color: #e0f7fa !important;
+    font-family: 'Oswald', sans-serif;
+    opacity: 1.0 !important;
+
+
 }
-.collapseIcon{
-    height:39px;
-    width:39px;
+
+.collapseIcon {
+    height: 39px;
+    width: 39px;
 }
-.navText:hover{
-    color:rgba(115,199,204,1)!important;
+
+.navText:hover {
+    color: rgba(115, 199, 204, 1) !important;
 }
-.navbar-brand{
-   margin:0px 0px 0px 0px !important;
-   padding:0px 0px 0px 0px !important;
-   
+
+.navbar-brand {
+    margin: 0px 0px 0px 0px !important;
+    padding: 0px 0px 0px 0px !important;
+
 }
-.resumeNav{
-    
-}
+
+.resumeNav {}
+
 .underline {
     position: relative;
     height: 2px;
-  }
+}
 
- 
 
-  .navbar-toggler.collapsed{
-    border:none;
+
+.navbar-toggler.collapsed {
+    border: none;
     outline: none !important;
     box-shadow: none !important;
 }
-.navbar-toggler{
-        border-color: rgba(115,199,204,1)!important;
-        border:none;
-        outline: none !important;
-        box-shadow: none !important;
-    
-}
-.navbar-toggler-icon{ color:rgba(115,199,204,1);border:none;
+
+.navbar-toggler {
+    border-color: rgba(115, 199, 204, 1) !important;
+    border: none;
     outline: none !important;
-    box-shadow: none !important;}
-.hamIcon{ color:rgba(115,199,204,);
-background-color:rgba(115,199,204,)}
+    box-shadow: none !important;
+
+}
+
+.navbar-toggler-icon {
+    color: rgba(115, 199, 204, 1);
+    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.hamIcon {
+    color: rgba(115, 199, 204, );
+    background-color: rgba(115, 199, 204, )
+}

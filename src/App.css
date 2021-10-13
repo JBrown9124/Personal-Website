@@ -1,112 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Slab:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
-/* .App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-.appContainer{
+.appContainer {
   background: #26418f;
-  
-  color:black;
-  
-  
-  
-  
-}
-/* 
 
-.make{
-  margin-bottom:1000px
+  color: black;
+
+
+
+
 }
-@media (max-width: 480px) { .home{
-  
+
+
+.home {
+
   position: relative;
-  top:350px!important;
- 
-}
-.builtSeperator{
-  margin-top:300px !important;
-}
-.about{
-  margin-top:200vw;
-  
-}
-.sectionSeperator{
-  margin-top:700px!important;
-  
-} }
-/* ipad Pro */
-/* @media (width: 1024px) { .home{
-  
-  position: relative;
-  top:60vw!important;
- 
-}
-.builtSeperator{
-  margin-top:300px !important;
-}
-.about{
-  margin-top:200vw;
-  
-}
-.sectionSeperator{
-  margin-top:100vw!important;
-  
-} }  */
+  top: 20.5vw;
 
+}
 
-.home{
-  
-  position: relative;
-  top:20.5vw;
- 
+.builtSeperator {
+  margin-top: 17vw;
 }
-.builtSeperator{
-  margin-top:17vw;
+
+.about {
+  margin-top: 35vw;
+  padding-top: 107px !important;
 }
-.about{
-  margin-top:35vw;padding-top: 107px!important;  }
-  
-.sectionSeperator{
-  margin-top:20vw;
-  padding-top: 107px!important; 
-  
+
+.sectionSeperator {
+  margin-top: 20vw;
+  padding-top: 107px !important;
+
 }
 
 
@@ -122,94 +49,94 @@
 
 
 
-@media (max-width: 480px) { .home{
-  
-  position: relative;
-  top:80vw!important;
- 
+@media (max-width: 480px) {
+  .home {
+
+    position: relative;
+    top: 80vw !important;
+
+  }
+
+  .builtSeperator {
+    margin-top: 60vw !important;
+  }
+
+  .about {
+    margin-top: 200vw;
+    padding-top: 107px !important;
+
+  }
+
+  .sectionSeperator {
+    margin-top: 70vw !important;
+    padding-top: 107px !important;
+
+  }
 }
-.builtSeperator{
-  margin-top:60vw !important;
-}
-.about{
-  margin-top:200vw; padding-top: 107px!important;
-  
-}
-.sectionSeperator{
-  margin-top:70vw!important; padding-top:107px!important;
-  
-} }
+
 /* ipad Pro */
 
 
 
 
 
-@media (max-width: 768px) and (min-width:481px) { .home{
-  
-  position: relative;
-  top:60vw!important;
- 
+@media (max-width: 768px) and (min-width:481px) {
+  .home {
+
+    position: relative;
+    top: 60vw !important;
+
+  }
+
+  .builtSeperator {
+    margin-top: 35vw !important;
+  }
+
+  .about {
+    margin-top: 100vw;
+    padding-top: 107px !important;
+
+  }
+
+  .sectionSeperator {
+    margin-top: 40vw !important;
+    padding-top: 107px !important;
+
+  }
 }
-.builtSeperator{
-  margin-top:35vw !important;
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .home {
+
+    position: relative;
+    top: 40vw !important;
+
+  }
+
+  .builtSeperator {
+    margin-top: 25vw !important;
+  }
+
+  .about {
+    margin-top: 60vw;
+    padding-top: 107px !important;
+
+  }
+
+  .sectionSeperator {
+    margin-top: 25vw !important;
+    padding-top: 107px !important;
+
+  }
 }
-.about{
-  margin-top:100vw; padding-top: 107px!important;
-  
-}
-.sectionSeperator{
-  margin-top:40vw!important; padding-top: 107px!important;
-  
-} }
 
-
-
-
-
-
-
-
-
-
-@media (min-width: 768px) and (max-width: 1024px) { .home{
-  
-  position: relative;
-  top:40vw!important;
- 
-}
-.builtSeperator{
-  margin-top:25vw !important;
-}
-.about{
-  margin-top:60vw; padding-top: 107px!important;
-  
-}
-.sectionSeperator{
-  margin-top:25vw!important;padding-top: 107px!important;
-  
-} }
 /* ipad Pro */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

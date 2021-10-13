@@ -1,11 +1,5 @@
 import React, { useState } from "react";
-import {
- 
-  Container,
-  Row,
-  Col,
-  
-} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import Typography from "@mui/material/Typography";
 import Accordion from "../components/Accordion";
@@ -35,13 +29,9 @@ export default function About(props) {
         <VisibilitySensor>
           {({ isVisible }) => (
             <FadeIn delay={0} isVisible={leftTextVisible} y={-40}>
-                  {isVisible ? setLeftTextVisible(true) : null}
+              {isVisible ? setLeftTextVisible(true) : null}
               <Row>
-             
-              
-             
                 <Col>
-                
                   <div className="aboutText">
                     <Typography variant="body2">
                       Greetings friend! My name is Jonathan and I have a passion
@@ -50,8 +40,7 @@ export default function About(props) {
                       and a strong passion for the inner workings of computers.
                     </Typography>
                   </div>
-                  
-                 
+
                   <Typography variant="body2">
                     Since then I have taken online courses on data structures
                     and algorithms, built full-stack projects, and solved
@@ -59,12 +48,9 @@ export default function About(props) {
                     understanding what it means to be a professional software
                     engineer.
                   </Typography>
-              
                 </Col>
-        
 
                 <Col>
-              
                   <Typography className="aboutText" variant="body2">
                     But my journey doesn't end there. Everyday I am learning
                     something new and exciting. Whether it's a new language,
@@ -73,38 +59,29 @@ export default function About(props) {
                     technologies I currently use as well as the certificates I
                     have received.
                   </Typography>
-               
                 </Col>
               </Row>
-              </FadeIn>
+            </FadeIn>
           )}
         </VisibilitySensor>
       </Container>
       <VisibilitySensor>
-          {({ isVisible }) => (
-
-       <FadeIn delay={0} isVisible={accordionVisible} y={-40}>
-       {isVisible ? setAccordionVisible(true) : null}
-        <div className="accordion">
-           
-          <Row>
-            <Col>
-           
-              <Accordion />
-             
-            </Col>
-            <Col>
-            
-
-              <Accordion2 />
-              
-            </Col>
-          </Row>
-        </div>
-        </FadeIn>
-         )}
-         </VisibilitySensor>
-    
+        {({ isVisible }) => (
+          <FadeIn delay={0} isVisible={accordionVisible} y={-40}>
+            {isVisible ? setAccordionVisible(true) : null}
+            <div className="accordion">
+              <Row>
+                <Col>
+                  <Accordion />
+                </Col>
+                <Col>
+                  <Accordion2 />
+                </Col>
+              </Row>
+            </div>
+          </FadeIn>
+        )}
+      </VisibilitySensor>
     </Container>
   );
 }

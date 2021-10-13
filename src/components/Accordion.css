@@ -9,13 +9,15 @@
     color:#015249!important;
     
 } */
-.MuiLink-underlineNone:hover{
-    color:rgba(115,199,204,1);
-    text-decoration:none;
+.MuiLink-underlineNone:hover {
+    color: rgba(115, 199, 204, 1);
+    text-decoration: none;
 }
-.tech{
-    margin-bottom:10px
+
+.tech {
+    margin-bottom: 10px
 }
-.accordionItems{
-    margin-left:21px
+
+.accordionItems {
+    margin-left: 21px
 }
