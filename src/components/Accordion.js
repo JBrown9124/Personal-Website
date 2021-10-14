@@ -102,17 +102,19 @@ export default function CustomizedAccordions() {
               {myTechnologies.map((tech, idx) => (
                 <Col key={idx} xl={4} xs={13} md={5} lg={4} sm={6}>
                   <div  className="accordionItems">
-                    <LinkUnderline
-                      top={"65%"}
-                      width={"80%"}
-                      background={"rgba(115,199,204,1)"}
-                    >
+                    
                       <DoubleArrowIcon
                         sx={{
                           color: "rgba(115,199,204,1)",
                           fontSize: "0.6rem",
                         }}
                       />{" "}
+                      <LinkUnderline
+                      left={0}
+                      top={"86%"}
+                      width={"100%"}
+                      background={"rgba(115,199,204,1)"}
+                    >
                       <Link
                       variant="body1"
                         type="button"

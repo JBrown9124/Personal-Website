@@ -10,6 +10,8 @@ const LinkUnderline = ({
   top = "75%",
   y = 0,
   rotation = 0,
+  left=12,
+
   scale = 1,
   timing = 150,
 }) => {
@@ -24,7 +26,7 @@ const LinkUnderline = ({
              scale(1)`,
     position: "absolute",
     top: top,
-    left: 12,
+    left: left,
     width: isBooped ? width : "0%",
     height: `${weight}px`,
     background: background,
@@ -53,17 +55,7 @@ const LinkUnderline = ({
     },
   });
 
-  React.useEffect(() => {
-    if (isBooped) {
-      return;
-    }
-    const timeoutId = window.setTimeout(() => {
-      setIsBooped(false);
-    }, timing);
-    return () => {
-      window.clearTimeout(timeoutId);
-    };
-  }, [isBooped, timing]);
+
   const trigger = () => {
     setIsBooped(true);
   };
