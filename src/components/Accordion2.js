@@ -75,7 +75,7 @@ export default function CustomizedAccordions() {
           </Typography>
         </AccordionSummary2>
         <AccordionDetails2>
-          <Typography className="accordionText">
+          
             <Container>
               <Row>
                 <Col>
@@ -108,7 +108,7 @@ export default function CustomizedAccordions() {
                 </Col>
               </Row>
             </Container>
-          </Typography>
+          
         </AccordionDetails2>
       </Accordion2>
     </>

@@ -13,7 +13,12 @@ function FadeIn({
   fromScale = 1,
   children,
 }) {
-  const [flip, set] = useState(false);
+  const [fade, setFade] = useState(false);
+  useEffect(()=>{
+    setFade(isVisible)
+
+
+  }, [isVisible])
   const props = useSpring({
     from: {
       transform: `translate(${fromX}px, ${fromY}px)
@@ -29,7 +34,7 @@ function FadeIn({
          scale(${scale})`,
       opacity: 1,
     },
-    cancel: isVisible === false,
+    cancel: fade === false,
     delay: delay,
 
     //   opacity: 0,

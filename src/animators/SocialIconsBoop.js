@@ -33,13 +33,13 @@ const SocialIconsBoop = ({
     setIsBooped(false);
   };
   return (
-    <animated.span
+    <animated.div
       onMouseEnter={trigger}
       onMouseLeave={triggerLeave}
       style={style}
     >
       {children}
-    </animated.span>
+    </animated.div>
   );
 };
 

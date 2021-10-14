@@ -17,10 +17,6 @@ import Tooltip from "@mui/material/Tooltip";
 
 import Zoom from "@mui/material/Zoom";
 export default function Work(props) {
-  const [titleVisible, setTitleVisible] = useState(false);
-  const [doVisible, setDoVisible] = useState(false);
-  const [loveVisible, setLoveVisible] = useState(false);
-  const [discordVisible, setDiscordVisible] = useState(false);
   function openInNewTab(url) {
     var win = window.open(url, "_blank");
     win.focus();
@@ -31,16 +27,14 @@ export default function Work(props) {
       <Container fluid>
         <VisibilitySensor>
           {({ isVisible }) => (
-            <FadeIn delay={0} isVisible={titleVisible} y={-40}>
-              {isVisible ? setTitleVisible(true) : false}
-
+            <FadeIn delay={0} isVisible={isVisible} y={-40}>
               <div className="separator">
                 <Typography variant="h4"> Personal Projects</Typography>
               </div>
             </FadeIn>
           )}
         </VisibilitySensor>
-        <Row className="centerRow" flexItem={true}>
+        <Row className="centerRow">
           <Col
             xs={"auto"}
             sm={"auto"}
@@ -51,9 +45,7 @@ export default function Work(props) {
           >
             <VisibilitySensor partialVisibility={true}>
               {({ isVisible }) => (
-                <FadeIn delay={0} isVisible={doVisible} y={-40}>
-                  {isVisible ? setDoVisible(true) : false}
-
+                <FadeIn delay={0} isVisible={isVisible} y={-40}>
                   <CardBoop>
                     <div className="cardDivider">
                       <Card className="doContainer" sx={{ maxWidth: 400 }}>
@@ -80,25 +72,26 @@ export default function Work(props) {
                             >
                               Do or Do Not
                             </Typography>
-                            <Typography
-                              className="doText"
-                              variant="body2"
-                              color="text.secondary"
-                            >
-                              <div className="pSeperator">
+
+                            <div className="pSeperator">
+                              <Typography className="doText" variant="body2">
                                 Created a social task-managing full-stack web
                                 application that allows you to create, share,
                                 edit (drawing and image importing features
                                 included), and complete tasks with users on your
-                                friends list.{" "}
-                              </div>
-                              <div className="pSeperator">
-                                {" "}
+                                friends list.
+                              </Typography>
+                            </div>
+                            <div className="pSeperator">
+                              <Typography className="doText" variant="body2">
+                              
                                 Includes user authentication, a friends list
                                 (received and sent friend requests) and friend
                                 alerts (ex. notifying a user when a friend has
-                                completed a shared task).{" "}
-                              </div>
+                                completed a shared task).
+                              </Typography>
+                            </div>
+                            <Typography className="doText" variant="body2">
                               Uses Django as the backend web framework and
                               React.js as the frontend library. All data is
                               queried from and stored in a PostgreSQL database
@@ -167,8 +160,7 @@ export default function Work(props) {
           >
             <VisibilitySensor partialVisibility={true}>
               {({ isVisible }) => (
-                <FadeIn delay={150} isVisible={discordVisible} y={-40}>
-                  {isVisible ? setDiscordVisible(true) : false}
+                <FadeIn delay={150} isVisible={isVisible} y={-40}>
                   <CardBoop>
                     <div className="cardDivider">
                       <Card className="discordContainer" sx={{ maxWidth: 400 }}>
@@ -192,25 +184,31 @@ export default function Work(props) {
                               variant="h5"
                               component="div"
                             >
-                              Discord Utility Bot{" "}
+                              Discord Utility Bot
                             </Typography>
-                            <Typography
-                              className="discordInfo"
-                              variant="body2"
-                              color="text.secondary"
-                            >
-                              <div className="pSeperator">
+                            <div className="pSeperator">
+                              <Typography
+                                className="discordInfo"
+                                variant="body2"
+                              >
                                 Developed a Discord bot that performs a variety
                                 of functions for users such as calling a Lord of
                                 the Rings or Star Wars ReST API which returns a
-                                random quote.{" "}
-                              </div>
-                              <div className="pSeperator">
+                                random quote.
+                              </Typography>
+                            </div>
+                            <div className="pSeperator">
+                              <Typography
+                                className="discordInfo"
+                                variant="body2"
+                              >
                                 The random quote along with the character’s name
                                 who said it are then placed in a YouTube search
                                 to pair its respective movie scene in the
                                 response to the user.{" "}
-                              </div>
+                              </Typography>
+                            </div>
+                            <Typography className="discordInfo" variant="body2">
                               Other functions include but are not limited to
                               playing music per request and remembering user
                               provided information (stores memories in a MySQL
@@ -265,8 +263,7 @@ export default function Work(props) {
           >
             <VisibilitySensor partialVisibility={true}>
               {({ isVisible }) => (
-                <FadeIn delay={300} isVisible={loveVisible} y={-40}>
-                  {isVisible ? setLoveVisible(true) : false}
+                <FadeIn delay={300} isVisible={isVisible} y={-40}>
                   <CardBoop>
                     <div className="cardDivider">
                       <Card className="loveContainer" sx={{ maxWidth: 400 }}>
@@ -293,20 +290,20 @@ export default function Work(props) {
                               The Love and Pain Experiment
                             </Typography>
 
-                            <Typography
-                              className="loveText"
-                              variant="body2"
-                              color="text.secondary"
-                            >
-                              <div className="pSeperator">
+                            <div className="pSeperator">
+                              <Typography className="loveText" variant="body2">
                                 Created a full-stack web application to process
                                 data for an experimental questionnaire.
-                              </div>
-                              <div className="pSeperator">
+                              </Typography>
+                            </div>
+                            <div className="pSeperator">
+                              <Typography className="loveText" variant="body2">
                                 The questions, possible answers, and user input
                                 is stored in a MySQL database. A Python based
                                 ReST API queries and manipulates the data.
-                              </div>
+                              </Typography>
+                            </div>
+                            <Typography className="loveText" variant="body2">
                               The frontend web app uses React.js to present the
                               survey. Upon completion, a chart is displayed
                               which is meant to prove a psychological theory.

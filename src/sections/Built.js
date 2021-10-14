@@ -18,18 +18,20 @@ export default function Built(props) {
     <>
       <Container>
         <div className="builtText">
-          <Typography variant="body1">
+        
             <Link
+           
               type="button"
               onClick={() =>
                 openInNewTab("https://github.com/JBrown9124/Personal-Website")
               }
               underline="none"
               color={"#e0f7fa"}
-            >
+            >  <Typography variant="body1">
               Designed and Built by Jonathan Brown
+              </Typography>
             </Link>
-          </Typography>
+       
         </div>
       </Container>
 

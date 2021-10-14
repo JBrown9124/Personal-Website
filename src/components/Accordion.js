@@ -97,7 +97,7 @@ export default function CustomizedAccordions() {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography variant="body1" className="accordionText">
+       
             <Row>
               {myTechnologies.map((tech, idx) => (
                 <Col key={idx} xl={4} xs={13} md={5} lg={4} sm={6}>
@@ -114,19 +114,20 @@ export default function CustomizedAccordions() {
                         }}
                       />{" "}
                       <Link
+                      variant="body1"
                         type="button"
                         onClick={() => openInNewTab(tech.link)}
                         underline="none"
                         color={"#e0f7fa"}
                       >
-                        <div className="tech">{tech.tech}</div>
+                      {tech.tech}
                       </Link>
                     </LinkUnderline>
                   </div>
                 </Col>
               ))}
             </Row>
-          </Typography>
+       
         </AccordionDetails>
       </Accordion>
     </>

@@ -78,9 +78,9 @@ export default function Navigation(props) {
                         flipDirection="vertical"
                       >
                         <video
-                          pause={false}
-                          play={playBrand}
-                          paused={false}
+                          
+                    
+                          
                           muted={true}
                           type="button"
                           autoPlay={true}
@@ -99,9 +99,9 @@ export default function Navigation(props) {
                           }}
                         />
                         <video
-                          pause={false}
-                          play={playBrand}
-                          paused={false}
+                        
+                          
+                          
                           muted={true}
                           type="button"
                           autoPlay={true}
@@ -130,7 +130,7 @@ export default function Navigation(props) {
                 aria-controls="responsive-navbar-nav"
                 onClick={() => setShowX(!showX)}
               >
-                <span>
+                <div>
                   {showX === false ? (
                     <GiHamburgerMenu
                       className="collapseIcon"
@@ -142,7 +142,7 @@ export default function Navigation(props) {
                       color="rgba(115,199,204,1)"
                     />
                   )}
-                </span>
+                </div>
               </Navbar.Toggle>
             </FadeIn>
             <Navbar.Collapse id="responsive-navbar-nav">
@@ -199,10 +199,10 @@ export default function Navigation(props) {
                   <LinkUnderline>
                     <Nav.Link
                       href={Jonathan_Brown_Resume}
-                      without
+                    
                       rel="noopener noreferrer"
                       target="_blank"
-                      trailingIcon="picture_as_pdf"
+                      
                       label="Resume"
                       className="navText"
                       onClick={() => setShowX(false)}

@@ -9,15 +9,13 @@ import VisibilitySensor from "react-visibility-sensor";
 import FadeIn from "../animators/FadeIn.js";
 
 export default function About(props) {
-  const [titleVisible, setTitleVisible] = useState(false);
-  const [leftTextVisible, setLeftTextVisible] = useState(false);
-  const [accordionVisible, setAccordionVisible] = useState(false);
+  
   return (
     <Container fluid>
       <VisibilitySensor>
         {({ isVisible }) => (
-          <FadeIn delay={0} isVisible={titleVisible} y={-40}>
-            {isVisible ? setTitleVisible(true) : null}
+          <FadeIn delay={0} isVisible={isVisible} y={-40}>
+            
 
             <div className="separator">
               <Typography variant="h4"> About Me</Typography>
@@ -28,12 +26,12 @@ export default function About(props) {
       <Container>
         <VisibilitySensor>
           {({ isVisible }) => (
-            <FadeIn delay={0} isVisible={leftTextVisible} y={-40}>
-              {isVisible ? setLeftTextVisible(true) : null}
+            <FadeIn delay={0} isVisible={isVisible} y={-40}>
+             
               <Row>
                 <Col>
                   <div className="aboutText">
-                    <Typography variant="body2">
+                    <Typography variant="body2" >
                       Greetings friend! My name is Jonathan and I have a passion
                       for creating things through the art of code. My software
                       engineer journey began in 2018 with a couple of text books
@@ -51,7 +49,7 @@ export default function About(props) {
                 </Col>
 
                 <Col>
-                  <Typography className="aboutText" variant="body2">
+                  <Typography className="aboutText"  variant="body2">
                     But my journey doesn't end there. Everyday I am learning
                     something new and exciting. Whether it's a new language,
                     framework or library, my cravings for a deeper understanding
@@ -67,8 +65,8 @@ export default function About(props) {
       </Container>
       <VisibilitySensor>
         {({ isVisible }) => (
-          <FadeIn delay={0} isVisible={accordionVisible} y={-40}>
-            {isVisible ? setAccordionVisible(true) : null}
+          <FadeIn delay={0} isVisible={isVisible} y={-40}>
+          
             <div className="accordion">
               <Row>
                 <Col>

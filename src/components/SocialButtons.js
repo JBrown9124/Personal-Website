@@ -64,9 +64,10 @@ export default function SocialButtons(props) {
             x={6}
             y={0}
           >
-            <Typography variant="body2">
+            
               <div className="emailLink">
                 <Link
+                variant="body2"
                   type="button"
                   onClick={() =>
                     window.open(
@@ -79,7 +80,7 @@ export default function SocialButtons(props) {
                   brownjs193@gmail.com
                 </Link>
               </div>
-            </Typography>
+            
           </SocialIconsBoop>
         </Col>
       </Row>

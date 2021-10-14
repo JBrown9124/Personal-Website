@@ -31,13 +31,13 @@ const ProfPicBoop = ({ x = 0, y = 0, rotation = 0, scale = 1, children }) => {
     setIsBooped(false);
   };
   return (
-    <animated.span
+    <animated.div
       onMouseEnter={trigger}
       onMouseLeave={triggerLeave}
       style={style}
     >
       {children}
-    </animated.span>
+    </animated.div>
   );
 };
 

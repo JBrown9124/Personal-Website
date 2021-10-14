@@ -11,8 +11,7 @@ import WorkButton from "../components/WorkButton.js";
 
 export default function Contact(props) {
   
-  const [rightTextVisible, setRightTextVisible] = useState(false);
-  const [buttonVisible, setButtonVisible] = useState(false);
+  
 
   return (
     <>
@@ -23,7 +22,7 @@ export default function Contact(props) {
               {/* {isVisible ? setTitleVisible(true) : ""} */}
 
               <div className="separator">
-                <Typography variant="h4"> Start a Dialogue</Typography>
+                <Typography  variant="h4"> Start a Dialogue</Typography>
               </div>
             </FadeIn>
           )}
@@ -33,24 +32,24 @@ export default function Contact(props) {
             <Container>
               <VisibilitySensor>
                 {({ isVisible }) => (
-                  <FadeIn  delay={0} isVisible={rightTextVisible} y={-40}>
-                    {isVisible ? setRightTextVisible(true) : null}
+                  <FadeIn  delay={0} isVisible={isVisible} y={-40}>
+                 
                     <Typography className="contactText" variant="body2">
                       I am currently in the process of finding a software
                       engineer position.
-                      
+                      </Typography>
                       <Typography className="contactText" variant="body2">
                         Please feel free contacting me about anything software
                         related!
                       </Typography>
-                    </Typography>
+                   
                   </FadeIn>
                 )}
               </VisibilitySensor>
               <VisibilitySensor>
                 {({ isVisible }) => (
-                  <FadeIn delay={0} isVisible={buttonVisible} y={-40}>
-                    {isVisible ? setButtonVisible(true) : null}
+                  <FadeIn delay={0} isVisible={isVisible} y={-40}>
+                   
                     <div className="contactButton">
                       <WorkButton />
                     </div>

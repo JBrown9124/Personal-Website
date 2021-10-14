@@ -6,14 +6,13 @@ const CertificateBoop = ({
   y = 0,
   rotation = 0,
   scale = 1.1,
-  timing = 150,
+  
   children,
 }) => {
   const [isBooped, setIsBooped] = React.useState(false);
   const style = useSpring({
-    display: "inline-block",
-    backfaceVisibility: "hidden",
-    cursor: "pointer",
+ 
+  
     boxShadow: isBooped
       ? "0 4px 8px 0 rgba(0, 0, 0, 0.0), 0 0px 0px 0 rgba(0, 0, 0, 0.0u)"
       : "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
@@ -30,17 +29,7 @@ const CertificateBoop = ({
 
     config: { mass: 1, tension: 170, friction: 26 },
   });
-  React.useEffect(() => {
-    if (isBooped) {
-      return;
-    }
-    const timeoutId = window.setTimeout(() => {
-      setIsBooped(false);
-    }, timing);
-    return () => {
-      window.clearTimeout(timeoutId);
-    };
-  }, [isBooped, timing]);
+ 
   const trigger = () => {
     setIsBooped(true);
   };
@@ -48,13 +37,13 @@ const CertificateBoop = ({
     setIsBooped(false);
   };
   return (
-    <animated.span
+    <animated.div
       onMouseEnter={trigger}
       onMouseLeave={triggerLeave}
       style={style}
     >
       {children}
-    </animated.span>
+    </animated.div>
   );
 };
 
