@@ -86,19 +86,18 @@ export default function Work(props) {
                               color="text.secondary"
                             >
                               <div className="pSeperator">
-                                Developed and deployed a social task managing
-                                web application that allows you to share, edit,
-                                delete, create (drawing and image importing
-                                features included) and complete tasks with users
-                                on your friends list.{" "}
+                                Created a social task-managing full-stack web
+                                application that allows you to create, share,
+                                edit (drawing and image importing features
+                                included), and complete tasks with users on your
+                                friends list.{" "}
                               </div>
                               <div className="pSeperator">
                                 {" "}
-                                Also handles useful social functions such as
-                                user authentication, a friends list (received
-                                and sent friend requests) and friend alerts (ex.
-                                notifying a user when a friend has completed a
-                                shared task).{" "}
+                                Includes user authentication, a friends list
+                                (received and sent friend requests) and friend
+                                alerts (ex. notifying a user when a friend has
+                                completed a shared task).{" "}
                               </div>
                               Uses Django as the backend web framework and
                               React.js as the frontend library. All data is
@@ -300,8 +299,8 @@ export default function Work(props) {
                               color="text.secondary"
                             >
                               <div className="pSeperator">
-                                Developed and deployed a web application to
-                                process data for an experimental questionnaire.
+                                Created a full-stack web application to process
+                                data for an experimental questionnaire.
                               </div>
                               <div className="pSeperator">
                                 The questions, possible answers, and user input

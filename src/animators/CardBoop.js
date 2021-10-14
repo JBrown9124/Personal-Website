@@ -22,17 +22,7 @@ const CardBoop = ({
 
     config: { mass: 1, tension: 170, friction: 26 },
   });
-  React.useEffect(() => {
-    if (isBooped) {
-      return;
-    }
-    const timeoutId = window.setTimeout(() => {
-      setIsBooped(false);
-    }, timing);
-    return () => {
-      window.clearTimeout(timeoutId);
-    };
-  }, [isBooped, timing]);
+  
   const trigger = () => {
     setIsBooped(true);
   };

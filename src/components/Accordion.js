@@ -100,8 +100,8 @@ export default function CustomizedAccordions() {
           <Typography variant="body1" className="accordionText">
             <Row>
               {myTechnologies.map((tech, idx) => (
-                <Col xl={4} xs={13} md={5} lg={4} sm={6}>
-                  <div key={idx} className="accordionItems">
+                <Col key={idx} xl={4} xs={13} md={5} lg={4} sm={6}>
+                  <div  className="accordionItems">
                     <LinkUnderline
                       top={"65%"}
                       width={"80%"}

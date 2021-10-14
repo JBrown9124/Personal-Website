@@ -47,15 +47,15 @@
 
 .loveInnerContainer {
   background: #2b6777 !important;
-
-  padding: 43.0px !important;
+ padding:32.3px!important;
+  
 
 }
 
 .loveTitle {
   font-family: "Cinzel" !important;
   color: white !important;
-  margin-bottom: 9.6px !important;
+ 
 }
 
 .loveText {
@@ -76,14 +76,14 @@
 
 .discordInnerContainer {
   background: #4f545c !important;
-  padding: 27.4px !important;
+  padding: 27px !important;
 
 }
 
 .discordTitle {
   font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif !important;
   color: white !important;
-  margin-bottom: 29.89px !important;
+  
 }
 
 .discordInfo {

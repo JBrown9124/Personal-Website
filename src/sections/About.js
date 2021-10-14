@@ -43,7 +43,7 @@ export default function About(props) {
 
                   <Typography variant="body2">
                     Since then I have taken online courses on data structures
-                    and algorithms, built full-stack projects, and solved
+                    and algorithms, built full-stack applications, and solved
                     countless leetcode problems, all for the benefit of deeply
                     understanding what it means to be a professional software
                     engineer.
