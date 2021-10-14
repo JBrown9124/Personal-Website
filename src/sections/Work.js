@@ -45,7 +45,7 @@ export default function Work(props) {
           >
             <VisibilitySensor partialVisibility={true}>
               {({ isVisible }) => (
-                <FadeIn delay={0} isVisible={isVisible} y={-40}>
+                <FadeIn delay={150} isVisible={isVisible} y={-40}>
                   <CardBoop>
                     <div className="cardDivider">
                       <Card className="doContainer" sx={{ maxWidth: 400 }}>
@@ -160,7 +160,7 @@ export default function Work(props) {
           >
             <VisibilitySensor partialVisibility={true}>
               {({ isVisible }) => (
-                <FadeIn delay={150} isVisible={isVisible} y={-40}>
+                <FadeIn delay={300} isVisible={isVisible} y={-40}>
                   <CardBoop>
                     <div className="cardDivider">
                       <Card className="discordContainer" sx={{ maxWidth: 400 }}>
@@ -263,7 +263,7 @@ export default function Work(props) {
           >
             <VisibilitySensor partialVisibility={true}>
               {({ isVisible }) => (
-                <FadeIn delay={300} isVisible={isVisible} y={-40}>
+                <FadeIn delay={450} isVisible={isVisible} y={-40}>
                   <CardBoop>
                     <div className="cardDivider">
                       <Card className="loveContainer" sx={{ maxWidth: 400 }}>

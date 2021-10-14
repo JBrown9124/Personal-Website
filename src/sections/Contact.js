@@ -48,7 +48,7 @@ export default function Contact(props) {
               </VisibilitySensor>
               <VisibilitySensor>
                 {({ isVisible }) => (
-                  <FadeIn delay={0} isVisible={isVisible} y={-40}>
+                  <FadeIn delay={150} isVisible={isVisible} y={-40}>
                    
                     <div className="contactButton">
                       <WorkButton />
