@@ -6,7 +6,11 @@ import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import CertificateBoop from "../animators/CertificateBoop";
-import { Container, Row, Col, Image } from "react-bootstrap";
+
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
 import CourseraCertificate1 from "../images/CourseraCertificate1.png";
 import CourseraCertificate2 from "../images/CourseraCertificate2.png";
 

@@ -2,9 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container } from "react-bootstrap";
 
 import {
-  createTheme,
-  responsiveFontSizes,
-  ThemeProvider,
+  
   Typography,
 } from "@material-ui/core";
 
@@ -18,7 +16,7 @@ export default function Built(props) {
     <>
       <Container>
         <div className="builtText">
-        
+        <Typography variant="body1">
             <Link
            
               type="button"
@@ -27,10 +25,12 @@ export default function Built(props) {
               }
               underline="none"
               color={"#e0f7fa"}
-            >  <Typography variant="body1">
+              variant="body1"
+            >  
               Designed and Built by Jonathan Brown
-              </Typography>
+          
             </Link>
+            </Typography>
        
         </div>
       </Container>

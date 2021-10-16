@@ -1,5 +1,5 @@
-import { responsiveFontSizes, Typography } from "@material-ui/core";
-import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+
+import {createTheme} from "@material-ui/core/styles";
 
 let theme = createTheme();
 

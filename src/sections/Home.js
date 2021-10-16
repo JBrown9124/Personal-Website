@@ -1,14 +1,17 @@
-import React, { useState } from "react";
-import { Row, Col, Image } from "react-bootstrap";
+import React from "react";
+
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Image from "react-bootstrap/Image";
 import profPic from "../images/profPic.jpg";
 import SocialButtons from "../components/SocialButtons.js";
 import ProfPicBoop from "../animators/ProfPicBoop.js";
 import Typography from "@mui/material/Typography";
-import theme from "../themes/theme1";
+
 import FadeIn from "../animators/FadeIn.js";
 import VisibilitySensor from "react-visibility-sensor";
 export default function Home(props) {
-  const [welcomeVisible, setWelcomeVisible] = useState(false);
+  
 
   return (
     <div><VisibilitySensor partialVisibility={true}>

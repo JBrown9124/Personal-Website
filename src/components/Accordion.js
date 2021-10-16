@@ -9,7 +9,8 @@ import Link from "@mui/material/Link";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 
 import React, { useEffect, useState } from "react";
-import { Row, Col } from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import LinkUnderline from "../animators/LinkUnderline";
 
 const Accordion = styled((props) => (
@@ -80,9 +81,7 @@ const myTechnologies = [
 export default function CustomizedAccordions() {
   const [expanded1, setExpanded1] = useState(true);
 
-  const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded1(newExpanded ? panel : false);
-  };
+  
 
   return (
     <>
@@ -111,7 +110,7 @@ export default function CustomizedAccordions() {
                       />{" "}
                       <LinkUnderline
                       left={0}
-                      top={"86%"}
+                      top={"89%"}
                       width={"100%"}
                       background={"rgba(115,199,204,1)"}
                     >

@@ -1,5 +1,8 @@
-import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from "react";
+
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import DoOrDoNotVid from "../images/DoOrDoNotVid.webm";
 import LoveAndPain from "../images/LoveAndPain.webm";
 import DiscordUtilityBot from "../images/DiscordUtilityBot.webm";

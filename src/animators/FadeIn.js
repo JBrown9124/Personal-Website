@@ -15,10 +15,11 @@ function FadeIn({
 }) {
   const [fade, setFade] = useState(false);
   useEffect(()=>{
+    if (isVisible){
     setFade(isVisible)
 
 
-  }, [isVisible])
+  }}, [isVisible])
   const props = useSpring({
     from: {
       transform: `translate(${fromX}px, ${fromY}px)
@@ -28,13 +29,16 @@ function FadeIn({
       opacity: 0,
     },
 
-    to: {
-      transform: `translate(${x}px, ${y}px)
+    
+      transform: fade ? `translate(${x}px, ${y}px)
          rotate(${rotation}deg)
-         scale(${scale})`,
-      opacity: 1,
-    },
-    cancel: fade === false,
+         scale(${scale})`: `translate(${fromX}px, ${fromY}px)
+         rotate(0deg)
+         
+         scale(${fromScale})`,
+      opacity: fade ? 1:0,
+    
+   
     delay: delay,
 
     //   opacity: 0,

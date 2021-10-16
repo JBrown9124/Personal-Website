@@ -1,37 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Jonathan_Brown_Resume from "../images/Jonathan_Brown_Resume.pdf";
-import {
-  Navbar,
-  Nav,
-  OverlayTrigger,
-  ButtonGroup,
-  Button,
-  Popover,
-  Badge,
-  Container,
-  Row,
-  Col,
-} from "react-bootstrap";
-
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+import Col from "react-bootstrap/Col";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
 import navIcon from "../images/navIcon.mp4";
 import navIconB from "../images/navIconB.mp4";
 import LinkUnderline from "../animators/LinkUnderline";
 import FadeIn from "../animators/FadeIn.js";
-import VisibilitySensor from "react-visibility-sensor";
 import ReactCardFlip from "react-card-flip";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { VscChromeClose } from "react-icons/vsc";
 import Tooltip from "@mui/material/Tooltip";
-import Fade from "@mui/material/Fade";
 import Zoom from "@mui/material/Zoom";
 function HideOnScroll(props) {
   const { children, window } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
+
   const trigger = useScrollTrigger({
     target: window ? window() : undefined,
   });
@@ -54,11 +41,8 @@ HideOnScroll.propTypes = {
 
 export default function Navigation(props) {
   const [playBrand, setPlayBrand] = useState(false);
-  const [flipDirection, setFlipDirection] = useState("vertical");
   const [showX, setShowX] = useState(false);
-  const triggerFlip = () => {
-    setPlayBrand(!playBrand);
-  };
+
   return (
     <>
       <HideOnScroll {...props}>
@@ -78,9 +62,6 @@ export default function Navigation(props) {
                         flipDirection="vertical"
                       >
                         <video
-                          
-                    
-                          
                           muted={true}
                           type="button"
                           autoPlay={true}
@@ -99,9 +80,6 @@ export default function Navigation(props) {
                           }}
                         />
                         <video
-                        
-                          
-                          
                           muted={true}
                           type="button"
                           autoPlay={true}
@@ -150,7 +128,7 @@ export default function Navigation(props) {
 
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
                 <FadeIn delay={150} fromY={-10} isVisible={true}>
-                  <LinkUnderline width={"60"}>
+                  <LinkUnderline width={"51"}>
                     <Nav.Link
                       href="#about"
                       className="navText"
@@ -163,7 +141,7 @@ export default function Navigation(props) {
               </Col>
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
                 <FadeIn delay={300} fromY={-10} isVisible={true}>
-                  <LinkUnderline width={"60"}>
+                  <LinkUnderline width={"50"}>
                     <Nav.Link
                       href="#work"
                       className="navText"
@@ -176,7 +154,7 @@ export default function Navigation(props) {
               </Col>
               <Col xs={"auto"} sm={"auto"} md={1} lg={1} xl={1} xxl={1}>
                 <FadeIn delay={450} fromY={-10} isVisible={true}>
-                  <LinkUnderline>
+                  <LinkUnderline width={"59"}>
                     <Nav.Link
                       href="#contact"
                       className="navText"
@@ -196,13 +174,11 @@ export default function Navigation(props) {
                 xxl={"auto"}
               >
                 <FadeIn delay={600} fromY={-10} isVisible={true}>
-                  <LinkUnderline>
+                  <LinkUnderline width={"59"}>
                     <Nav.Link
                       href={Jonathan_Brown_Resume}
-                    
                       rel="noopener noreferrer"
                       target="_blank"
-                      
                       label="Resume"
                       className="navText"
                       onClick={() => setShowX(false)}

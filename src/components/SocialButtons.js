@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Row, Col, Image } from "react-bootstrap";
+import React from "react";
+
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { AiOutlineMail } from "react-icons/ai";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import SocialIconsBoop from "../animators/SocialIconsBoop.js";
-import Typography from "@mui/material/Typography";
+
 import Tooltip from "@mui/material/Tooltip";
-import Fade from "@mui/material/Fade";
+
 import Zoom from "@mui/material/Zoom";
 import Link from "@mui/material/Link";
 export default function SocialButtons(props) {

@@ -1,5 +1,5 @@
 import { animated, useSpring } from "react-spring";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const SocialIconsBoop = ({
   x = 0,

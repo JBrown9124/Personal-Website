@@ -1,5 +1,5 @@
 import { animated, useSpring } from "react-spring";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const LinkUnderline = ({
   children,
@@ -10,10 +10,10 @@ const LinkUnderline = ({
   top = "75%",
   y = 0,
   rotation = 0,
-  left=12,
+  left=16,
 
   scale = 1,
-  timing = 150,
+  
 }) => {
   const [isBooped, setIsBooped] = React.useState(false);
   const style = useSpring({

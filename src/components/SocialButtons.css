@@ -1,7 +1,5 @@
 
-.linkedIn{
-    
-}
+
 .github{
 margin-left:15px;
 
@@ -12,42 +10,38 @@ margin-left:15px;
 }
 @media (max-width: 480px) { 
 .githubIcon{
-    /* margin-left:15px; */
+   
     width:15px!important;
     height:15px!important;
-    /* color: #fff !important; */
+    
    
 
 } .linkedInIcon{
     width:15px!important;
     height:15px!important;
     
-    /* color: #fff !important; */
+  
 }}
 .linkedInIcon{
     width:25px;
     height:25px;
-    
-    /* color: #fff !important; */
+   
 }
 .githubIcon{
-    /* margin-left:15px; */
+    
     width:25px;
     height:25px;
-    /* color: #fff !important; */
+   
    
 
 }
 .emailIcon{
-    /* margin-left:15px; */
+   
     width:25px;
     height:25px;
-    /* color: #fff !important; */
+   
 }
-.emailLink{ 
-    /* margin-left:15px; */
 
-}
 .MuiLink-underlineNone:hover{
     color:rgba(115,199,204,1);
     text-decoration:none;

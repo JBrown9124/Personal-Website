@@ -1,5 +1,5 @@
 import { animated, useSpring } from "react-spring";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const ProfPicBoop = ({ x = 0, y = 0, rotation = 0, scale = 1, children }) => {
   const [isBooped, setIsBooped] = React.useState(false);
