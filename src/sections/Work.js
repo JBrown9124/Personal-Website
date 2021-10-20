@@ -87,7 +87,6 @@ export default function Work(props) {
                             </div>
                             <div className="pSeperator">
                               <Typography className="doText" variant="body2">
-                              
                                 Includes user authentication, a friends list
                                 (received and sent friend requests) and friend
                                 alerts (ex. notifying a user when a friend has
@@ -95,8 +94,8 @@ export default function Work(props) {
                               </Typography>
                             </div>
                             <Typography className="doText" variant="body2">
-                              Uses Django as the backend web framework and
-                              React.js as the frontend library. All data is
+                              Uses Django as the back-end web framework and
+                              React.js as the front-end library. All data is
                               queried from and stored in a PostgreSQL database
                               using a ReST API developed with Django.
                             </Typography>
@@ -302,13 +301,12 @@ export default function Work(props) {
                             <div className="pSeperator">
                               <Typography className="loveText" variant="body2">
                                 The questions, possible answers, and user input
-                                is stored in a MySQL database. A Python based
-                                ReST API queries and manipulates the data.
+                                is stored in a MySQL database. Developed a Flask ReST API used to query and manipulate the data.
                               </Typography>
                             </div>
                             <Typography className="loveText" variant="body2">
-                              The frontend web app uses React.js to present the
-                              survey. Upon completion, a chart is displayed
+                              The front-end library used to present the survey
+                              is React.js. Upon completion, a chart is displayed
                               which is meant to prove a psychological theory.
                             </Typography>
                           </CardContent>
