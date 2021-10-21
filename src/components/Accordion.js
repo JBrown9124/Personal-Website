@@ -102,7 +102,7 @@ export default function CustomizedAccordions() {
           <Row>
             {myTechnologies.map((tech, idx) => (
               <Col key={idx} xl={4} xs={13} md={5} lg={4} sm={6}>
-                <div className="accordionItems">
+               
                   <DoubleArrowIcon
                     sx={{
                       color: "rgba(115,199,204,1)",
@@ -125,7 +125,7 @@ export default function CustomizedAccordions() {
                       {tech.tech}
                     </Link>
                   </LinkUnderline>
-                </div>
+             
               </Col>
             ))}
           </Row>

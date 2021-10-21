@@ -12,7 +12,8 @@ const CertificateBoop = ({
   const [isBooped, setIsBooped] = React.useState(false);
   const style = useSpring({
  
-  
+    display: "inline-block",
+    backfaceVisibility: "hidden",
     boxShadow: isBooped
       ? "0 4px 8px 0 rgba(0, 0, 0, 0.0), 0 0px 0px 0 rgba(0, 0, 0, 0.0u)"
       : "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",

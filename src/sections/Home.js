@@ -29,7 +29,7 @@ export default function Home(props) {
 
               <FadeIn delay={1050} isVisible={isVisible} y={-40}>
                 <Typography variant="h3" className="whoText">
-                  A self-taught full-stack developer.
+                  A full-stack software engineer.
                 </Typography>
               </FadeIn>
 

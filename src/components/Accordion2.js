@@ -80,7 +80,7 @@ export default function CustomizedAccordions() {
         </AccordionSummary2>
         <AccordionDetails2>
           
-            <Container>
+            
               <Row>
                 <Col>
                   <CertificateBoop>
@@ -111,8 +111,7 @@ export default function CustomizedAccordions() {
                   </CertificateBoop>
                 </Col>
               </Row>
-            </Container>
-          
+             
         </AccordionDetails2>
       </Accordion2>
     </>

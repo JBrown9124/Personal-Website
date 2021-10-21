@@ -32,7 +32,7 @@ export default function About(props) {
                     <Typography variant="body2">
                       Greetings friend! My name is Jonathan and I have a passion
                       for creating things through the art of code. My software
-                      engineer journey began in 2018 with a couple of text books
+                      engineer journey began in 2018 with a couple of textbooks
                       and a strong passion for the inner workings of computers.
                     </Typography>
                   </div>
@@ -40,7 +40,7 @@ export default function About(props) {
                   <Typography variant="body2">
                     Since then I have taken online courses on data structures
                     and algorithms, built full-stack applications, and solved
-                    countless leetcode problems, all for the benefit of deeply
+                    countless LeetCode problems, all for the benefit of deeply
                     understanding what it means to be a professional software
                     engineer.
                   </Typography>
