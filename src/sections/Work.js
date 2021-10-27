@@ -97,7 +97,7 @@ export default function Work(props) {
                               Uses Django as the back-end web framework and
                               React.js as the front-end library. All data is
                               queried from and stored in a PostgreSQL database
-                              using a ReST API developed with Django.
+                              using a REST API developed with Django.
                             </Typography>
                           </CardContent>
                           <div className="socialCardIcons">
@@ -195,7 +195,7 @@ export default function Work(props) {
                               >
                                 Developed a Discord bot that performs a variety
                                 of functions for users such as calling a Lord of
-                                the Rings or Star Wars ReST API which returns a
+                                the Rings or Star Wars REST API which returns a
                                 random quote.
                               </Typography>
                             </div>
@@ -207,7 +207,7 @@ export default function Work(props) {
                                 The random quote along with the character’s name
                                 who said it are then placed in a YouTube search
                                 to pair its respective movie scene in the
-                                response to the user.{" "}
+                                response to the user.
                               </Typography>
                             </div>
                             <Typography className="discordInfo" variant="body2">
@@ -301,7 +301,7 @@ export default function Work(props) {
                             <div className="pSeperator">
                               <Typography className="loveText" variant="body2">
                                 The questions, possible answers, and user input
-                                is stored in a MySQL database. Developed a Flask ReST API used to query and manipulate the data.
+                                is stored in a MySQL database. Developed a Flask REST API used to query and manipulate the data.
                               </Typography>
                             </div>
                             <Typography className="loveText" variant="body2">

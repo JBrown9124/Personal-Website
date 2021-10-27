@@ -9,9 +9,8 @@ const ProfPicBoop = ({ x = 0, y = 0, rotation = 0, scale = 1, children }) => {
     filter: isBooped
       ? "sepia(0%) hue-rotate(0deg) saturate(100%)"
       : "sepia(80%) hue-rotate(200deg) saturate(135%)",
-    boxShadow: isBooped
-      ? "0 4px 8px 0 rgba(0, 0, 0, 0.0), 0 0px 0px 0 rgba(0, 0, 0, 0.0u)"
-      : "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+    boxShadow: isBooped?"#26418f  0px 0px 0px 2px inset, #26418f  10px -10px 0px -3px, #77C9D4 10px -10px,#26418f  20px -20px 0px -3px, #77C9D4 20px -20px, #26418f 30px -30px 0px -3px, #77C9D4 30px -30px, #26418f 40px -40px 0px -3px, #77C9D4 40px -40px":
+    "#26418f  0px 0px 0px 0px inset, #26418f 0px 0px 0px 0px, #77C9D4 0px 0px, #26418f 0px 0px 0px 0px, #77C9D4 0px 0px,  #26418f 0px 0px 0px 0px, #77C9D4  0px 0px, #26418f 0px 0px 0px 0px, #77C9D4  0px 0px",
     transform: isBooped
       ? `translate(${x}px, ${y}px)
          rotate(${rotation}deg)

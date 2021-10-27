@@ -77,13 +77,14 @@
 
 .discordInnerContainer {
   background: #4f545c !important;
-  padding: 27px !important;
+  padding: 26px !important;
 
 }
 
 .discordTitle {
   font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif !important;
   color: white !important;
+  margin-bottom: 11px!important;
   
 }
 
