@@ -5,7 +5,7 @@ const CertificateBoop = ({
   x = 0,
   y = 0,
   rotation = 0,
-  scale = 1.1,
+  scale = 1.08,
   
   children,
 }) => {
@@ -14,8 +14,8 @@ const CertificateBoop = ({
  
     display: "inline-block",
     backfaceVisibility: "hidden",
-    boxShadow: isBooped?"#26418f  0px 0px 0px 2px inset, #26418f  10px -10px 0px -3px, #77C9D4 10px -10px,#26418f  20px -20px 0px -3px, #77C9D4 20px -20px, #26418f 30px -30px 0px -3px, #77C9D4 30px -30px, #26418f 40px -40px 0px -3px, #77C9D4 40px -40px":
-    "#26418f  0px 0px 0px 0px inset, #26418f 0px 0px 0px 0px, #77C9D4 0px 0px, #26418f 0px 0px 0px 0px, #77C9D4 0px 0px,  #26418f 0px 0px 0px 0px, #77C9D4  0px 0px, #26418f 0px 0px 0px 0px, #77C9D4  0px 0px",
+    boxShadow: isBooped?"#26418f  0px 0px 0px 2px inset, #26418f  10px -10px 0px -3px, #77C9D4 10px -10px":
+    "#26418f  0px 0px 0px 0px inset, #26418f 0px 0px 0px 0px, #77C9D4 0px 0px",
     
     transform: isBooped
       ? `translate(${x}px, ${y}px)
