@@ -79,39 +79,36 @@ export default function CustomizedAccordions() {
           </Typography>
         </AccordionSummary2>
         <AccordionDetails2>
-          
-            
-              <Row>
-                <Col>
-                  <CertificateBoop>
-                    <Image
-                      type="button"
-                      src={CourseraCertificate1}
-                      onClick={() =>
-                        openInNewTab(
-                          "https://www.coursera.org/account/accomplishments/certificate/YL6AHDSWBFU6"
-                        )
-                      }
-                      fluid
-                    />
-                  </CertificateBoop>
-                </Col>
-                <Col>
-                  <CertificateBoop>
-                    <Image
-                      type="button"
-                      src={CourseraCertificate2}
-                      onClick={() =>
-                        openInNewTab(
-                          "https://www.coursera.org/account/accomplishments/certificate/8HN48YFWNRAQ"
-                        )
-                      }
-                      fluid
-                    />
-                  </CertificateBoop>
-                </Col>
-              </Row>
-             
+          <Row>
+            <Col>
+              <CertificateBoop>
+                <Image
+                  type="button"
+                  src={CourseraCertificate1}
+                  onClick={() =>
+                    openInNewTab(
+                      "https://www.coursera.org/account/accomplishments/certificate/YL6AHDSWBFU6"
+                    )
+                  }
+                  fluid
+                />
+              </CertificateBoop>
+            </Col>
+            <Col>
+              <CertificateBoop>
+                <Image
+                  type="button"
+                  src={CourseraCertificate2}
+                  onClick={() =>
+                    openInNewTab(
+                      "https://www.coursera.org/account/accomplishments/certificate/8HN48YFWNRAQ"
+                    )
+                  }
+                  fluid
+                />
+              </CertificateBoop>
+            </Col>
+          </Row>
         </AccordionDetails2>
       </Accordion2>
     </>

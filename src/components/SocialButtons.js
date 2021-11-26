@@ -65,23 +65,21 @@ export default function SocialButtons(props) {
             x={6}
             y={0}
           >
-            
-              <div className="emailLink">
-                <Link
+            <div className="emailLink">
+              <Link
                 variant="body2"
-                  type="button"
-                  onClick={() =>
-                    window.open(
-                      "mailto:brownjs193@gmail.com?subject=Subject&body=Body%20goes%20here"
-                    )
-                  }
-                  underline="none"
-                  color={"rgb(255, 255, 255)"}
-                >
-                  brownjs193@gmail.com
-                </Link>
-              </div>
-            
+                type="button"
+                onClick={() =>
+                  window.open(
+                    "mailto:brownjs193@gmail.com?subject=Subject&body=Body%20goes%20here"
+                  )
+                }
+                underline="none"
+                color={"rgb(255, 255, 255)"}
+              >
+                brownjs193@gmail.com
+              </Link>
+            </div>
           </SocialIconsBoop>
         </Col>
       </Row>
