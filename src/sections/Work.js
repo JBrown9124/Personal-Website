@@ -1,43 +1,19 @@
 import React from "react";
-
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import DoOrDoNotVid from "../images/DoOrDoNotVid.webm";
 import LoveAndPain from "../images/LoveAndPain.webm";
 import AnalyzeThis from "../images/AnalyzeThis.webm";
-import DiscordUtilityBot from "../images/DiscordUtilityBot.webm";
-import ReactPlayer from "react-player";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import CardBoop from "../animators/CardBoop.js";
-import { FaGithub } from "react-icons/fa";
-import { FiExternalLink } from "react-icons/fi";
-import SocialIconsBoop from "../animators/SocialIconsBoop.js";
 import VisibilitySensor from "react-visibility-sensor";
 import FadeIn from "../animators/FadeIn.js";
-import Tooltip from "@mui/material/Tooltip";
-
-import { useTheme } from "@mui/material/styles";
-
 import Grid from "@mui/material/Grid";
-
-import CardMedia from "@mui/material/CardMedia";
-import IconButton from "@mui/material/IconButton";
-
-import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import SkipNextIcon from "@mui/icons-material/SkipNext";
 import WorkProject from "../components/Work/WorkProject";
-import Zoom from "@mui/material/Zoom";
+
 export default function Work(props) {
   function openInNewTab(url) {
     var win = window.open(url, "_blank");
     win.focus();
   }
-  const theme = useTheme();
+
 
   return (
     <>
@@ -157,6 +133,13 @@ export default function Work(props) {
         </Grid>
      
       </Grid>
+      </>
+  );
+}
+
+
+
+{/*The Old
       {/* <Container fluid>
         <VisibilitySensor>
           {({ isVisible }) => (
@@ -509,6 +492,3 @@ export default function Work(props) {
         </Row>
         
       </Container> */}
-    </>
-  );
-}
