@@ -1,22 +1,22 @@
 @import url("https://fonts.googleapis.com/css?family=Fauna One");
 @import url("https://fonts.googleapis.com/css?family=Cinzel");
-
+/* 
 .player-wrapper {
   position: relative;
   padding-top: 56.25%;
   /* Player ratio: 100 / (1280 / 720) */
 
 
-}
+/* }  */
 
-.react-player {
+/* .react-player {
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 20px;
 
 
-}
+} */
 
 .doTitle {
   font-family: "Helvetica", sans-serif !important;

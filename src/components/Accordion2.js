@@ -81,7 +81,7 @@ export default function CustomizedAccordions() {
         <AccordionDetails2>
           <Row>
             <Col>
-              <CertificateBoop>
+              <CertificateBoop x={5} y={-5} rotation={0} scale={1} fromY={0} fromX={0}>
                 <Image
                   type="button"
                   src={CourseraCertificate1}
@@ -92,10 +92,10 @@ export default function CustomizedAccordions() {
                   }
                   fluid
                 />
-              </CertificateBoop>
+              </CertificateBoop >
             </Col>
             <Col>
-              <CertificateBoop>
+              <CertificateBoop x={5} y={-5} rotation={0} scale={1} fromY={0} fromX={0}>
                 <Image
                   type="button"
                   src={CourseraCertificate2}

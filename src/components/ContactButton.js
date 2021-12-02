@@ -28,7 +28,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-export default function WorkButton() {
+export default function ContactButton() {
   return (
     <ColorButton
       onClick={() =>

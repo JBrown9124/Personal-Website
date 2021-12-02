@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import Typography from "@mui/material/Typography";
 import VisibilitySensor from "react-visibility-sensor";
 import FadeIn from "../animators/FadeIn.js";
-import WorkButton from "../components/WorkButton.js";
+import ContactButton from "../components/ContactButton.js";
 
 export default function Contact(props) {
   return (
@@ -38,7 +38,7 @@ export default function Contact(props) {
               {({ isVisible }) => (
                 <FadeIn delay={0} isVisible={isVisible} y={-40}>
                   <div className="contactButton">
-                    <WorkButton />
+                    <ContactButton />
                   </div>
                 </FadeIn>
               )}
