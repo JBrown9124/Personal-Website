@@ -14,7 +14,7 @@ const CardBoop = ({
     
     // boxShadow: isBooped?"#26418f  0px 0px 0px 2px inset, #26418f  10px -10px 0px -3px, #77C9D4 10px -10px":
     // "#26418f  0px 0px 0px 0px inset, #26418f 0px 0px 0px 0px, #77C9D4 0px 0px",
-    boxShadow:isBooped?"rgba(0, 0, 0, 0.56) 0px 22px 70px 4px":"rgba(0, 0, 0, 0.0) 0px 0px 0px 0px",
+    boxShadow:isBooped?"rgba(0, 0, 0, 0.56) 0px 22px 70px 4px":"rgba(0, 0, 0, 0.27) 0px 11px 35px 2px",
     // boxShadow:isBooped?"rgba(0, 0, 0, 0.25) 0px 25px 50px -12px":"rgba(0, 0, 0, 0.0) 0px 0px 0px 0px",
     transform: isBooped
       ? `translate(${x}px, ${y}px)
@@ -24,7 +24,7 @@ const CardBoop = ({
          rotate(0deg)
          
          scale(1)`,
-
+         borderRadius: "15px",
     config: { mass: 1, tension: 170, friction: 26 },
   });
   

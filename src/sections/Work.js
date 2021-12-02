@@ -5,6 +5,7 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import DoOrDoNotVid from "../images/DoOrDoNotVid.webm";
 import LoveAndPain from "../images/LoveAndPain.webm";
+import AnalyzeThis from "../images/AnalyzeThis.webm";
 import DiscordUtilityBot from "../images/DiscordUtilityBot.webm";
 import ReactPlayer from "react-player";
 import Card from "@mui/material/Card";
@@ -38,7 +39,7 @@ export default function Work(props) {
           )}
         </VisibilitySensor>
         <Row className="centerRow">
-          <Col
+        <Col
             xs={"auto"}
             sm={"auto"}
             md={"auto"}
@@ -49,6 +50,122 @@ export default function Work(props) {
             <VisibilitySensor partialVisibility={true}>
               {({ isVisible }) => (
                 <FadeIn delay={150} isVisible={isVisible} y={-40}>
+                  <CardBoop>
+                    <div className="cardDivider">
+                      <Card className="discordContainer" sx={{ maxWidth: 400 }}>
+                        <Container>
+                          <div className="player-wrapper">
+                            <ReactPlayer
+                              playing={true}
+                              className="react-player"
+                              url={AnalyzeThis}
+                              width="100%"
+                              height="100%"
+                              muted={true}
+                              loop={true}
+                              controls
+                            />
+                          </div>
+                          <CardContent className="discordInnerContainer">
+                            <Typography
+                              className="discordTitle"
+                              gutterBottom
+                              variant="h5"
+                              component="div"
+                            >
+                              Analyze This
+                            </Typography>
+                            <div className="pSeperator">
+                              <Typography
+                                className="discordInfo"
+                                variant="body2"
+                              >
+                                Created a full-stack web application that parses
+                                strings for signs of mental illness. Results
+                                help provide support to the user. At the moment,
+                                it detects signs of suicide, anger, and
+                                addiction.
+                              </Typography>
+                            </div>
+                            <div className="pSeperator">
+                              <Typography
+                                className="discordInfo"
+                                variant="body2"
+                              >
+                                To analyze strings, I developed an algorithm
+                                that works with a large pool of words to find
+                                determinants of mental illness. Determinant
+                                words must be in a certain order to be flagged.
+                              </Typography>
+                            </div>
+                            <Typography className="discordInfo" variant="body2">
+                              Analysis results and Google Maps/Places API are
+                              used to find the nearest support facilities
+                              (rehab, support groups, etc.) and resources.
+                              Client was created with TypeScript React.js, the
+                              REST API with Python (Django), and data is stored
+                              and queried from Firestore (NoSQL).
+                            </Typography>
+                          </CardContent>
+                          <div className="socialCardIcons">
+                            <SocialIconsBoop
+                              rotation={0}
+                              x={0}
+                              y={-6}
+                              afterColor={"black"}
+                            >
+                              <Tooltip
+                                title="GitHub"
+                                TransitionComponent={Zoom}
+                              >
+                                <div>
+                                  <FaGithub
+                                    type="button"
+                                    className="gitIcon"
+                                    onClick={() =>
+                                      openInNewTab(
+                                        "https://github.com/JBrown9124/Discord_Utility_Bot"
+                                      )
+                                    }
+                                  ></FaGithub>
+                                </div>
+                              </Tooltip>
+                            </SocialIconsBoop>
+                            <SocialIconsBoop
+                              rotation={0}
+                              x={0}
+                              y={-6}
+                              afterColor={"black"}
+                            >
+                              <FiExternalLink
+                                type="button"
+                                className="linkIcon"
+                                onClick={() =>
+                                  openInNewTab("https://discord.com/")
+                                }
+                              ></FiExternalLink>
+                            </SocialIconsBoop>
+                          </div>
+                        </Container>
+                      </Card>
+                    </div>
+                  </CardBoop>
+                </FadeIn>
+              )}
+            </VisibilitySensor>
+          </Col>
+
+          <Col
+            xs={"auto"}
+            sm={"auto"}
+            md={"auto"}
+            lg={"auto"}
+            xl={"auto"}
+            xxl={"auto"}
+          >
+            <VisibilitySensor partialVisibility={true}>
+              {({ isVisible }) => (
+                <FadeIn delay={300} isVisible={isVisible} y={-40}>
                   <CardBoop>
                     <div className="cardDivider">
                       <Card className="doContainer" sx={{ maxWidth: 400 }}>
@@ -152,109 +269,7 @@ export default function Work(props) {
             </VisibilitySensor>
           </Col>
 
-          <Col
-            xs={"auto"}
-            sm={"auto"}
-            md={"auto"}
-            lg={"auto"}
-            xl={"auto"}
-            xxl={"auto"}
-          >
-            <VisibilitySensor partialVisibility={true}>
-              {({ isVisible }) => (
-                <FadeIn delay={300} isVisible={isVisible} y={-40}>
-                  <CardBoop>
-                    <div className="cardDivider">
-                      <Card className="discordContainer" sx={{ maxWidth: 400 }}>
-                        <Container>
-                          <div className="player-wrapper">
-                            <ReactPlayer
-                              playing={true}
-                              className="react-player"
-                              url={DiscordUtilityBot}
-                              width="100%"
-                              height="100%"
-                              muted={true}
-                              loop={true}
-                              controls
-                            />
-                          </div>
-                          <CardContent className="discordInnerContainer">
-                            <Typography
-                              className="discordTitle"
-                              gutterBottom
-                              variant="h5"
-                              component="div"
-                            >
-                              Discord Utility Bot
-                            </Typography>
-                            <div className="pSeperator">
-                              <Typography
-                                className="discordInfo"
-                                variant="body2"
-                              >
-                                Developed a Discord bot that performs a variety
-                                of functions for users such as calling a Lord of
-                                the Rings or Star Wars REST API which returns a
-                                random quote.
-                              </Typography>
-                            </div>
-                            <div className="pSeperator">
-                              <Typography
-                                className="discordInfo"
-                                variant="body2"
-                              >
-                                The random quote along with the character’s name
-                                who said it are then placed in a YouTube search
-                                to pair its respective movie scene in the
-                                response to the user.
-                              </Typography>
-                            </div>
-                            <Typography className="discordInfo" variant="body2">
-                              Other functions include but are not limited to
-                              playing music per request and remembering user
-                              provided information (stores memories in a MySQL
-                              database).
-                            </Typography>
-                          </CardContent>
-                          <div className="socialCardIcons">
-                            <SocialIconsBoop rotation={0} x={0} y={-6}>
-                              <Tooltip
-                                title="GitHub"
-                                TransitionComponent={Zoom}
-                              >
-                                <div>
-                                  <FaGithub
-                                    type="button"
-                                    className="gitIcon"
-                                    onClick={() =>
-                                      openInNewTab(
-                                        "https://github.com/JBrown9124/Discord_Utility_Bot"
-                                      )
-                                    }
-                                  ></FaGithub>
-                                </div>
-                              </Tooltip>
-                            </SocialIconsBoop>
-                            <SocialIconsBoop rotation={0} x={0} y={-6}>
-                              <FiExternalLink
-                                type="button"
-                                className="linkIcon"
-                                onClick={() =>
-                                  openInNewTab("https://discord.com/")
-                                }
-                              ></FiExternalLink>
-                            </SocialIconsBoop>
-                          </div>
-                        </Container>
-                      </Card>
-                    </div>
-                  </CardBoop>
-                </FadeIn>
-              )}
-            </VisibilitySensor>
-          </Col>
-
+       
           <Col
             xs={"auto"}
             sm={"auto"}
@@ -301,7 +316,8 @@ export default function Work(props) {
                             <div className="pSeperator">
                               <Typography className="loveText" variant="body2">
                                 The questions, possible answers, and user input
-                                is stored in a MySQL database. Developed a Flask REST API used to query and manipulate the data.
+                                is stored in a MySQL database. Developed a Flask
+                                REST API used to query and manipulate the data.
                               </Typography>
                             </div>
                             <Typography className="loveText" variant="body2">

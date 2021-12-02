@@ -31,23 +31,26 @@
 .doContainer {
 
   background: white;
-
+  border-radius:15px !important;
   color: black !important;
 
 }
 
 .doInnerContainer {
   background: #F8F9FA !important;
+  border-radius:15px;
 }
 
 .loveContainer {
   background: #c8d8e4 !important;
+  border-radius:15px !important;
 
 }
 
 .loveInnerContainer {
   background: #2b6777 !important;
  padding:30px!important;
+ border-radius:15px;
   
 
 }
@@ -70,27 +73,29 @@
 }
 
 .discordContainer {
-  background: #36393f !important;
+  border-radius:15px !important;
+  background: #009688 !important;
 
 
 }
 
 .discordInnerContainer {
-  background: #4f545c !important;
-  padding: 26px !important;
+  background: white !important;
+  padding: 14.5px !important;
+  border-radius:15px;
 
 }
 
 .discordTitle {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif !important;
-  color: white !important;
+  font-family: "Open sans, sans-serif" !important;
+  color: black !important;
   margin-bottom: 11px!important;
   
 }
 
 .discordInfo {
-  font-family: Whitney, Helvetica Neue, Helvetica, Arial, sans-serif !important;
-  color: rgb(255, 255, 255) !important;
+  font-family: "Open sans, sans-serif" !important;
+  color: rgb(110, 107, 107) !important;
 }
 
 .discordCardIcons {
