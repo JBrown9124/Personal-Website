@@ -67,7 +67,7 @@ export default function SocialButtons(props) {
           >
             <div className="emailLink">
               <Link
-                variant="body2"
+                variant="subtitle1"
                 type="button"
                 onClick={() =>
                   window.open(

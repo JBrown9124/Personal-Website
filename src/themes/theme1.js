@@ -10,7 +10,7 @@ theme.typography.h6 = {
     fontSize: "1rem",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: ".6rem",
+    fontSize: ".8rem",
   },
 };
 theme.typography.body1 = {
@@ -20,7 +20,7 @@ theme.typography.body1 = {
     fontSize: ".7rem",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: ".5rem",
+    fontSize: ".7rem",
   },
 };
 theme.typography.body2 = {
@@ -30,7 +30,7 @@ theme.typography.body2 = {
     fontSize: "1.0rem",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: ".6rem",
+    fontSize: ".8rem",
   },
 };
 theme.typography.h5 = {
@@ -44,6 +44,7 @@ theme.typography.h5 = {
     fontSize: "1.0rem",
   },
 };
+
 theme.typography.h2 = {
   fontFamily: "Oswald, sans-serif",
   fontWeight: "light",
@@ -88,5 +89,16 @@ theme.typography.h4 = {
   [theme.breakpoints.down("sm")]: {
     fontSize: "1.5rem",
   },
+};
+theme.typography.subtitle1 = {
+  fontFamily: "Open Sans, sans-serif",
+  color: "#e0f7fa",
+  [theme.breakpoints.up("sm")]: {
+    fontSize: "1.0rem",
+  },
+  [theme.breakpoints.down("sm")]: {
+    fontSize: ".6rem",
+  },
+
 };
 export default theme;

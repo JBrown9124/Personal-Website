@@ -15,11 +15,6 @@ export default function WorkProject({
   projectUrl,
   technologiesUsed,
 }) {
-  function openInNewTab(url) {
-    var win = window.open(url, "_blank");
-    win.focus();
-  }
-
   return (
     <>
       <Grid
@@ -36,9 +31,11 @@ export default function WorkProject({
       >
         <Grid
           container
-          xs={1}
-          direction="column"
-          sx={{ padding: "15px", width: "100%", height: "100%" }}
+          xs={2}
+          md={1}
+          
+         direction="row"
+          sx={{ padding: "10px", width: "100%", height: "100%" }}
         >
           <ProjectVideo videoUrl={videoUrl} />
 

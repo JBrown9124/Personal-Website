@@ -4,8 +4,8 @@ import { FiExternalLink } from "react-icons/fi";
 import SocialIconsBoop from "../../animators/SocialIconsBoop.js";
 import Tooltip from "@mui/material/Tooltip";
 import Grid from "@mui/material/Grid";
-
 import Zoom from "@mui/material/Zoom";
+
 export default function ProjectSocialIcons({ githubUrl, projectUrl }) {
   function openInNewTab(url) {
     var win = window.open(url, "_blank");
@@ -14,7 +14,7 @@ export default function ProjectSocialIcons({ githubUrl, projectUrl }) {
 
   return (
     <>
-      <Grid item sx={{ padding: "15px" }}>
+      <Grid item sx={{ padding: "10px" }}>
         <SocialIconsBoop
           beforeColor={"black"}
           afterColor={"#52ab98"}

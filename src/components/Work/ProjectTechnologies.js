@@ -26,16 +26,12 @@ const CustomChip = styled(Chip)(({ theme }) => ({
   },
 }));
 export default function ProjectTechnologies({ technologiesUsed }) {
-  function openInNewTab(url) {
-    var win = window.open(url, "_blank");
-    win.focus();
-  }
 
   return (
     <>
-      <Grid item container direction="row" spacing={1} sx={{ padding: "15px" }}>
+      <Grid item container direction="row" spacing={1} sx={{ padding: "10px" }}>
         {technologiesUsed.map((tech, idx) => (
-          <Grid item>
+          <Grid item key={idx}>
             <CustomChip size="small" label={tech} />
           </Grid>
         ))}

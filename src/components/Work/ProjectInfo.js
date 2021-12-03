@@ -8,14 +8,10 @@ export default function ProjectInfo({
   infoParagraph2,
   infoParagraph3,
 }) {
-  function openInNewTab(url) {
-    var win = window.open(url, "_blank");
-    win.focus();
-  }
 
   return (
     <>
-      <Grid container xs={1} direction="column" sx={{ padding: "15px" }}>
+      <Grid container xs={2} md={1} direction="column" sx={{ padding: "10px" }}>
         <CardBoop>
           <Grid
             item

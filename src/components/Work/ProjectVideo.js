@@ -3,10 +3,6 @@ import ReactPlayer from "react-player";
 import Grid from "@mui/material/Grid";
 
 export default function WorkProject({ videoUrl }) {
-  function openInNewTab(url) {
-    var win = window.open(url, "_blank");
-    win.focus();
-  }
 
   return (
     <>
@@ -14,7 +10,7 @@ export default function WorkProject({ videoUrl }) {
         item
         sx={{
           position: "relative",
-          padding: "15px",
+          padding: "10px",
           borderRadius: "20px!important",
         }}
       >

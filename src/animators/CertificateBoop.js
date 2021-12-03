@@ -67,6 +67,7 @@ const CertificateBoop = ({
   const safeRandomColor = "#77C9D4"
   const style = useSpring({
     width: "100%",
+    height: "100%",
     display: "inline-block",
     backfaceVisibility: "hidden",
     boxShadow: isBooped

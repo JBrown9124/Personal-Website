@@ -12,7 +12,7 @@ import React, { useEffect, useState } from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import LinkUnderline from "../animators/LinkUnderline";
-
+import Grid from "@mui/material/Grid";
 const Accordion = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
 ))(({ theme }) => ({
@@ -89,19 +89,20 @@ export default function CustomizedAccordions() {
   return (
     <>
       <Accordion
-        disableGutters
+    
         expanded={expanded1}
         onChange={() => setExpanded1(!expanded1)}
       >
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
-          <Typography variant="h6" className="accordionTitle">
+          <Typography variant="h6" >
             Technologies I Use
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Row>
+        <Grid container columns={3}>
             {myTechnologies.map((tech, idx) => (
-              <Col key={idx} xl={4} xs={13} md={5} lg={4} sm={6}>
+             
+             <Grid item xs={3} md={1}>
                
                   <DoubleArrowIcon
                     sx={{
@@ -125,10 +126,10 @@ export default function CustomizedAccordions() {
                       {tech.tech}
                     </Link>
                   </LinkUnderline>
-             
-              </Col>
+                  </Grid>
+              
             ))}
-          </Row>
+            </Grid>
         </AccordionDetails>
       </Accordion>
     </>
