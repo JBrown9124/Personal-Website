@@ -16,16 +16,16 @@ export default function ProjectInfo({
           <Grid
             item
             sx={{
-              background: "white",
+              background: "#26418f",
               borderRadius: "15px",
-              border: "solid black 1px",
+              border: "solid #e0f7fa 1px",
             }}
           >
             <Grid item>
               <Typography
                 variant="h5"
-                component="div"
-                sx={{ color: "black!important", padding: "10px" }}
+             
+                sx={{ color: "#e0f7fa!important", padding: "10px" }}
               >
                 {title}
               </Typography>
@@ -33,7 +33,7 @@ export default function ProjectInfo({
             <Grid item>
               <Typography
                 variant="body2"
-                sx={{ color: "black!important", padding: "10px" }}
+                sx={{ color: "#e0f7fa!important", padding: "10px" }}
               >
                 {infoParagraph1}
               </Typography>
@@ -41,7 +41,7 @@ export default function ProjectInfo({
             <Grid item>
               <Typography
                 variant="body2"
-                sx={{ color: "black!important", padding: "10px" }}
+                sx={{ color: "#e0f7fa!important", padding: "10px" }}
               >
                 {infoParagraph2}
               </Typography>
@@ -49,7 +49,7 @@ export default function ProjectInfo({
             <Grid item>
               <Typography
                 variant="body2"
-                sx={{ color: "black!important", padding: "10px" }}
+                sx={{ color: "#e0f7fa!important", padding: "10px" }}
               >
                 {infoParagraph3}
               </Typography>

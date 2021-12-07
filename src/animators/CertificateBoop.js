@@ -6,31 +6,31 @@
 //   y = 0,
 //   rotation = 0,
 //   scale = 1.08,
-  
+
 //   children,
 // }) => {
 //   const [isBooped, setIsBooped] = React.useState(false);
 //   const style = useSpring({
- 
+
 //     display: "inline-block",
 //     backfaceVisibility: "hidden",
 //     boxShadow: isBooped?"#26418f  0px 0px 0px 2px inset, #26418f  10px -10px 0px -3px, #77C9D4 10px -10px":
 //     "#26418f  0px 0px 0px 0px inset, #26418f 0px 0px 0px 0px, #77C9D4 0px 0px",
-    
+
 //     transform: isBooped
 //       ? `translate(${x}px, ${y}px)
 //          rotate(${rotation}deg)
 //          scale(${scale})`
 //       : `translate(0px, 0px)
 //          rotate(0deg)
-         
+
 //          scale(1)`,
 //     border: "1px solid",
 //     borderColor: "grey",
 
 //     config: { mass: 1, tension: 170, friction: 26 },
 //   });
- 
+
 //   const trigger = () => {
 //     setIsBooped(true);
 //   };
@@ -54,7 +54,8 @@ import React from "react";
 import { styled } from "@mui/material";
 
 const CertificateBoop = ({
-  x=5, y=-5,
+  x = 5,
+  y = -5,
   rotation = 0,
   scale = 1.0,
   fromY = 0,
@@ -64,7 +65,7 @@ const CertificateBoop = ({
   children,
 }) => {
   const [isBooped, setIsBooped] = React.useState(false);
-  const safeRandomColor = "#77C9D4"
+  const safeRandomColor = "#77C9D4";
   const style = useSpring({
     width: "100%",
     height: "100%",

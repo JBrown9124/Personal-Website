@@ -26,6 +26,7 @@ const CardBoop = ({
          
          scale(1)`,
     borderRadius: "15px",
+    
     config: { mass: .5, tension: 399, friction: 26 },
   });
 

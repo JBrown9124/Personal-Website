@@ -16,7 +16,7 @@ export default function Work(props) {
 
   return (
     <>
-      <Grid container direction="column" spacing={6}>
+      <Grid container direction="column" spacing={1}>
         <Grid item>
           <VisibilitySensor partialVisibility={true}>
             {({ isVisible }) => (

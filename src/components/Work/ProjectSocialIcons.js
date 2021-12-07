@@ -16,8 +16,8 @@ export default function ProjectSocialIcons({ githubUrl, projectUrl }) {
     <>
       <Grid item sx={{ padding: "10px" }}>
         <SocialIconsBoop
-          beforeColor={"black"}
-          afterColor={"#52ab98"}
+          beforeColor={"#26418f"}
+          afterColor={"#e0f7fa"}
           rotation={0}
           x={0}
           y={-6}
@@ -33,8 +33,8 @@ export default function ProjectSocialIcons({ githubUrl, projectUrl }) {
           </Tooltip>
         </SocialIconsBoop>
         <SocialIconsBoop
-          beforeColor={"black"}
-          afterColor={"#52ab98"}
+          beforeColor={"#26418f"}
+          afterColor={"#e0f7fa"}
           rotation={0}
           x={0}
           y={-6}

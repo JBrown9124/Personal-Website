@@ -37,31 +37,28 @@ const AccordionSummary2 = styled((props) => (
 ))(({ theme }) => ({
   background: theme.palette.mode === "dark" ? "#26418f" : "#26418f",
   borderBottom: "none",
-  border:"none",
+  border: "none",
   flexDirection: "row-reverse",
   "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
     transform: "rotate(90deg)",
-   
+
     borderBottom: "none",
-    border:"none",
+    border: "none",
   },
   "& .MuiAccordionSummary-content": {
     background: theme.palette.mode === "dark" ? "#26418f" : "#26418f",
     marginLeft: theme.spacing(1),
     borderBottom: "none",
-    border:"none",
-  
+    border: "none",
   },
 }));
 
 const AccordionDetails2 = styled(MuiAccordionDetails)(({ theme }) => ({
   borderBottom: "none",
-  border:"none",
+  border: "none",
   padding: theme.spacing(2),
   //   borderTop: '1px solid rgba(0, 0, 0, .125)',
   background: theme.palette.mode === "dark" ? "#26418f" : "#26418f",
-
-
 }));
 
 export default function CustomizedAccordions() {
@@ -80,14 +77,19 @@ export default function CustomizedAccordions() {
         onChange={() => setExpanded2(!expanded2)}
       >
         <AccordionSummary2 aria-controls="panel2d-content" id="panel2d-header">
-          <Typography variant="h6">
-            Certificates
-          </Typography>
+          <Typography variant="h6">Certificates</Typography>
         </AccordionSummary2>
         <AccordionDetails2>
-      <Grid container spacing={2} columns={2}>
-        <Grid item md={1}>
-              <CertificateBoop x={5} y={-5} rotation={0} scale={1} fromY={0} fromX={0}>
+          <Grid container spacing={2} columns={2}>
+            <Grid item md={1}>
+              <CertificateBoop
+                x={5}
+                y={-5}
+                rotation={0}
+                scale={1}
+                fromY={0}
+                fromX={0}
+              >
                 <Image
                   type="button"
                   src={CourseraCertificate1}
@@ -98,10 +100,17 @@ export default function CustomizedAccordions() {
                   }
                   fluid
                 />
-              </CertificateBoop >
-              </Grid>
-              <Grid item md={1}>
-              <CertificateBoop x={5} y={-5} rotation={0} scale={1} fromY={0} fromX={0}>
+              </CertificateBoop>
+            </Grid>
+            <Grid item md={1}>
+              <CertificateBoop
+                x={5}
+                y={-5}
+                rotation={0}
+                scale={1}
+                fromY={0}
+                fromX={0}
+              >
                 <Image
                   type="button"
                   src={CourseraCertificate2}
@@ -113,8 +122,7 @@ export default function CustomizedAccordions() {
                   fluid
                 />
               </CertificateBoop>
-              </Grid>
-   
+            </Grid>
           </Grid>
         </AccordionDetails2>
       </Accordion2>
