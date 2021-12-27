@@ -3,25 +3,25 @@ import Grid from "@mui/material/Grid";
 import { styled } from "@mui/material/styles";
 import Chip from "@mui/material/Chip";
 const CustomChip = styled(Chip)(({ theme }) => ({
-  backgroundColor: "#26418f",
+  backgroundColor: "transparent",
   "&:hover": {
-    backgroundColor: "rgba(38, 65, 143, .9)",
+    backgroundColor: "rgba(119, 201, 212, .05)",
   },
 
-  color: "#e0f7fa",
+  color: "black",
   fill: "transparent",
   textTransform: "none",
-  border: "solid #e0f7fa 1px",
+  border: "solid black 1px",
 
   [theme.breakpoints.up("md")]: {
-    fontFamily:"Open Sans, sans-serif",
+    
     fontSize: "1.1rem",
     width: "100%",
     height: "100%",
   },
   [theme.breakpoints.down("md")]: {
     fontSize: ".6rem",
-
+  
     width: "100%",
     height: "100%",
   },
