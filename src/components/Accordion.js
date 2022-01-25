@@ -62,12 +62,15 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 const myTechnologies = [
   { tech: "Python", link: "https://www.python.org/doc/essays/blurb/" },
+  {tech: "Node.js",link:"https://nodejs.org/en/"},
   {
     tech: "JavaScript",
     link: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript",
   },
   { tech: "TypeScript", link: "https://www.typescriptlang.org/" },
   { tech: "React", link: "https://reactjs.org/" },
+  {tech: "Angular",link:"https://angular.io/"},
+  {tech: "Socket.IO",link:"https://socket.io/"},
   { tech: "Django", link: "https://www.djangoproject.com/" },
   { tech: "Flask", link: "https://pythonbasics.org/what-is-flask-python/" },
   { tech: "SQLAlchemy", link: "https://www.sqlalchemy.org/" },
@@ -102,7 +105,7 @@ export default function CustomizedAccordions() {
         <Grid container columns={3}>
             {myTechnologies.map((tech, idx) => (
              
-             <Grid item xs={3} md={1}>
+             <Grid item xs={3} md={1} key={idx}>
                
                   <DoubleArrowIcon
                     sx={{

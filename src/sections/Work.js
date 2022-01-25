@@ -38,10 +38,10 @@ export default function Work(props) {
                   projectUrl={"https://tic-tac-toe-royale.herokuapp.com/"}
                   title={"Tic-Tac-Toe Royale"}
                   infoParagraph1={
-                    "Created a full-stack online web game. Players are able to set board size, board color, “win by” condition (amount of pieces in a row required to win) and pieces (upload custom piece capability included)."
+                    "Created a full-stack online web game.  Able to set board size, board color, “win by” condition (amount of pieces in a row required to win) and pieces (upload custom piece capability included)."
                   }
                   infoParagraph2={
-                    "Capable of having up to 100 players per board. Bots, lobby browser capability and many more features are coming soon. "
+                    "Capable of having up to 100 players per board. Able to add up to 10 bots per board. "
                   }
                   infoParagraph3={
                     " Client was created with TypeScript React.js, the REST API with Python (Django), and real-time client updates are handled with Socket.IO."

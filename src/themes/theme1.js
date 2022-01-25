@@ -76,7 +76,7 @@ theme.typography.h3 = {
     fontSize: "2.0rem",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: ".6rem",
+    fontSize: ".73rem",
   },
 };
 theme.typography.h4 = {
@@ -97,7 +97,7 @@ theme.typography.subtitle1 = {
     fontSize: "1.0rem",
   },
   [theme.breakpoints.down("sm")]: {
-    fontSize: ".6rem",
+    fontSize: ".60rem",
   },
 
 };

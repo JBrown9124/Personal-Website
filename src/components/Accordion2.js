@@ -11,6 +11,7 @@ import Grid from "@mui/material/Grid";
 import Image from "react-bootstrap/Image";
 import CourseraCertificate1 from "../images/CourseraCertificate1.png";
 import CourseraCertificate2 from "../images/CourseraCertificate2.png";
+import SQLEssentialTraining from "../images/SQLEssentialTraining.png"
 
 const Accordion2 = styled((props) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
@@ -117,6 +118,27 @@ export default function CustomizedAccordions() {
                   onClick={() =>
                     openInNewTab(
                       "https://www.coursera.org/account/accomplishments/certificate/8HN48YFWNRAQ"
+                    )
+                  }
+                  fluid
+                />
+              </CertificateBoop>
+            </Grid>
+            <Grid item md={1}>
+              <CertificateBoop
+                x={5}
+                y={-5}
+                rotation={0}
+                scale={1}
+                fromY={0}
+                fromX={0}
+              >
+                <Image
+                  type="button"
+                  src={SQLEssentialTraining}
+                  onClick={() =>
+                    openInNewTab(
+                      "https://www.linkedin.com/learning/certificates/bc92e92adc662fd12e598a3a8bc1cf74b7dcc3e29bf6972f0acc851838f5c954?trk=share_certificate&trk=lil_details_certification"
                     )
                   }
                   fluid

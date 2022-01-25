@@ -9,6 +9,8 @@ import useScrollTrigger from "@mui/material/useScrollTrigger";
 import Slide from "@mui/material/Slide";
 import navIcon from "../images/navIcon.mp4";
 import navIconB from "../images/navIconB.mp4";
+import navIconCropped from "../images/navIconCropped.mp4";
+import navIconBCropped from "../images/navIconBCropped.mp4";
 import LinkUnderline from "../animators/LinkUnderline";
 import FadeIn from "../animators/FadeIn.js";
 import ReactCardFlip from "react-card-flip";
@@ -65,15 +67,14 @@ export default function Navigation(props) {
                           muted={true}
                           type="button"
                           autoPlay={true}
-                          src={navIcon}
+                          src={navIconCropped}
                           width="65"
                           height="45"
                           style={{
                             opacity: 1.0,
-                            borderColor: "rgba(115,199,204,1)!important",
+                            
                             outline: "black",
-                            borderWidth: "10px!important",
-                            borderRadius: "13px",
+                           
                             mixBlendMode: "difference!importnat",
                             background: "transparent!important",
                             color: "transparent!important",
@@ -83,15 +84,13 @@ export default function Navigation(props) {
                           muted={true}
                           type="button"
                           autoPlay={true}
-                          src={navIconB}
+                          src={navIconBCropped}
                           width="65"
                           height="45"
                           sx={{
                             opacity: 1.0,
-                            borderColor: "rgba(115,199,204,1)!important",
-                            outline: "black",
-                            borderWidth: "10px!important",
-                            borderRadius: "13px",
+                         
+
                             mixBlendMode: "difference!importnat",
                             background: "transparent!important",
                             color: "transparent!important",
