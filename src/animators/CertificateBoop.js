@@ -71,6 +71,7 @@ const CertificateBoop = ({
     height: "100%",
     display: "inline-block",
     backfaceVisibility: "hidden",
+    borderRadius:"5px",
     boxShadow: isBooped
       ? `-1px 1px  ${safeRandomColor}, -2px 2px  ${safeRandomColor}, -3px 3px  ${safeRandomColor}, -4px 4px  ${safeRandomColor}, -5px 5px  ${safeRandomColor}, -6px 6px  ${safeRandomColor}, -7px 7px  ${safeRandomColor}, -8px 8px  ${safeRandomColor}`
       : `-0px 0px  ${safeRandomColor}, -0px 0px  ${safeRandomColor}, -0px 0px  ${safeRandomColor}, -0px 0px  ${safeRandomColor}, -0px 0px  ${safeRandomColor}, -0px 0px  ${safeRandomColor}, -0px 0px  ${safeRandomColor}, -0px 0px  ${safeRandomColor}`,
@@ -84,7 +85,7 @@ const CertificateBoop = ({
          
          scale(1)`,
 
-    config: { mass: 0.1, tension: 399, friction: 0, clamp: true },
+    config: { mass: 1, tension: 200, friction: 0, clamp: true },
   });
 
   const trigger = () => {

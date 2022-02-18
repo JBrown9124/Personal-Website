@@ -23,7 +23,7 @@ export default function SocialButtons(props) {
             afterColor={"rgba(115,199,204,1)"}
             rotation={0}
             x={0}
-            y={-6}
+            y={-4}
           >
             <Tooltip TransitionComponent={Zoom} title="LinkedIn">
               <div>
@@ -45,7 +45,7 @@ export default function SocialButtons(props) {
             afterColor={"rgba(115,199,204,1)"}
             rotation={0}
             x={0}
-            y={-6}
+            y={-4}
           >
             <Tooltip TransitionComponent={Zoom} title="GitHub">
               <div>
@@ -62,7 +62,7 @@ export default function SocialButtons(props) {
           <SocialIconsBoop
             afterColor={"rgba(115,199,204,1)"}
             rotation={0}
-            x={6}
+            x={0}
             y={0}
           >
             <div className="emailLink">

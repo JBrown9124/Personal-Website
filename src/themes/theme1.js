@@ -34,7 +34,7 @@ theme.typography.body2 = {
   },
 };
 theme.typography.h5 = {
-  fontFamily: "Oswald, sans-serif",
+  fontFamily: "Open Sans, sans-serif",
   color: "#77C9D4",
   textAlign: "center",
   [theme.breakpoints.up("sm")]: {

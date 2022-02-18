@@ -21,13 +21,13 @@ export default function WorkProject({
         container
         columns={2}
         sx={{
-          background: "#e0f7fa",
+      
           width: "100%",
           height: "100%",
-          borderRadius: "15px",
-          border: "solid #77C9D4 1px",
-          boxShadow: "rgba(0, 0, 0, 0.15) 0px 5px 15px 0px",
-          marginBottom:"50px"
+          // borderRadius: "15px",
+          // border: "solid #77C9D4 1px",
+          // boxShadow: 20,
+          marginBottom:title === "The Love and Pain Experiment"?"0px":"200px"
         }}
       >
         <Grid
@@ -35,7 +35,7 @@ export default function WorkProject({
           xs={2}
           md={1}
           direction="row"
-          sx={{ padding: "10px", width: "100%", height: "100%" }}
+          sx={{ padding: "10px", width: "100%", height: "100%",  }}
         >
           <ProjectVideo videoUrl={videoUrl} />
 

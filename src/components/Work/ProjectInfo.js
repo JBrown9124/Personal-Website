@@ -10,20 +10,20 @@ export default function ProjectInfo({
 }) {
   return (
     <>
-      <Grid container xs={2} md={1} direction="column" sx={{ padding: "10px" }}>
-        <CardBoop>
+      <Grid container xs={2} md={1} direction="column" sx={{ padding: "10px",  }}>
+        {/* <CardBoop> */}
           <Grid
             item
             sx={{
-              background: "white",
-              borderRadius: "15px",
-              border: "solid #77C9D4 1px",
+              // borderRadius: "5px",
+              // border: "solid #e0f7fa 1px",
+              // boxShadow: 4,
             }}
           >
             <Grid item>
               <Typography
                 variant="h5"
-                sx={{ color: "black!important", padding: "10px" }}
+                sx={{ color: "#e0f7fa!important", padding: "10px" }}
               >
                 {title}
               </Typography>
@@ -31,7 +31,7 @@ export default function ProjectInfo({
             <Grid item>
               <Typography
                 variant="body2"
-                sx={{ color: "black!important", padding: "10px" }}
+                sx={{ color: "#e0f7fa!important", padding: "10px" }}
               >
                 {infoParagraph1}
               </Typography>
@@ -39,7 +39,7 @@ export default function ProjectInfo({
             <Grid item>
               <Typography
                 variant="body2"
-                sx={{ color: "black!important", padding: "10px" }}
+                sx={{ color: "#e0f7fa!important", padding: "10px" }}
               >
                 {infoParagraph2}
               </Typography>
@@ -47,13 +47,13 @@ export default function ProjectInfo({
             <Grid item>
               <Typography
                 variant="body2"
-                sx={{ color: "black!important", padding: "10px" }}
+                sx={{ color: "#e0f7fa!important", padding: "10px" }}
               >
                 {infoParagraph3}
               </Typography>
             </Grid>
           </Grid>
-        </CardBoop>
+        {/* </CardBoop> */}
       </Grid>
     </>
   );

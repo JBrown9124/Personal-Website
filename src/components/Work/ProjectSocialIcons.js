@@ -16,11 +16,11 @@ export default function ProjectSocialIcons({ githubUrl, projectUrl }) {
     <>
       <Grid item sx={{ padding: "10px" }}>
         <SocialIconsBoop
-          beforeColor={"black"}
+          beforeColor={"#e0f7fa"}
           afterColor={"#77C9D4"}
           rotation={0}
           x={0}
-          y={-6}
+          y={-4}
         >
           <Tooltip title="GitHub" TransitionComponent={Zoom}>
             <div>
@@ -33,11 +33,11 @@ export default function ProjectSocialIcons({ githubUrl, projectUrl }) {
           </Tooltip>
         </SocialIconsBoop>
         <SocialIconsBoop
-          beforeColor={"black"}
+          beforeColor={"#e0f7fa"}
           afterColor={"#77C9D4"}
           rotation={0}
           x={0}
-          y={-6}
+          y={-4}
         >
           <FiExternalLink
             type="button"

@@ -93,6 +93,7 @@ export default function CustomizedAccordions() {
               >
                 <Image
                   type="button"
+                  style={{borderRadius:"5px"}}
                   src={CourseraCertificate1}
                   onClick={() =>
                     openInNewTab(
@@ -113,6 +114,7 @@ export default function CustomizedAccordions() {
                 fromX={0}
               >
                 <Image
+                style={{borderRadius:"5px"}}
                   type="button"
                   src={CourseraCertificate2}
                   onClick={() =>
@@ -134,6 +136,7 @@ export default function CustomizedAccordions() {
                 fromX={0}
               >
                 <Image
+                      style={{borderRadius:"5px"}}
                   type="button"
                   src={SQLEssentialTraining}
                   onClick={() =>

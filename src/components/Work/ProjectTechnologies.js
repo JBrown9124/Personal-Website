@@ -7,11 +7,11 @@ const CustomChip = styled(Chip)(({ theme }) => ({
   "&:hover": {
     backgroundColor: "rgba(119, 201, 212, .05)",
   },
-
-  color: "black",
+  
+  color: "#e0f7fa",
   fill: "transparent",
   textTransform: "none",
-  border: "solid black 1px",
+  border: "solid #e0f7fa 1px",
 
   [theme.breakpoints.up("md")]: {
     
@@ -30,10 +30,10 @@ export default function ProjectTechnologies({ technologiesUsed }) {
 
   return (
     <>
-      <Grid item container direction="row" spacing={1} sx={{ padding: "10px" }}>
+      <Grid item container direction="row" spacing={1} sx={{ padding: "10px",  }}>
         {technologiesUsed.map((tech, idx) => (
           <Grid item key={idx}>
-            <CustomChip size="small" label={tech} />
+            <CustomChip size="small" label={tech} sx={{}}/>
           </Grid>
         ))}
       </Grid>

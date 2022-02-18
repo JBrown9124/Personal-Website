@@ -1,6 +1,7 @@
 import React from "react";
 import DoOrDoNotVid from "../images/DoOrDoNotVid.webm";
 import LoveAndPain from "../images/LoveAndPain.webm";
+import TicTacToe from "../images/TicTacToe.webm"
 import AnalyzeThis from "../images/AnalyzeThis.webm";
 import Typography from "@mui/material/Typography";
 import VisibilitySensor from "react-visibility-sensor";
@@ -21,7 +22,7 @@ export default function Work(props) {
           <VisibilitySensor partialVisibility={true}>
             {({ isVisible }) => (
               <FadeIn delay={0} isVisible={isVisible} y={-40}>
-                <div className="separator">
+                <div className="separator" style={{}}>
                   <Typography variant="h4"> Personal Projects</Typography>
                 </div>
               </FadeIn>
@@ -33,18 +34,18 @@ export default function Work(props) {
             {({ isVisible }) => (
               <FadeIn isVisible={isVisible} y={-40}>
                 <WorkProject
-                  videoUrl={"Coming Soon"}
+                  videoUrl={TicTacToe}
                   githubUrl={"https://github.com/JBrown9124/tic_tac_toe_online"}
                   projectUrl={"https://tic-tac-toe-royale.herokuapp.com/"}
                   title={"Tic-Tac-Toe Royale"}
                   infoParagraph1={
-                    "Created a full-stack online web game.  Able to set board size, board color, “win by” condition (amount of pieces in a row required to win) and pieces (upload custom piece capability included)."
+                    "Created a full-stack online Tic-Tac-Toe web game with a twist. Acquire and use powers to dominate your enemies."
                   }
                   infoParagraph2={
-                    "Capable of having up to 100 players per board. Able to add up to 10 bots per board. "
+                    "Set the board size, board color, “win by” condition (amount of pieces in a row required to win) and pieces (upload custom piece capability included). Capable of having up to 100 players in a single game. Full bot functionality (add up to 10 AI per board)."
                   }
                   infoParagraph3={
-                    " Client was created with TypeScript React.js, the REST API with Python (Django), and real-time client updates are handled with Socket.IO."
+                    "Client was created with TypeScript React.js, the REST API with Python (Django), and real-time client updates are handled with Socket.IO."
                   }
                   technologiesUsed={[
                     "Python",
